@@ -1,16 +1,16 @@
 <template>
     <jet-action-section>
         <template #title>
-            Browser Sessions
+            ログインアクティビティ
         </template>
 
         <template #description>
-            Manage and logout your active sessions on other browsers and devices.
+            他のブラウザやデバイスでのログインを確認し、ログアウトすることができます。
         </template>
 
         <template #content>
             <div class="max-w-xl text-sm text-gray-600">
-                If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.
+                必要に応じて、全てのデバイスで他の全てのブラウザセッションをログアウトすることができます。直近のセッションを表示していますが、全てを確認することができないので、自分以外のログインが行われた場合はパスワードの変更も行ってください。
             </div>
 
             <!-- Other Browser Sessions -->

@@ -1,50 +1,18 @@
 <template>
     <jet-form-section @submitted="updateProfileInformation">
         <template #title>
-            Profile Information
+            アカウント情報
         </template>
 
         <template #description>
-            Update your account's profile information and email address.
+            アカウントのプロフィール情報とメールアドレスを更新します
         </template>
 
         <template #form>
-            <!-- Profile Photo -->
-            <div class="col-span-6 sm:col-span-4" v-if="$page.jetstream.managesProfilePhotos">
-                <!-- Profile Photo File Input -->
-                <input type="file" class="hidden"
-                            ref="photo"
-                            @change="updatePhotoPreview">
-
-                <jet-label for="photo" value="Photo" />
-
-                <!-- Current Profile Photo -->
-                <div class="mt-2" v-show="! photoPreview">
-                    <img :src="user.profile_photo_url" alt="Current Profile Photo" class="rounded-full h-20 w-20 object-cover">
-                </div>
-
-                <!-- New Profile Photo Preview -->
-                <div class="mt-2" v-show="photoPreview">
-                    <span class="block rounded-full w-20 h-20"
-                          :style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
-                    </span>
-                </div>
-
-                <jet-secondary-button class="mt-2 mr-2" type="button" @click.native.prevent="selectNewPhoto">
-                    Select A New Photo
-                </jet-secondary-button>
-
-                <jet-secondary-button type="button" class="mt-2" @click.native.prevent="deletePhoto" v-if="user.profile_photo_path">
-                    Remove Photo
-                </jet-secondary-button>
-
-                <jet-input-error :message="form.error('photo')" class="mt-2" />
-            </div>
-
             <!-- Name -->
             <div class="col-span-6 sm:col-span-4">
                 <jet-label for="name" value="Name" />
-                <jet-input id="name" type="text" class="mt-1 block w-full" v-model="form.name" autocomplete="name" />
+                <jet-input id="name" type="text" class="mt-1 block w-full bg-gray-200" v-model="form.name" autocomplete="name" />
                 <jet-input-error :message="form.error('name')" class="mt-2" />
             </div>
 
@@ -58,11 +26,11 @@
 
         <template #actions>
             <jet-action-message :on="form.recentlySuccessful" class="mr-3">
-                Saved.
+                設定を更新しました
             </jet-action-message>
 
             <jet-button :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                Save
+                保存
             </jet-button>
         </template>
     </jet-form-section>

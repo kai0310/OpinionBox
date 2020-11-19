@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,15 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
+
+
+Route::resource('/post', PostController::class)
+        ->names(['index'=>'post.index',
+        'create' => 'post.create',
+        'edit' => 'post.edit',
+        'update' => 'post.update',
+        'destroy' => 'post.destroy',
+        'store'=>'post.store'])
+    ->middleware(['auth']);
+
+

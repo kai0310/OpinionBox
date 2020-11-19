@@ -1,20 +1,20 @@
 <template>
     <jet-action-section>
         <template #title>
-            Two Factor Authentication
+            二要素認証
         </template>
 
         <template #description>
-            Add additional security to your account using two factor authentication.
+            二要素認証を行い、より強固なアカウントの保護を行います。
         </template>
 
         <template #content>
             <h3 class="text-lg font-medium text-gray-900" v-if="twoFactorEnabled">
-                You have enabled two factor authentication.
+                二要素認証が有効になっています
             </h3>
 
             <h3 class="text-lg font-medium text-gray-900" v-else>
-                You have not enabled two factor authentication.
+                二要素認証が有効になっていません
             </h3>
 
             <div class="mt-3 max-w-xl text-sm text-gray-600">
