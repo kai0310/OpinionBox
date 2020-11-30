@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Post/Create.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Post/Show.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Acknowledgments.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Other/Faq.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Other/Guide.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/DeleteUserForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/DeleteUserForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/LogoutOtherBrowserSessionsForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/Show.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/TwoFactorAuthenticationForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdatePasswordForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdatePasswordForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdateProfileInformationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdateProfileInformationForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Post/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Post/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Post/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Post/Show.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -220,7 +218,13 @@
       <workItem from="1605620294014" duration="3107000" />
       <workItem from="1605690914139" duration="596000" />
       <workItem from="1605703835291" duration="311000" />
-      <workItem from="1605792624373" duration="1307000" />
+      <workItem from="1605792624373" duration="1518000" />
+      <workItem from="1605799670068" duration="1966000" />
+      <workItem from="1605878605370" duration="3148000" />
+      <workItem from="1605975108107" duration="1563000" />
+      <workItem from="1606643268240" duration="1977000" />
+      <workItem from="1606711317320" duration="8608000" />
+      <workItem from="1606736103249" duration="5600000" />
     </task>
     <servers />
   </component>
@@ -228,15 +232,20 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605513710336">
+    <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605881242971">
       <screen x="0" y="23" width="1680" height="960" />
     </state>
-    <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.960@0.23.1680.960" timestamp="1605513710336" />
-    <state x="925" y="401" width="676" height="582" key="find.popup" timestamp="1605342738039">
+    <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.960@0.23.1680.960" timestamp="1605881242971" />
+    <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605799795113">
       <screen x="0" y="23" width="1680" height="960" />
+    </state>
+    <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.960@0.23.1680.960" timestamp="1605799795113" />
+    <state x="925" y="398" width="676" height="576" key="find.popup" timestamp="1606713927040">
+      <screen x="0" y="25" width="1680" height="949" />
     </state>
     <state x="1835" y="62" width="647" height="518" key="find.popup/0.23.1440.810/1440.-121.1920.1057@1440.-121.1920.1057" timestamp="1605109485157" />
     <state x="2274" y="446" width="647" height="490" key="find.popup/0.23.1440.812/1440.-121.1920.1057@1440.-121.1920.1057" timestamp="1605109277149" />
-    <state x="925" y="401" width="676" height="582" key="find.popup/0.23.1680.960@0.23.1680.960" timestamp="1605342738039" />
+    <state x="925" y="401" width="676" height="582" key="find.popup/0.23.1680.960@0.23.1680.960" timestamp="1605881173714" />
+    <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1606713927040" />
   </component>
 </project>

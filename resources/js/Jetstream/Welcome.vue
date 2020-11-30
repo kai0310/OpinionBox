@@ -19,9 +19,9 @@
 
             <div class="mt-6 text-gray-500">
                 さあ、OpinionBoxを使用してみましょう。相談方法は簡単下のリンクからフォームへ行き、投稿を作成するだけです。<br />
-                <jet-button :href="route('')">
-                    相談を投稿してみる
-                </jet-button>
+                <inertia-link :href="route('post.create')">
+                    <jet-button>相談を投稿してみる</jet-button>
+                </inertia-link>
             </div>
         </div>
     </div>

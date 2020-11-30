@@ -20,6 +20,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/faq', function () {
+    return Inertia\Inertia::render('Other/Faq');
+})->name('Faq');
+
+Route::get('/guide', function () {
+    return Inertia\Inertia::render('Other/Guide');
+})->name('Guide');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
