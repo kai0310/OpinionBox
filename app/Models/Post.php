@@ -17,12 +17,18 @@ class Post extends Model
         'user_id'
     ];
 
+    /**
+     * @return BelongsTo
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function comment(): hasMany
+    /**
+     * @return hasMany
+     */
+    public function comments(): hasMany
     {
         return $this->hasMany(Comment::class);
     }

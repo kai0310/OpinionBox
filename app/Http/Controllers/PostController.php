@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Inertia\Inertia;
 use App\Models\Post;
-use App\Models\User;
 
 class PostController extends Controller
 {
     public function index()
     {
-
-        $posts = Post::with('comment')->where('user_id', Auth::id())->latest()->get();
+        $posts = Post::where('user_id', Auth::id())->latest()->get();
         return Inertia::render('Post/Index', [
             'posts' => $posts,
         ]);
@@ -24,14 +21,8 @@ class PostController extends Controller
 
     public function show($id)
     {
-        $post = Post::find($id);
-        $comments = $post->comment;
-
-        dump($comments->user->name);
-        return Inertia::render('Post/Show', [
-            'post' => $post,
-            'comments' => $comments,
-        ]);
+        $posts = Post::find($id)->with('comments.user')->first();
+        return Inertia::render('Post/Show', compact('posts'));
     }
 
     public function create()
