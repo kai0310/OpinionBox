@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Post/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Post/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Post/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Post/Show.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Other/Faq.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Other/Faq.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Other/Guide.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Other/Guide.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,7 @@
       <workItem from="1605975108107" duration="1563000" />
       <workItem from="1606643268240" duration="1977000" />
       <workItem from="1606711317320" duration="8608000" />
-      <workItem from="1606736103249" duration="6023000" />
+      <workItem from="1606736103249" duration="11179000" />
     </task>
     <servers />
   </component>
@@ -221,10 +220,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605881242971">
-      <screen x="0" y="23" width="1680" height="960" />
+    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606746284514">
+      <screen x="0" y="25" width="1680" height="949" />
     </state>
     <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.960@0.23.1680.960" timestamp="1605881242971" />
+    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.949@0.25.1680.949" timestamp="1606746284514" />
     <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605799795113">
       <screen x="0" y="23" width="1680" height="960" />
     </state>

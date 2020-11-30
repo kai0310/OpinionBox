@@ -11,25 +11,38 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+
+    /**
+     * @return \Inertia\Response
+     */
     public function index()
     {
-        $posts = Post::where('user_id', Auth::id())->latest()->get();
-        return Inertia::render('Post/Index', [
-            'posts' => $posts,
-        ]);
+        $posts = Auth::user()->posts()->get();
+        return Inertia::render('Post/Index', compact('posts'));
     }
 
+    /**
+     * @param $id
+     * @return \Inertia\Response
+     */
     public function show($id)
     {
         $posts = Post::find($id)->with('comments.user')->first();
         return Inertia::render('Post/Show', compact('posts'));
     }
 
+    /**
+     * @return \Inertia\Response
+     */
     public function create()
     {
         return Inertia::render('Post/Create');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
     {
         $input = $request->all();
@@ -38,11 +51,11 @@ class PostController extends Controller
             'body' => ['required'],
         ])->validateWithBag('postCreate');
 
-        $post = new Post;
-        $post->user_id = Auth::id();
-        $post->title = $request->title;
-        $post->body = $request->body;
-        $post->save();
+        Post::create([
+            'user_id'   => Auth::id(),
+            'title'     => $request->title,
+            'body'      => $request->body,
+        ]);
         return Redirect::route('post.index');
     }
 }

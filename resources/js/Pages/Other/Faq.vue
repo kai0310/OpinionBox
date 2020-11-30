@@ -7,7 +7,7 @@
         </template>
         <div class="bg-gray-100">
             <section class="text-gray-700">
-                <div class="container px-5 py-24 mx-auto">
+                <div class="container px-5 py-20 mx-auto">
                     <div class="text-center mb-20">
                         <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
                             よくある質問
@@ -20,7 +20,7 @@
                     <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
                         <div class="w-full lg:w-1/2 px-4 py-2">
                             <details class="mb-4">
-                                <summary class="bg-gray-200 rounded-md py-2 px-4">
+                                <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                     相談の投稿内容は他の人に見られますか？
                                 </summary>
                                 <span>
@@ -28,7 +28,7 @@
                                 </span>
                             </details>
                             <details class="mb-4">
-                                <summary class="bg-gray-200 rounded-md py-2 px-4">
+                                <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                     どの様にして投稿することができますか？
                                 </summary>
                                 <span>
@@ -36,7 +36,7 @@
                                 </span>
                             </details>
                             <details class="mb-4">
-                                <summary class="bg-gray-200 rounded-md py-2 px-4">
+                                <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                     システムの修正の報告について
                                 </summary>
                                 <span>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="w-full lg:w-1/2 px-4 py-2">
                             <details class="mb-4">
-                                <summary class="bg-gray-200 rounded-md py-2 px-4">
+                                <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                     推奨していない投稿
                                 </summary>
                                 <span class="px-4 py-2">
@@ -65,7 +65,7 @@
                                 </span>
                             </details>
                             <details class="mb-4">
-                                <summary class="bg-gray-200 rounded-md py-2 px-4">
+                                <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                     退会・アカウント削除したい
                                 </summary>
                                 <span class="px-4 py-2">
@@ -73,7 +73,7 @@
                                 </span>
                             </details>
                             <details class="mb-4">
-                                <summary class="bg-gray-200 rounded-md py-2 px-4">
+                                <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                     サポート環境について
                                 </summary>
                                 <span class="px-4 py-2">

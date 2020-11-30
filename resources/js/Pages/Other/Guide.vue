@@ -12,7 +12,6 @@
                         <div class="hidden md:flex flex-col items-center">
                             <div class="w-32 py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
                                 <div class="text-3xl font-black text-gray-500">Step 1</div>
-                                <div class="text-gray-500 text-sm">Idea</div>
                             </div>
                             <div class="h-full border-l-4 border-transparent">
                                 <div class="border-l-4 mr-4 h-full border-gray-300 border-dashed"></div>
@@ -22,8 +21,9 @@
                             <div class="flex md:flex-row flex-col items-center">
                                 <div class="flex-auto">
                                     <div class="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-gray-500"><span class="font-black">Step 1</span> - Idea</div>
-                                    <div class="p-3 text-3xl text-gray-800 font">Find your best idea</div>
-                                    <div class="px-3 pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                                    <div class="p-3 text-3xl text-gray-800 font">アカウント登録</div>
+                                    <div class="px-3 pb-6">意見や相談を行うためのアカウント作成を行います。登録内容は、ご自身の名前,利用可能なメールアドレス,パスワードのみです。</div>
+                                    <!-- <div class="text-gray-500 text-sm"></div> -->
                                 </div>
                                 <div class="md:w-96 w-full p-5"><img src="https://image.flaticon.com/icons/svg/1330/1330216.svg" alt="step 1" class="object-scale-down"></div>
                             </div>
@@ -42,7 +42,7 @@
                         <div class="hidden md:flex flex-col items-center">
                             <div class="w-32 py-5 border border-gray-300 rounded ml-4 uppercase flex flex-col items-center justify-center">
                                 <div class="text-3xl font-black text-gray-500">Step 2</div>
-                                <div class="text-gray-500 text-sm">Collaboration</div>
+                                <!-- <div class="text-gray-500 text-sm"></div> -->
                             </div>
                             <div class="h-full border-r-4 border-transparent">
                                 <div class="border-l-4 ml-4 h-full border-gray-300 border-dashed"></div>
@@ -52,8 +52,8 @@
                             <div class="flex md:flex-row flex-col items-center">
                                 <div class="flex-auto">
                                     <div class="md:hidden text-sm font-normal uppercase pt-3 pl-3 text-gray-500"><span class="font-black">Step 2</span> - Collaboration</div>
-                                    <div class="p-3 text-3xl text-gray-800 font">Find your team and collaborate</div>
-                                    <div class="px-3 pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, voluptates error alias dolorem praesentium sit soluta iure incidunt labore explicabo eaque, quia architecto veritatis dolores, enim consequatur nihil ipsum.</div>
+                                    <div class="p-3 text-3xl text-gray-800 font">意見や相談を投稿！</div>
+                                    <div class="px-3 pb-6">アカウント登録をすると、すぐに意見や相談を投稿することができます。相談の投稿は、教職員や権限を持った持ったユーザのみが閲覧することができますが、意見を投稿すると全てのユーザが閲覧可能になってしまいますので、注意してください。</div>
                                 </div>
                                 <div class="md:w-96 w-full p-5"><img src="https://image.flaticon.com/icons/svg/1330/1330216.svg" alt="step 2" class="object-scale-down"></div>
                             </div>
