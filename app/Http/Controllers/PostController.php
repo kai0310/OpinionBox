@@ -17,8 +17,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Auth::user()->posts()->get();
-        return Inertia::render('Post/Index', compact('posts'));
+        return Inertia::render('Post/Index')->with(
+            'posts', Auth::user()->posts()->get()
+        );
     }
 
     /**
@@ -27,8 +28,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $posts = Post::find($id)->with('comments.user')->first();
-        return Inertia::render('Post/Show', compact('posts'));
+        return Inertia::render('Post/Show')->with(
+            'posts',Post::find($id)->with('comments.user')->first()
+        );
     }
 
     /**

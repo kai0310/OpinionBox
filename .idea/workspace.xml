@@ -6,8 +6,6 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Other/Faq.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Other/Faq.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Other/Guide.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Other/Guide.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +210,8 @@
       <workItem from="1605975108107" duration="1563000" />
       <workItem from="1606643268240" duration="1977000" />
       <workItem from="1606711317320" duration="8608000" />
-      <workItem from="1606736103249" duration="11179000" />
+      <workItem from="1606736103249" duration="11467000" />
+      <workItem from="1606780041357" duration="504000" />
     </task>
     <servers />
   </component>
