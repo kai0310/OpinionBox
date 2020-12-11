@@ -16,6 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/jenssegers/agent" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/fortify" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/jetstream" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/sail" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/mime-type-detection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mobiledetect/mobiledetectlib" />
