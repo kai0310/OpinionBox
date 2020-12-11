@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OpinionBox.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OpinionBox.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +156,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k9GjgUaJUQxoD92UNuBgRE4FzI" />
@@ -212,6 +218,8 @@
       <workItem from="1606711317320" duration="8608000" />
       <workItem from="1606736103249" duration="11467000" />
       <workItem from="1606780041357" duration="504000" />
+      <workItem from="1607599187084" duration="1275000" />
+      <workItem from="1607600864658" duration="907000" />
     </task>
     <servers />
   </component>
@@ -228,12 +236,12 @@
       <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.960@0.23.1680.960" timestamp="1605799795113" />
-    <state x="925" y="398" width="676" height="576" key="find.popup" timestamp="1606713927040">
+    <state x="925" y="398" width="676" height="576" key="find.popup" timestamp="1607600210512">
       <screen x="0" y="25" width="1680" height="949" />
     </state>
     <state x="1835" y="62" width="647" height="518" key="find.popup/0.23.1440.810/1440.-121.1920.1057@1440.-121.1920.1057" timestamp="1605109485157" />
     <state x="2274" y="446" width="647" height="490" key="find.popup/0.23.1440.812/1440.-121.1920.1057@1440.-121.1920.1057" timestamp="1605109277149" />
     <state x="925" y="401" width="676" height="582" key="find.popup/0.23.1680.960@0.23.1680.960" timestamp="1605881173714" />
-    <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1606713927040" />
+    <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1607600210512" />
   </component>
 </project>
