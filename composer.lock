@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05247cf3cd7629fafef4be64485c9b80",
+    "content-hash": "81ce8342ed7fdc3c2206ee3286da9952",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1405,16 +1405,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v0.0.9",
+            "version": "v0.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "fb46ec1bcfb45c10dfaf806d127878a83dcf6def"
+                "reference": "90bca29b485e3cda56ce911a598f8f8bffa6443f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/fb46ec1bcfb45c10dfaf806d127878a83dcf6def",
-                "reference": "fb46ec1bcfb45c10dfaf806d127878a83dcf6def",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/90bca29b485e3cda56ce911a598f8f8bffa6443f",
+                "reference": "90bca29b485e3cda56ce911a598f8f8bffa6443f",
                 "shasum": ""
             },
             "require": {
@@ -1456,7 +1456,7 @@
                 "docker",
                 "laravel"
             ],
-            "time": "2020-12-11T19:07:04+00:00"
+            "time": "2020-12-16T14:31:36+00:00"
         },
         {
             "name": "laravel/sanctum",
