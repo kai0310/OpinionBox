@@ -4,16 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-use App\Post;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Post;
+
+/**
+ * Class Comment
+ * @package App\Models
+ *
+ * @property int $id ID
+ * @property int $user_id ユーザID
+ * @property string $body 本文
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ */
 
 class Comment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'text',
+        'body',
     ];
 
     /**
