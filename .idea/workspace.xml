@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Other/about.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Other/faq.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Other/guide.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OpinionBox.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OpinionBox.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +226,7 @@
       <workItem from="1609054357759" duration="5475000" />
       <workItem from="1609062433346" duration="10711000" />
       <workItem from="1609074976036" duration="3647000" />
-      <workItem from="1609132264210" duration="2301000" />
+      <workItem from="1609132264210" duration="4838000" />
     </task>
     <servers />
   </component>
@@ -249,11 +238,11 @@
       <screen x="1440" y="-119" width="1920" height="1055" />
     </state>
     <state x="2260" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.803/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609064079138" />
-    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606746284514">
+    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609135893478">
       <screen x="0" y="25" width="1680" height="949" />
     </state>
     <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.960@0.23.1680.960" timestamp="1605881242971" />
-    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.949@0.25.1680.949" timestamp="1606746284514" />
+    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.949@0.25.1680.949" timestamp="1609135893478" />
     <state x="2357" y="284" key="NewPhpFileDialog" timestamp="1609067902174">
       <screen x="1440" y="-119" width="1920" height="1055" />
     </state>
