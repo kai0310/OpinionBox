@@ -1,0 +1,31 @@
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Guide') }}
+        </h2>
+    </x-slot>
+
+    <div class="bg-gray-100 p-8">
+        <section class="text-center">
+            <h3 class=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">Our mission</h3>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Our mission is to provide a place for people to voice their opinions and to incorporate those opinions into school improvement.</p>
+            <div class="flex mt-6 justify-center">
+                <div class="w-32 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+        </section>
+
+        <div class="flex items-center justify-center mt-16">
+            <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg">
+                <div class="flex mb-4">
+                    <img class="w-12 h-12 rounded-full" src="https://avatars0.githubusercontent.com/u/52205108?s=460&amp;u=0667510c252aaa7352707d952480fe7baeafb9b6&amp;v=4"/>
+                    <div class="ml-2 mt-0.5">
+                        <span class="block font-medium text-base leading-snug text-black dark:text-gray-100"><a href="https://github.com/kai0310" target="_blank">kai0310<i class="fab fa-github ml-1"></i></a></span>
+                        <span class="block text-sm text-gray-500 dark:text-gray-400 font-light leading-snug">Creator, Development manager</span>
+                    </div>
+                </div>
+                <p class="text-gray-800 dark:text-gray-100 leading-snug md:leading-normal">I hope that this web application will be used by many more people and that our students will make our school a better place!<br />I'm very honored to be able to develop this OpinionBox. Programming is a very powerful way to solve problems around us. Let's feel the joy of creating and solving together.</p>
+
+            </div>
+        </div>
+    </div>
+</x-app-layout>
