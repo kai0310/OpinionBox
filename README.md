@@ -1,4 +1,4 @@
-# OpinionBox 【WIP】
+# OpinionBox 【このブランチはアーカイブされました】
 
 <p>
     <a href="">
