@@ -74,15 +74,17 @@
             @empty
                 <div class="mt-6">
                     <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
-                        <h1 class="text-gray-700 font-bold hover:underline cursor-pointer">まだ表示できる意見がない様です</h1>
+                        <h1 class="text-gray-700 font-bold cursor-pointer">まだ表示できる意見がない様です</h1>
                     </div>
                 </div>
             @endforelse
-            <div class="mt-6">
-                <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
-                    <a href="{{ route('post.all') }}" class="text-gray-700 font-bold hover:underline cursor-pointer">他の意見も見る</a>
+            @if( count($posts) )
+                <div class="mt-6">
+                    <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
+                        <a href="{{ route('post.all') }}" class="text-gray-700 font-bold hover:underline cursor-pointer">他の意見も見る</a>
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
 </x-app-layout>

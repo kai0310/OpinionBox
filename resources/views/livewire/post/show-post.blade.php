@@ -21,8 +21,10 @@
                 </div>
             @endif
         @empty
-            <div class="mt-9 mx-auto max-w-2xl bg-white rounded-lg p-3 shadow-lg mb-4">
-                <p class="text-gray-600 text-lg text-center px-3">まだコメントはありません</p>
+            <div class="my-6">
+                <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
+                    <h1 class="text-gray-700 font-bold cursor-pointer">まだコメントはありません</h1>
+                </div>
             </div>
         @endforelse
     </div>

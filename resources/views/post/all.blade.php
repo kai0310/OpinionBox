@@ -31,8 +31,10 @@
                 </div>
             </div>
         @empty
-            <div class="mt-6 max-w-4xl px-10 py-6 bg-white rounded-lg shadow-md text-center">
-                <h3 class="text-2xl text-gray-700 font-bold hover:underline cursor-pointer">まだ表示できる投稿が無い様です</h3>
+            <div class="mt-6">
+                <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
+                    <h1 class="text-gray-700 font-bold cursor-pointer">まだ表示できる意見がない様です</h1>
+                </div>
             </div>
         @endforelse
         <div class="mx-auto max-w-4xl">
