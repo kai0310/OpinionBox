@@ -1,12 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Guide') }}
+        <h2 class="text-xl text-gray-800 leading-tight">
+            Guide
         </h2>
     </x-slot>
 
-    <div class="bg-gray-100 p-8">
-        <section class="text-center">
+    <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+    <section class="text-center">
             <h3 class=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">Our mission</h3>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Our mission is to provide a place for people to voice their opinions and to incorporate those opinions into school improvement.</p>
             <div class="flex mt-6 justify-center">

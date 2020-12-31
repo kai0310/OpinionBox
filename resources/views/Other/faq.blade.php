@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('FAQ') }}
+        <h2 class="text-xl text-gray-800 leading-tight">
+            FAQ
         </h2>
     </x-slot>
 
-    <div class="bg-gray-100">
+    <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
         <section class="text-gray-700">
             <div class="container px-5 py-20 mx-auto">
                 <div class="text-center mb-20">

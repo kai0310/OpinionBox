@@ -40,19 +40,22 @@
                 <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-center">
                     <div class="p-5 w-48 ">
                         <div class="text-xs uppercase text-gray-500 font-medium">Home</div>
-                        <a class="my-3 block" href="/#">Services <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Products <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="{{ route('about') }}">About Us <span class="text-teal-600 text-xs p-1"></span></a>
+                        <a class="my-3 block" href="/">Service</a>
+                        <a class="my-3 block" href="{{ route('dashboard') }}">Top</a>
+                        <a class="my-3 block" href="{{ route('about') }}">About Us</a>
                     </div>
                     <div class="p-5 w-48 ">
-                        <div class="text-xs uppercase text-gray-500 font-medium">User</div>
-                        <a class="my-3 block" href="/#">Sign in <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">New Account <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Demo <span class="text-teal-600 text-xs p-1">New</span></a><a class="my-3 block" href="/#">Career <span class="text-teal-600 text-xs p-1">We're hiring</span></a><a class="my-3 block" href="/#">Surveys <span class="text-teal-600 text-xs p-1">New</span></a>
+                        <div class="text-xs uppercase text-gray-500 font-medium">Box</div>
+                        <a class="my-3 block" href="{{ route('post.index') }}">トップ</a>
+                        <a class="my-3 block" href="{{ route('post.create') }}">新規作成</a>
+                        <a class="my-3 block" href="{{ route('post.me') }}">自分の投稿</a>
+                        <a class="my-3 block" href="{{ route('post.all') }}">全ての投稿</a>
                     </div>
                     <div class="p-5 w-48 ">
                         <div class="text-xs uppercase text-gray-500 font-medium">Resources</div>
-                        <a class="my-3 block" href="{{ route('guide') }}">Guide<span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="{{ route('faq') }}">FAQ<span class="text-teal-600 text-xs p-1"></span></a>
-                    </div>
-                    <div class="p-5 w-48 ">
-                        <div class="text-xs uppercase text-gray-500 font-medium">Support</div>
-                        <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
+                        <a class="my-3 block" href="{{ route('guide') }}">Guide</a>
+                        <a class="my-3 block" href="{{ route('faq') }}">FAQ</a>
+                        <a class="my-3 block" href="https://github.com/kai0310/OpinionBox/blob/2.x/LICENSE" target="_blank">LICENSE</a>
                     </div>
                     <div class="p-5 w-48 ">
                         <div class="text-xs uppercase text-gray-500 font-medium">Contact us</div>
