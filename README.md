@@ -9,6 +9,10 @@
     </a>
 </p>
 
+## Screenshot
+
+<img src="https://user-images.githubusercontent.com/52205108/103396209-38bb7c00-4b75-11eb-9e50-9c3c2e025f14.png" width="800px" alt="screenshot1" />
+
 
 ## Overview
 It is a web application that aims to gather students' opinions and consultations on the web.
