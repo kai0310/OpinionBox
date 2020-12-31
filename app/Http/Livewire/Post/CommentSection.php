@@ -6,7 +6,7 @@ use Livewire\Component;
 use Auth;
 use App\Models\Comment;
 
-class ShowPost extends Component
+class CommentSection extends Component
 {
     public $post;
     public $body;
@@ -30,7 +30,7 @@ class ShowPost extends Component
 
     public function render()
     {
-        return view('livewire.post.show-post')->with(
+        return view('livewire.post.comment-section')->with(
             'post', $this->post::find($this->post->id)->with('comments.user')->first()
         );
     }

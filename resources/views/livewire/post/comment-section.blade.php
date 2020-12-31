@@ -1,5 +1,5 @@
 <div class="flex-1 p:2 sm:p-6 justify-between flex flex-col">
-    <div wire:poll id="messages" class="flex flex-col space-y-4 p-3">
+    <div wire:poll.5s id="messages" class="flex flex-col space-y-4 p-3">
         @forelse($post->comments as $comment)
             @if($comment->user->id === Auth::id())
                 <div class="chat-message">
