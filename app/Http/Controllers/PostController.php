@@ -13,13 +13,8 @@ class PostController extends Controller
     public function index()
     {
         return view('post.index')->with(
-            'posts', Post::inRandomOrder(self::TAKE_RAND_COUNT)->get(),
+            'posts', Post::where('is_checked', true)->inRandomOrder(self::TAKE_RAND_COUNT)->get(),
         );
-    }
-
-    public function store()
-    {
-        return;
     }
 
     public function create()
@@ -29,6 +24,15 @@ class PostController extends Controller
 
     public function show($id)
     {
+
+        $post = Post::findOrFail($id);
+
+        if (!$post->is_checked ) {
+            if ( $post->user_id != Auth::id() and !Auth::user()->is_admin ) {
+                return abort(403);
+            }
+        }
+
         return view('post.show')->with(
             'post', Post::findOrFail($id),
         );
@@ -37,7 +41,7 @@ class PostController extends Controller
     public function all()
     {
         return view('post.all')->with(
-            'posts', Post::paginate(self::TAKE_MAX_COUNT)
+            'posts', Post::where('is_checked', true)->paginate(self::TAKE_MAX_COUNT)
         );
     }
 
