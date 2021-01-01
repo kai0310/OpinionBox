@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Builder;
 use phpDocumentor\Reflection\Types\Boolean;
 
 /**
@@ -31,11 +32,51 @@ class Post extends Model
         'user_id',
     ];
 
-    protected $dateFormat = 'Y-m-d H:i';
-
     protected $casts = [
         'is_checked' => 'boolean',
     ];
+
+    /**
+     * @return false|string
+     */
+    public function getCreatedAttribute()
+    {
+        $diff = $this->created_at->diff(now());
+
+        if ($diff->m > 0) {
+            return date('Y年m月d日', strtotime($this->created_at));
+        }
+
+        if ($diff->d > 0) {
+            return sprintf('%d 日前', $diff->d);
+        }
+
+        if ($diff->h > 0) {
+            return sprintf('%d 時間前', $diff->h);
+        }
+
+        if ($diff->i > 0) {
+            return sprintf('%d 分前', $diff->i);
+        }
+
+        if ($diff->s > 0) {
+            return sprintf('%d 秒前', $diff->s);
+        }
+
+        return 'たった今';
+    }
+
+
+    public function scopeOrderByCreated($query, $direction = 'asc') {
+        $query->orderBy('created_at', $direction);
+    }
+
+    protected static function booted()
+    {
+        static::addGlobalScope('is_checked', function (Builder $builder) {
+            $builder->where('is_checked', true);
+        });
+    }
 
     /**
      * @return BelongsTo

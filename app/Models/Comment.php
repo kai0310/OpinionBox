@@ -27,7 +27,9 @@ class Comment extends Model
         'body',
     ];
 
-    protected $dateFormat = 'Y-m-d H:i';
+    public function scopeOrderByCreated($query, $direction = 'asc') {
+        $query->orderBy('created_at', $direction);
+    }
 
     /**
      * @return BelongsTo

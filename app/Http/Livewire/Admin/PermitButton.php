@@ -12,8 +12,10 @@ class PermitButton extends Component
 
     public function submit()
     {
-        Post::where('id', $this->post->id)
-            ->update(['is_checked' => true]);
+        Post::withoutGlobalScope('is_checked')->where('id', $this->post->id)
+            ->update([
+                'is_checked' => true,
+            ]);
         $this->emit('saved');
     }
 

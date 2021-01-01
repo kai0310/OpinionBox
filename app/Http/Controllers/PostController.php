@@ -13,7 +13,10 @@ class PostController extends Controller
     public function index()
     {
         return view('post.index')->with(
-            'posts', Post::where('is_checked', true)->inRandomOrder(self::TAKE_RAND_COUNT)->get(),
+            'posts', Post::orderByCreated('desc')
+                ->inRandomOrder(self::TAKE_RAND_COUNT)
+                ->orderByCreated('desc')
+                ->get(),
         );
     }
 
@@ -25,7 +28,8 @@ class PostController extends Controller
     public function show($id)
     {
 
-        $post = Post::findOrFail($id);
+        $post = Post::withoutGlobalScope('is_checked')
+            ->findOrFail($id);
 
         if (!$post->is_checked ) {
             if ( $post->user_id != Auth::id() and !Auth::user()->is_admin ) {
@@ -34,21 +38,25 @@ class PostController extends Controller
         }
 
         return view('post.show')->with(
-            'post', Post::findOrFail($id),
+            compact("post")
         );
     }
 
     public function all()
     {
         return view('post.all')->with(
-            'posts', Post::where('is_checked', true)->paginate(self::TAKE_MAX_COUNT)
+            'posts', Post::orderByCreated('desc')
+                ->paginate(self::TAKE_MAX_COUNT)
         );
     }
 
     public function me()
     {
         return view('post.me')->with(
-            'posts', Auth::user()->posts()->paginate(self::TAKE_MAX_COUNT)
+            'posts', Auth::user()->posts()
+                ->withoutGlobalScope('is_checked')
+                ->orderByCreated('desc')
+                ->paginate(self::TAKE_MAX_COUNT)
         );
     }
 }

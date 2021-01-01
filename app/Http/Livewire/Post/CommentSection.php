@@ -15,7 +15,6 @@ class CommentSection extends Component
         'body' => 'required|string|max:200',
     ];
 
-
     public function submit()
     {
         $this->validate();
@@ -30,8 +29,10 @@ class CommentSection extends Component
 
     public function render()
     {
+
         return view('livewire.post.comment-section')->with(
-            'post', $this->post::find($this->post->id)->with('comments.user')->first()
+            'comments', $this->post->comments()
+            ->orderByCreated('desc')->get()
         );
     }
 }
