@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="" />
+    <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
+      <change afterPath="$PROJECT_DIR$/app/View/Components/UserAvatar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Post/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Post/Create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ja.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/post/comment-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/post/comment-section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/other/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/other/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/other/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/other/faq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/other/guide.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/other/guide.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/me.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/me.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,6 +251,8 @@
       <workItem from="1609392093347" duration="1320000" />
       <workItem from="1609409076953" duration="1171000" />
       <workItem from="1609419971851" duration="584000" />
+      <workItem from="1609483234139" duration="8444000" />
+      <workItem from="1609521695604" duration="1626000" />
     </task>
     <servers />
   </component>
@@ -262,8 +282,8 @@
       <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.960@0.23.1680.960" timestamp="1605799795113" />
-    <state x="2391" y="295" width="773" height="641" key="find.popup" timestamp="1609392120276">
-      <screen x="1440" y="-119" width="1920" height="1055" />
+    <state x="2391" y="265" width="773" height="595" key="find.popup" timestamp="1609494685806">
+      <screen x="1440" y="-119" width="1920" height="979" />
     </state>
     <state x="2497" y="280" width="773" height="656" key="find.popup/0.0.1440.900/1440.-144.1920.1080@1440.-144.1920.1080" timestamp="1609347541321" />
     <state x="1835" y="62" width="647" height="518" key="find.popup/0.23.1440.810/1440.-121.1920.1057@1440.-121.1920.1057" timestamp="1605109485157" />
@@ -273,6 +293,7 @@
     <state x="2497" y="295" width="773" height="641" key="find.popup/0.25.1440.800/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609343628244" />
     <state x="2568" y="274" width="773" height="641" key="find.popup/0.25.1440.803/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609071114453" />
     <state x="2391" y="295" width="773" height="641" key="find.popup/0.25.1440.805/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609382739304" />
+    <state x="2391" y="265" width="773" height="595" key="find.popup/0.25.1440.875/1440.-119.1920.979@1440.-119.1920.979" timestamp="1609494685806" />
     <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1609320063972" />
   </component>
 </project>

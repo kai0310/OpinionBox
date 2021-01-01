@@ -2,7 +2,17 @@
     <x-slot name="header">
         <h2 class="text-xl text-gray-800 leading-tight">
             <div class="flex items-center">
-                <span><a href="{{ route('post.index') }}">Box<i class="fas fa-angle-right mx-3"></i></a> {{ $post->title }}</span>
+                <div>
+                    <a href="{{ route('post.index') }}">
+                        Box<i class="fas fa-angle-right mx-3 hidden md:inline-block"></i>
+                    </a>
+                    <a href="{{ route('post.all') }}">
+                        全ての投稿<i class="fas fa-angle-right mx-3 hidden md:inline-block"></i>
+                    </a>
+                    <p class="hidden md:inline-block max-w-xs truncate align-middle">
+                        {{ $post->title }}
+                    </p>
+                </div>
                 <livewire:admin.permit-button :post="$post" />
             </div>
         </h2>
@@ -14,12 +24,18 @@
                 <div class="flex justify-between container mx-auto">
                     <div class="w-full">
                         <div class="px-4 sm:px-0">
-                            <h1 class="text-xl font-bold text-gray-700 md:text-2xl">{{ $post->title }}について</h1>
-                            <p class="mt-2 text-gray-600">現在選択中のOpinionBoxに入った意見を表示しています。</p>
+                            <h1 class="text-xl font-bold text-gray-700 md:text-2xl">
+                                {{ $post->title }}について
+                            </h1>
+                            <p class="mt-2 text-gray-600">
+                                現在選択中のOpinionBoxに入った意見を表示しています。
+                            </p>
                         </div>
                         <div class="flex bg-green-100 max-12 my-4">
                             <div class="hidden md:block w-16 bg-green-500">
-                                <div class="p-4 text-center"><i class="far fa-lightbulb text-white text-4xl"></i></div>
+                                <div class="p-4 text-center">
+                                    <i class="far fa-lightbulb text-white text-4xl"></i>
+                                </div>
                             </div>
                             <div class="w-auto text-grey-darker items-center p-4">
                                 <span class="text-lg font-bold pb-4">コメントをしてみよう！</span>
@@ -30,7 +46,9 @@
                             <div class="mt-6">
                                 <div class="px-10 py-6 bg-white rounded-lg shadow-md">
                                     <div class="mt-2">
-                                        <h3 class="text-2xl text-gray-700 font-bold">{{ $post->title }}</h3>
+                                        <h3 class="text-2xl text-gray-700 font-bold">
+                                            {{ $post->title }}
+                                        </h3>
                                         <p class="mt-2 text-gray-600 break-words">
                                             {!! nl2br($post->content) !!}
                                         </p>
@@ -39,10 +57,14 @@
                                         <div class="flex items-center">
                                             <img src="{{ $post->user->profile_photo_url }}"
                                                  alt="{{ $post->user->name }}さんのプロフィール画像"
-                                                 class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block "
+                                                 class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
                                             />
-                                            <h1 class="text-gray-700 font-bold">{{ $post->user->name }}</h1>
-                                            <span class="ml-3 font-light text-gray-600">{{ $post->created_at }}</span>
+                                            <h1 class="text-gray-700 font-bold">
+                                                {{ $post->user->name }}
+                                            </h1>
+                                            <span class="ml-3 font-light text-gray-600">
+                                                {{ $post->created_at }}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

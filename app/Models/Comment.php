@@ -27,6 +27,8 @@ class Comment extends Model
         'body',
     ];
 
+    protected $dateFormat = 'Y-m-d H:i';
+
     /**
      * @return BelongsTo
      */

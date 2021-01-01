@@ -4,19 +4,35 @@
             @if($comment->user->id === Auth::id())
                 <div class="chat-message">
                     <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
-                            <div><span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white ">{{ $comment->body }}</span></div>
+                        <div class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-1 items-end">
+                            <div>
+                                <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white">
+                                    {{ $comment->body }}
+                                </span>
+                            </div>
                         </div>
-                        <img src="{{ $comment->user->profile_photo_url }}" alt="My profile" class="w-6 h-6 rounded-full order-2">
+                        <img
+                            src="{{ $comment->user->profile_photo_url }}"
+                            alt="{{ $comment->user->name }}さんのプロフィール画像"
+                            class="w-6 h-6 rounded-full order-1"
+                        />
                     </div>
                 </div>
             @else
                 <div class="chat-message">
                     <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
-                            <div><span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">{{ $comment->body }}</span></div>
+                        <div class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start">
+                            <div>
+                                <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+                                    {{ $comment->body }}
+                                </span>
+                            </div>
                         </div>
-                        <img src="{{ $comment->user->profile_photo_url }}" alt="My profile" class="w-6 h-6 rounded-full order-1">
+                        <img
+                            src="{{ $comment->user->profile_photo_url }}"
+                            alt="{{ $comment->user->name }}さんのプロフィール画像"
+                            class="w-6 h-6 rounded-full order-1"
+                        />
                     </div>
                 </div>
             @endif
@@ -51,6 +67,9 @@
                             <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
                         </svg>
                     </button>
+                    <x-jet-action-message class="ml-3" on="saved">
+                        投稿に成功しました
+                    </x-jet-action-message>
                 </div>
             </div>
         </div>

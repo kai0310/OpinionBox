@@ -33,19 +33,29 @@
                     <div class="md:hidden"><x-jet-application-mark /></div>
                     <div class="sm:flex items-center justify-center">
                         @auth
-                            <a href="{{ url('/dashboard') }}" class="mr-5 text-lg font-medium text-true-gray-800 hover:text-cool-gray-700 transition duration-150 ease-in-out">Dashboard</a>
+                            <a href="{{ url('/dashboard') }}"class="mr-5 text-lg font-medium text-true-gray-800 hover:text-cool-gray-700 transition duration-150 ease-in-out">
+                                Dashboard
+                            </a>
                         @else
-                            <a href="{{ route('login') }}" class="mr-5 text-lg font-medium text-true-gray-800 hover:text-cool-gray-700 transition duration-150 ease-in-out">Login</a>
+                            <a href="{{ route('login') }}" class="mr-5 text-lg font-medium text-true-gray-800 hover:text-cool-gray-700 transition duration-150 ease-in-out">
+                                Login
+                            </a>
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="px-6 py-3 text-lg rounded-3xl font-medium bg-gradient-to-b md:from-gray-900 to-black md:text-white outline-none focus:outline-none hover:shadow-md hover:from-true-gray-900 transition duration-200 ease-in-out">Register</a>
+                                <a href="{{ route('register') }}" class="px-6 py-3 text-lg rounded-3xl font-medium bg-gradient-to-b md:from-gray-900 to-black md:text-white outline-none focus:outline-none hover:shadow-md hover:from-true-gray-900 transition duration-200 ease-in-out">
+                                    Register
+                                </a>
                             @endif
                         @endauth
                     </div>
                 </div>
 
                 <div class="lg:2/6 xl:w-2/4 my-20 lg:my-40 lg:ml-16 text-left">
-                    <div class="text-3xl md:text-5xl text-gray-900 leading-none">From Your Opinion<br />to Big Impact</div>
-                    <div class="my-6 text-xl md:text-xl font-light text-true-gray-400 antialiased">OpinionBoxを用いて私たちで学校に改革を起こしませか？</div>
+                    <div class="text-3xl md:text-5xl text-gray-900 leading-none">
+                        From Your Opinion<br />to Big Impact
+                    </div>
+                    <div class="my-6 text-xl md:text-xl font-light text-true-gray-400 antialiased">
+                        OpinionBoxを用いて私たちで学校に改革を起こしませか？
+                    </div>
                     <a href="{{ route('login') }}" class="mt-6 md:px-8 md:py-4 rounded-full font-normal tracking-wide md:bg-gradient-to-b from-blue-600 to-blue-700 text-blue-700 md:text-white outline-none focus:outline-none hover:underline md:hover:shadow-lg hover:from-blue-700 transition duration-200 ease-in-out">
                         Let's use OpinionBox
                     </a>

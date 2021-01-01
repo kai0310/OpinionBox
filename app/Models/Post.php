@@ -31,6 +31,8 @@ class Post extends Model
         'user_id',
     ];
 
+    protected $dateFormat = 'Y-m-d H:i';
+
     protected $casts = [
         'is_checked' => 'boolean',
     ];

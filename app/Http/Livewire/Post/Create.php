@@ -12,9 +12,14 @@ class Create extends Component
     public $content;
 
     protected $rules = [
-        'title'     => 'required|string|min:10|max:20',
+        'title'     => 'required|string|min:5|max:30',
         'content'   => 'required|string|min:20|max:200',
     ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
     public function submit()
     {
@@ -26,7 +31,7 @@ class Create extends Component
             'content'   => $this->content,
         ]);
 
-        session()->flash('message', '意見の投稿が完了しました');
+        $this->emit('saved');
         $this->title = '';
         $this->content = '';
     }

@@ -18,8 +18,13 @@
             <div class="flex-auto">
                 <div class="flex md:flex-row flex-col items-center">
                     <div class="flex-auto">
-                        <div class="p-3 text-3xl text-gray-800 font">アカウント登録</div>
-                        <div class="px-3 pb-6">意見や相談を行うためのアカウント作成を行います。登録内容は、ご自身の名前（フルネーム）、利用可能なメールアドレス、パスワードのみです。登録する際のお名前は<span class="text-red-500">必ずご自身のお名前をフルネーム</span>で登録してください。</div>
+                        <div class="p-3 text-3xl text-gray-800 font">
+                            アカウント登録
+                        </div>
+                        <div class="px-3 pb-6">
+                            意見や相談を行うためのアカウント作成を行います。登録内容は、ご自身の名前（フルネーム）、利用可能なメールアドレス、パスワードのみです。
+                            登録する際のお名前は<span class="text-red-500">必ずご自身のお名前をフルネーム</span>で登録してください。
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,8 +50,14 @@
             <div class="flex-auto rounded  border-gray-300">
                 <div class="flex md:flex-row flex-col items-center">
                     <div class="flex-auto">
-                        <div class="p-3 text-3xl text-gray-800 font">意見をBoxに入れてみよう</div>
-                        <div class="px-3 pb-6">アカウント登録をすると、すぐに意見を投稿することができます。より良い学校生活のために「もっとこうしたらいい！」や「こんなことをして欲しい」などの意見を<a href="{{ route('post.create') }}" class="text-blue-500">こちら</a>のページより投稿することができます。</div>
+                        <div class="p-3 text-3xl text-gray-800 font">
+                            意見をBoxに入れてみよう
+                        </div>
+                        <div class="px-3 pb-6">
+                            アカウント登録をすると、すぐに意見を投稿することができます。
+                            より良い学校生活のために「もっとこうしたらいい！」や「こんなことをして欲しい」などの意見を
+                            <a href="{{ route('post.create') }}" class="text-blue-500">こちら</a>のページより投稿することができます。
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,8 +83,13 @@
             <div class="flex-auto rounded">
                 <div class="flex md:flex-row flex-col items-center">
                     <div class="flex-auto">
-                        <div class="p-3 text-3xl text-gray-800 font">友達の意見を見てみよう</div>
-                        <div class="px-3 pb-6">OpinionBoxでは公開されたBoxに入った意見を見ることはできます。意見をBoxに入れる際にはすでに似たような意見はないか確認してみましょう。</div>
+                        <div class="p-3 text-3xl text-gray-800 font">
+                            友達の意見を見てみよう
+                        </div>
+                        <div class="px-3 pb-6">
+                            OpinionBoxでは公開されたBoxに入った意見を見ることはできます。
+                            意見をBoxに入れる際にはすでに似たような意見はないか確認してみましょう。
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,8 +112,13 @@
             <div class="flex-auto">
                 <div class="flex md:flex-row flex-col items-center">
                     <div class="flex-auto">
-                        <div class="p-3 text-3xl text-gray-800 font">コメントをしてみよう</div>
-                        <div class="px-3 pb-6">OpinionBoxでは自分の投稿や他の人の投稿に関してコメントすることができます。その意見に関する質問や、「こうしたらいいのではないか！」などといったコメントをしてみましょう。</div>
+                        <div class="p-3 text-3xl text-gray-800 font">
+                            コメントをしてみよう
+                        </div>
+                        <div class="px-3 pb-6">
+                            OpinionBoxでは自分の投稿や他の人の投稿に関してコメントすることができます。
+                            その意見に関する質問や、「こうしたらいいのではないか！」などといったコメントをしてみましょう。
+                        </div>
                     </div>
                 </div>
             </div>
