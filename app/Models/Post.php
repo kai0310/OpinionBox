@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
-use phpDocumentor\Reflection\Types\Boolean;
 
 /**
  * Class Post
@@ -37,7 +36,9 @@ class Post extends Model
     ];
 
     /**
-     * @return false|string
+     * 投稿日時
+     *
+     * @return string
      */
     public function getCreatedAttribute()
     {
@@ -66,11 +67,9 @@ class Post extends Model
         return 'たった今';
     }
 
-
-    public function scopeOrderByCreated($query, $direction = 'asc') {
-        $query->orderBy('created_at', $direction);
-    }
-
+    /**
+     * 承認済みの投稿のみ
+     */
     protected static function booted()
     {
         static::addGlobalScope('is_checked', function (Builder $builder) {
@@ -78,15 +77,30 @@ class Post extends Model
         });
     }
 
+
     /**
+     * 投稿順にソート
+     *
+     * @param $query
+     * @param string $direction
+     */
+    public function scopeOrderByCreated($query, $direction = 'asc') {
+        $query->orderBy('created_at', $direction);
+    }
+
+    /**
+     * 投稿者
+     *
      * @return BelongsTo
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withTrashed();
     }
 
     /**
+     * コメント
+     *
      * @return hasMany
      */
     public function comments(): hasMany

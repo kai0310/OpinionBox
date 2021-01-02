@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="text-xl text-gray-800 leading-tight">
             <div class="flex items-center">
-                <div>
+                <div class="flex items-center">
                     <a href="{{ route('post.index') }}">
                         Box<i class="fas fa-angle-right mx-3 hidden md:inline-block"></i>
                     </a>
@@ -63,7 +63,7 @@
                                             {{ $post->user->name }}
                                         </h1>
                                         <span class="ml-3 font-light text-gray-600">
-                                                {{ $post->created_at }}
+                                            {{ $post->created }}
                                         </span>
                                     </div>
                                 </div>

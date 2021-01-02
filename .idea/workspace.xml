@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/PermitButton.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/PermitButton.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Post/CommentSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Post/CommentSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_055618_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_055618_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post/me.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/me.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/UserAvatar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/UserAvatar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/post/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +241,7 @@
       <workItem from="1609409076953" duration="1171000" />
       <workItem from="1609419971851" duration="584000" />
       <workItem from="1609483234139" duration="8444000" />
-      <workItem from="1609521695604" duration="13636000" />
+      <workItem from="1609521695604" duration="17129000" />
     </task>
     <servers />
   </component>
@@ -260,13 +254,13 @@
     </state>
     <state x="2260" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.800/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609342751387" />
     <state x="2260" y="163" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.803/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609064079138" />
-    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609409222554">
+    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609547256828">
       <screen x="0" y="25" width="1680" height="949" />
     </state>
     <state x="2251" y="131" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900/1440.-144.1920.1080@1440.-144.1920.1080" timestamp="1609335900353" />
     <state x="710" y="268" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.960@0.23.1680.960" timestamp="1605881242971" />
     <state x="2251" y="150" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.805/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609379112148" />
-    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.949@0.25.1680.949" timestamp="1609409222554" />
+    <state x="710" y="267" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.949@0.25.1680.949" timestamp="1609547256828" />
     <state x="2357" y="269" key="NewPhpFileDialog" timestamp="1609347283329">
       <screen x="1440" y="-144" width="1920" height="1080" />
     </state>
@@ -277,8 +271,8 @@
       <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.960@0.23.1680.960" timestamp="1605799795113" />
-    <state x="2391" y="295" width="773" height="641" key="find.popup" timestamp="1609541573149">
-      <screen x="1440" y="-119" width="1920" height="1055" />
+    <state x="925" y="398" width="676" height="576" key="find.popup" timestamp="1609546504103">
+      <screen x="0" y="25" width="1680" height="949" />
     </state>
     <state x="2497" y="280" width="773" height="656" key="find.popup/0.0.1440.900/1440.-144.1920.1080@1440.-144.1920.1080" timestamp="1609347541321" />
     <state x="1835" y="62" width="647" height="518" key="find.popup/0.23.1440.810/1440.-121.1920.1057@1440.-121.1920.1057" timestamp="1605109485157" />
@@ -290,6 +284,6 @@
     <state x="2391" y="295" width="773" height="641" key="find.popup/0.25.1440.805/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609535258636" />
     <state x="2391" y="295" width="773" height="641" key="find.popup/0.25.1440.806/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609541573149" />
     <state x="2391" y="265" width="773" height="595" key="find.popup/0.25.1440.875/1440.-119.1920.979@1440.-119.1920.979" timestamp="1609494685806" />
-    <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1609320063972" />
+    <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1609546504103" />
   </component>
 </project>

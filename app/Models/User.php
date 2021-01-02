@@ -10,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
@@ -18,6 +19,7 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -61,7 +63,27 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    protected $dates = ['deleted_at'];
+
+
     /**
+     * 退会済みのユーザの名前を指定
+     *
+     * @param $value
+     * @return string
+     */
+    public function getNameAttribute($value)
+    {
+        if ( isset($this->deleted_at) ){
+            return '退会済みユーザ';
+        } else {
+            return $value;
+        }
+    }
+
+    /**
+     * 投稿
+     *
      * @return HasMany
      */
     public function posts(): hasMany
@@ -70,6 +92,8 @@ class User extends Authenticatable
     }
 
     /**
+     * コメント
+     *
      * @return hasMany
      */
     public function comments(): hasMany

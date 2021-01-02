@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->text('profile_photo_path')->nullable();
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
+
+            $table->softDeletes();
         });
     }
 
