@@ -1,5 +1,5 @@
 <div class="ml-auto text-sm">
-    @if( $post->is_checked )
+    @if ( $post->is_checked )
         <i class="far fa-eye mx-2"></i>公開中
     @else
         @can('admin')

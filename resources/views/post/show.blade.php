@@ -23,7 +23,7 @@
             <div class="flex justify-between container mx-auto">
                 <div class="w-full">
                     <div class="px-4 sm:px-0">
-                        @if($post->created_at->diff(now())->m > 0)
+                        @if ( $post->created_at->diff(now())->m > 0 )
                             <div class="flex bg-yellow-50 max-12 mb-4">
                                 <div class="w-auto text-grey-darker items-center p-4">
                                     <p class="leading-tight">
@@ -58,6 +58,7 @@
                                 </div>
                                 <div class="flex justify-end items-center mt-4">
                                     <div class="flex items-center">
+                                        <livewire:post.like-button :counts="count($post->likes)" :post="$post" />
                                         <x-user-avatar :user="$post->user" />
                                         <h1 class="text-gray-700 font-bold">
                                             {{ $post->user->name }}

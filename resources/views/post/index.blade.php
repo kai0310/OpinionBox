@@ -73,7 +73,7 @@
                     </div>
                 </div>
             @endforelse
-            @if( count($posts) )
+            @if ( count($posts) )
                 <div class="mt-6">
                     <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
                         <a

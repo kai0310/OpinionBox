@@ -14,6 +14,7 @@
             </a>
             <div class="flex justify-end items-center mt-4">
                 <div class="flex items-center">
+                    <livewire:post.like-button :counts="count($post->likes)" :post="$post" />
                     <x-user-avatar :user="$post->user" />
                     <h1 class="text-gray-700 font-bold">{{ $post->user->name }}</h1>
                     <span class="ml-3 font-light text-gray-600">{{ $post->created }}</span>

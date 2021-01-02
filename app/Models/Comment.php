@@ -27,6 +27,12 @@ class Comment extends Model
         'body',
     ];
 
+    /**
+     * 投稿順にソート
+     *
+     * @param $query
+     * @param string $direction
+     */
     public function scopeOrderByCreated($query, $direction = 'asc') {
         $query->orderBy('created_at', $direction);
     }
