@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/article-list-item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/article-list-item.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post/me.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/me.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +178,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/Pages/Post" />
       <recent name="$PROJECT_DIR$/resources/js/Pages" />
@@ -244,7 +242,10 @@
       <workItem from="1609409076953" duration="1171000" />
       <workItem from="1609419971851" duration="584000" />
       <workItem from="1609483234139" duration="8444000" />
-      <workItem from="1609521695604" duration="25957000" />
+      <workItem from="1609521695604" duration="27001000" />
+      <workItem from="1609753226954" duration="1267000" />
+      <workItem from="1609934076203" duration="1578000" />
+      <workItem from="1609999159959" duration="548000" />
     </task>
     <servers />
   </component>
