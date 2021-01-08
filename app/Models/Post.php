@@ -35,6 +35,10 @@ class Post extends Model
         'is_checked' => 'boolean',
     ];
 
+    // 最大取得数
+    public const TAKE_MAX_COUNT  = 10;
+    public const TAKE_RAND_COUNT = 5;
+
     /**
      * 投稿日時
      *
