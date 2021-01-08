@@ -44,7 +44,7 @@ class Post extends Model
      *
      * @return string
      */
-    public function getCreatedAttribute()
+    public function getCreatedAttribute(): string
     {
         $diff = $this->created_at->diff(now());
 

@@ -52,6 +52,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'is_admin'          => 'boolean',
+        'is_developer'      => 'boolean',
     ];
 
     /**
@@ -65,25 +66,39 @@ class User extends Authenticatable
 
     protected $dates = ['deleted_at'];
 
-
     /**
      * 退会済みのユーザの名前を指定
      *
-     * @param $value
+     * @param $name
      * @return string
      */
-    public function getNameAttribute($value)
+    public function getNameAttribute($name): string
     {
         if ( isset($this->deleted_at) ){
             return '退会済みユーザ';
         } else {
-            return $value;
+            return $name;
         }
     }
 
-    public function getContributionsAttribute()
+    /**
+     * コメント数と投稿数を返却
+     *
+     * @return int
+     */
+    public function getContributions(): int
     {
-        return count($this->comments) + count($this->posts);
+        return count($this->posts) + count($this->comments);
+    }
+
+    /**
+     * 意見の貢献数として, コメント数と投稿数を返却
+     *
+     * @return int
+     */
+    public function getContributionsAttribute(): int
+    {
+        return $this->getContributions();
     }
 
     /**
