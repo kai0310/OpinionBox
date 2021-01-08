@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Post\MyPostAction;
 use App\Http\Controllers\Post\AllPostAction;
+use App\Http\Controllers\Profile\ShowAction;
 use App\Http\Controllers\Admin;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +31,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::view('/faq', 'other.faq')->name('faq');
 Route::view('/guide', 'other.guide')->name('guide');
 Route::view('/about', 'other.about')->name('about');
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/post/all', AllPostAction::class)->name('post.all');
     Route::get('/post/me', MyPostAction::class)->name('post.me');
@@ -36,6 +39,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/post', PostController::class, [
         'only' => ['index', 'create', 'show',]
     ]);
+    Route::get('/users/@{id}', ShowAction::class)->name('user.show');
 });
 
 Route::middleware(['auth', 'can:admin'])

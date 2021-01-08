@@ -29,7 +29,7 @@ class PostController extends Controller
         $post = Post::withoutGlobalScope('is_checked')
             ->findOrFail($id);
 
-        if (!$post->is_checked ) {
+        if ( !$post->is_checked ) {
             if ( $post->user_id != Auth::id() and !Auth::user()->is_admin ) {
                 return abort(403);
             }

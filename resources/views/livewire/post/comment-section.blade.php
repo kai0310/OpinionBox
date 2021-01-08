@@ -1,4 +1,4 @@
-<div class="flex-1 p:2 sm:p-6 justify-between flex flex-col">
+<div class="flex-1 p:2 sm:p-6 justify-between flex flex-col mt-10">
     <div wire:poll.5s id="messages" class="flex flex-col space-y-4 p-3">
         @forelse($post->comments as $comment)
             @if ( $comment->user->id === Auth::id() )
@@ -6,9 +6,11 @@
                     <div class="flex items-end justify-end">
                         <div class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-1 items-end">
                             <div>
-                                <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white">
-                                    {{ $comment->body }}
-                                </span>
+                                <a href="{{ route('user.show', [$comment->user->name]) }}" class="block pointer select-none">
+                                    <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white">
+                                        {{ $comment->body }}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                         <img
@@ -16,7 +18,6 @@
                             alt="{{ $comment->user->name }}さんのプロフィール画像"
                             class="w-6 h-6 rounded-full order-1"
                         />
-                    </div>
                 </div>
             @else
                 <div class="chat-message">
@@ -51,6 +52,7 @@
         </div>
     @endif
     <form wire:submit.prevent="submit">
+        @csrf
         <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
             <div class="relative flex">
                 <input type="text"

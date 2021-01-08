@@ -38,6 +38,8 @@ class Comment extends Model
     }
 
     /**
+     * ユーザ
+     *
      * @return BelongsTo
      */
     public function user(): BelongsTo
@@ -46,6 +48,8 @@ class Comment extends Model
     }
 
     /**
+     * 投稿
+     *
      * @return BelongsTo
      */
     public function posts(): BelongsTo

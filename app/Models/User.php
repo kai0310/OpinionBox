@@ -81,6 +81,11 @@ class User extends Authenticatable
         }
     }
 
+    public function getContributionsAttribute()
+    {
+        return count($this->comments) + count($this->posts);
+    }
+
     /**
      * 投稿
      *
