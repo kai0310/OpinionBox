@@ -81,17 +81,6 @@ class Post extends Model
         });
     }
 
-
-    /**
-     * 投稿順にソート
-     *
-     * @param $query
-     * @param string $direction
-     */
-    public function scopeOrderByCreated($query, $direction = 'asc') {
-        $query->orderBy('created_at', $direction);
-    }
-
     /**
      * 投稿者
      *

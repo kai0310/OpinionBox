@@ -16,7 +16,7 @@ class MyPostAction extends Controller
         return view('post.me')->with(
             'posts', Auth::user()->posts()
             ->withoutGlobalScope('is_checked')
-            ->orderByCreated('desc')
+            ->latest()
             ->paginate(Post::TAKE_MAX_COUNT)
         );
     }

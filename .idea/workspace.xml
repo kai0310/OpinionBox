@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4f1c184a-3066-4955-bef1-a70463aee14c" name="デフォルト変更リスト" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Post/AllPostAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Post/AllPostAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Post/MyPostAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Post/MyPostAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Post/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Post/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Post/CommentSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Post/CommentSection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/post/comment-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/post/comment-section.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +187,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -255,7 +262,13 @@
       <workItem from="1610001779671" duration="25000" />
       <workItem from="1610073917244" duration="9674000" />
       <workItem from="1610083636804" duration="3000" />
-      <workItem from="1610112986331" duration="1557000" />
+      <workItem from="1610112986331" duration="2230000" />
+      <workItem from="1610201205349" duration="1400000" />
+      <workItem from="1610229715034" duration="294000" />
+      <workItem from="1610246166471" duration="530000" />
+      <workItem from="1610304821140" duration="489000" />
+      <workItem from="1610305354566" duration="97000" />
+      <workItem from="1610305474608" duration="10000" />
     </task>
     <servers />
   </component>
@@ -284,6 +297,10 @@
     <state x="2357" y="284" key="NewPhpFileDialog/0.25.1440.800/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609342757341" />
     <state x="2357" y="284" key="NewPhpFileDialog/0.25.1440.803/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609216398210" />
     <state x="802" y="417" key="NewPhpFileDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1610079411539" />
+    <state x="575" y="225" key="SettingsEditor" timestamp="1610305445146">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="575" y="225" key="SettingsEditor/0.25.1920.1055@0.25.1920.1055" timestamp="1610305445146" />
     <state x="677" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605799795113">
       <screen x="0" y="23" width="1680" height="960" />
     </state>
@@ -292,7 +309,7 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="647" y="464" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.1025@0.25.1680.1025" timestamp="1610079050494" />
-    <state x="925" y="427" width="676" height="623" key="find.popup" timestamp="1610077982716">
+    <state x="925" y="427" width="676" height="623" key="find.popup" timestamp="1610114627134">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="2497" y="280" width="773" height="656" key="find.popup/0.0.1440.900/1440.-144.1920.1080@1440.-144.1920.1080" timestamp="1609347541321" />
@@ -305,7 +322,7 @@
     <state x="2391" y="295" width="773" height="641" key="find.popup/0.25.1440.805/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609535258636" />
     <state x="2391" y="295" width="773" height="641" key="find.popup/0.25.1440.806/1440.-119.1920.1055@1440.-119.1920.1055" timestamp="1609541573149" />
     <state x="2391" y="265" width="773" height="595" key="find.popup/0.25.1440.875/1440.-119.1920.979@1440.-119.1920.979" timestamp="1609494685806" />
-    <state x="925" y="427" width="676" height="623" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1610077982716" />
+    <state x="925" y="427" width="676" height="623" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1610114627134" />
     <state x="925" y="398" width="676" height="576" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1609546504103" />
   </component>
 </project>

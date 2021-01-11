@@ -32,7 +32,7 @@ class CommentSection extends Component
 
         return view('livewire.post.comment-section')->with(
             'comments', $this->post->comments()
-            ->orderByCreated('desc')->get()
+            ->latest()->get()
         );
     }
 }

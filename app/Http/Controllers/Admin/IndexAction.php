@@ -15,6 +15,7 @@ class IndexAction extends Controller
         return view('admin.index')->with(
             'posts', Post::withoutGlobalScope('is_checked')
             ->where('is_checked', false)
+            ->latest()
             ->paginate(Post::TAKE_MAX_COUNT)
         );
     }

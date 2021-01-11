@@ -13,7 +13,7 @@ class PostController extends Controller
     {
         return view('post.index')->with(
             'posts', Post::inRandomOrder(Post::TAKE_RAND_COUNT)
-            ->orderByCreated('desc')
+            ->latest()
             ->get(),
         );
     }
@@ -23,7 +23,7 @@ class PostController extends Controller
         return view('post.create');
     }
 
-    public function show($id)
+    public function show(int $id)
     {
 
         $post = Post::withoutGlobalScope('is_checked')
