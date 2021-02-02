@@ -25,15 +25,13 @@ class Create extends Component
     {
         $this->validate();
 
-        Post::create([
+        $post = Post::create([
             'user_id'   => Auth::id(),
             'title'     => $this->title,
             'content'   => $this->content,
         ]);
-
-        $this->emit('saved');
-        $this->title = '';
-        $this->content = '';
+        session()->flash('message', '意見が投稿されました');
+        return redirect()->route('post.show', $post->id);
     }
 
     public function render()

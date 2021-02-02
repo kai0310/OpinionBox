@@ -7,6 +7,11 @@
       <sourceFolder url="file://$MODULE_DIR$/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/19" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/32" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/e1" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/ee" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bacon/bacon-qr-code" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dasprid/enum" />

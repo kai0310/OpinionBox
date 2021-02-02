@@ -2,7 +2,8 @@
     <x-jet-form-section submit="submit">
         <x-slot name="title">意見をBoxに入れてみる</x-slot>
         <x-slot name="description">
-            さぁ。あなたもあなたの意見をBoxに入れてみましょう。<br />方法は簡単。次のフォームにその意見のタイトルと内容を入力し、送信するだけです。
+            早速あなたもあなたの意見をBoxに入れてみましょう。<br />
+            Boxに入れるには次の項目にそれぞれ意見のタイトルと内容を入力し、送信するだけです。
         </x-slot>
         <div class="col-span-6 sm:col-span-4">
             <div class="max-w-xl ml-2 text-xs text-gray-600">
@@ -12,14 +13,14 @@
                 <div class="col-span-6 sm:col-span-4">
                     <x-jet-label for="title">タイトル</x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600">
-                        それがどの様な提案内容なのか分かりやすいようにタイトルを入力してください
+                        それがどの様な提案・意見なのか分かりやすいようにタイトルを入力してください
                     </div>
                     <x-jet-input wire:model="title" input="title" id="title" class="w-96" />
                     <x-jet-input-error for="title" class="mt-2" />
 
                     <x-jet-label class="my-2" for="content">内容</x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600">
-                        それがどの様な提案内容なのか分かりやすいように簡潔に内容を入力してください
+                        それがどの様な提案・意見なのか分かりやすいように簡潔に内容を入力してください
                     </div>
                     <textarea
                         wire:model="content"

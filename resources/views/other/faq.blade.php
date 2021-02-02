@@ -14,7 +14,7 @@
                     </h1>
                     <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
                         お困りですか？OpinionBoxについてのよくある質問は以下に記載しています。それでも解決しない場合は、
-                        <a href="https://github.com/kai0310/OpinionBox/issues" target="_blank">Support</a>を利用してください。
+                        <a href="{{ config('opinion-box.github.issues') }}" target="_blank">GitHubのissues</a>を利用してください。
                     </p>
                 </div>
                 <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
@@ -42,7 +42,9 @@
                             </summary>
                             <span>
                                 OpinionBoxにおいて修正の必要なバグ等はこのサイトの運営者もしくは
-                                <a href="https://github.com/kai0310/OpinionBox/issues" target="_blank">GitHubでissues</a>
+                                <a href="{{ config('opinion-box.github.issues') }}" target="_blank" class="text-blue-500">
+                                    GitHubでissues
+                                </a>
                                 を作成し、開発者に知らせてください。
                             </span>
                         </details>

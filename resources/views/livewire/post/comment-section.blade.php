@@ -14,29 +14,26 @@
                         <img
                             src="{{ $comment->user->profile_photo_url }}"
                             alt="{{ $comment->user->name }}さんのプロフィール画像"
-                            class="w-6 h-6 rounded-full order-1"
+                            class="w-8 h-8 rounded-full order-1"
                         />
                     </div>
                     @else
-                        <div class="chat-message my-1">
+                        <div class="chat-message my-1 my-5">
                             <div class="flex items-end">
                                 <div class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start">
                                     <div class="max-w-xs">
-                                        <a
-                                            href="{{ route('user.show', [$comment->user->name]) }}"
-                                            class="block pointer select-none"
-                                        >
-                                            <p class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
-                                                {{ $comment->body }}
-                                            </p>
-                                        </a>
+                                        <p class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+                                            {{ $comment->body }}
+                                        </p>
                                     </div>
                                 </div>
-                                <img
-                                    src="{{ $comment->user->profile_photo_url }}"
-                                    alt="{{ $comment->user->name }}さんのプロフィール画像"
-                                    class="w-6 h-6 rounded-full order-1"
-                                />
+                                <a href="{{ route('user.show', [$comment->user->name]) }}" class="block pointer select-none">
+                                    <img
+                                        src="{{ $comment->user->profile_photo_url }}"
+                                        alt="{{ $comment->user->name }}さんのプロフィール画像"
+                                        class="w-8 h-8 rounded-full order-1"
+                                    />
+                                </a>
                             </div>
                         </div>
                     @endif
