@@ -11,33 +11,40 @@
                 もっとOpinionBoxを活用しよう
             </h1>
             <p class="mt-2 text-gray-600">
-                OpinionBoxはよりたくさんの意見を集約し、改善されるように様々な機能があります。<br />
+                OpinionBoxはよりたくさんの意見を集約し、改善されるように様々な機能があります。<br/>
                 OpinionBoxを用いて私たちでより良い学校へとしましょう。
             </p>
         </div>
         <section class="max-w-6xl mx-auto px-10 py-6">
             <div class="flex flex-wrap -m-4">
                 <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-300 p-6 rounded-lg bg-white">
-                        <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                            <i class="fas fa-comments"></i>
+                    <a href="{{ route('post.create') }}">
+                        <div class="border border-gray-300 p-6 rounded-lg bg-white">
+                            <div
+                                class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h2 class="text-lg  font-medium title-font mb-2">意見を投稿してみよう</h2>
+                            <p class="leading-relaxed text-base">あなたもOpinionBoxを使って意見を投稿してみましょう。</p>
                         </div>
-                        <h2 class="text-lg  font-medium title-font mb-2">意見を投稿してみよう</h2>
-                        <p class="leading-relaxed text-base">あなたもOpinionBoxを使って意見を投稿してみましょう。</p>
-                    </div>
+                    </a>
+                </div>
+                <div class="xl:w-1/3 md:w-1/2 p-4">
+                    <a href="{{ route('post.all') }}">
+                        <div class="border border-gray-300 p-6 rounded-lg bg-white">
+                            <div
+                                class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <h2 class="text-lg  font-medium title-font mb-2">意見を探してみよう</h2>
+                            <p class="leading-relaxed text-base">OpinionBoxでは、公開中の他の人の意見を見ることができます。</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="xl:w-1/3 md:w-1/2 p-4">
                     <div class="border border-gray-300 p-6 rounded-lg bg-white">
-                        <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
-                            <i class="fas fa-thumbs-up"></i>
-                        </div>
-                        <h2 class="text-lg  font-medium title-font mb-2">意見を探してみよう</h2>
-                        <p class="leading-relaxed text-base">OpinionBoxでは、公開中の他の人の意見を見ることができます。</p>
-                    </div>
-                </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-300 p-6 rounded-lg bg-white">
-                        <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
+                        <div
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
                             <i class="fas fa-comment-dots"></i>
                         </div>
                         <h2 class="text-lg  font-medium title-font mb-2">
@@ -62,7 +69,7 @@
         <div class="flex flex-col mt-3">
             @forelse($posts as $post)
                 <div class="mt-6">
-                    <x-article-list-item :post="$post" />
+                    <x-article-list-item :post="$post"/>
                 </div>
             @empty
                 <div class="mt-6">

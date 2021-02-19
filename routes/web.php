@@ -35,7 +35,6 @@ Route::view('/about', 'other.about')->name('about');
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/post/all', AllPostAction::class)->name('post.all');
     Route::get('/post/me', MyPostAction::class)->name('post.me');
-    Route::get('/post/{id}', [PostController::class, 'show'])->where('id', '[0-9]+')->name('post.show');
     Route::resource('/post', PostController::class, [
         'only' => ['index', 'create', 'show',]
     ]);
