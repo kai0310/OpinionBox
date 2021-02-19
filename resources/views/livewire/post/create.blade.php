@@ -15,7 +15,7 @@
                     <div class="max-w-xl ml-2 text-xs text-gray-600">
                         それがどの様な提案・意見なのか分かりやすいようにタイトルを入力してください
                     </div>
-                    <x-jet-input wire:model="title" input="title" id="title" class="w-96" />
+                    <x-jet-input wire:model.debounce.500ms="title" input="title" id="title" class="w-96" />
                     <x-jet-input-error for="title" class="mt-2" />
 
                     <x-jet-label class="my-2" for="content">内容</x-jet-label>
@@ -23,7 +23,7 @@
                         それがどの様な提案・意見なのか分かりやすいように簡潔に内容を入力してください
                     </div>
                     <textarea
-                        wire:model="content"
+                        wire:model.debounce.500ms="content"
                         id="content"
                         class="mt-1 block w-full form-input rounded-md shadow-sm h-32"
                     ></textarea>

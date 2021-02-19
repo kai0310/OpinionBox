@@ -9,14 +9,17 @@ class PermitButton extends Component
 {
     public $post;
 
+    protected $listeners = [
+        'refresh-permit-button' => '$refresh',
+    ];
 
     public function submit()
     {
-        Post::withoutGlobalScope('is_checked')->where('id', $this->post->id)
+        Post::withoutGlobalScope('is_checked')->whereId($this->post->id)
             ->update([
                 'is_checked' => true,
             ]);
-        $this->emit('saved');
+        $this->emit('refresh-permit-button');
     }
 
     public function render()
