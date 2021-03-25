@@ -1,4 +1,4 @@
-# OpinionBox 【WIP】
+# OpinionBox
 
 <p>
     <a href="">
@@ -17,14 +17,28 @@
 ## Overview
 It is a web application that aims to gather students' opinions and consultations on the web.
 
+## Author
+- [kai0310](https://github.com/kai0310)
+
 ## Requirement
 - Git
 - PHP(7.3<=)
 - Composer
 - Node.js
 
-## Author
-Author: [kai0310](https://github.com/kai0310)
+## Install
+```bash
+$ git clone https://github.com/kai0310/OpinionBox.git
+$ cd OpinionBox
+$ ./vendor/bin/sail composer install
+$ cp .env.example .env
+$ ./vendor/bin/sail artisan key:generate
+$ ./vendor/bin/sail artisan migrate
+
+$ ./vendor/bin/sail up -d
+```
+
+Let's get access [http://localhost](http://localhost)
 
 ## Note
 Please note that I do not take any responsibility or liability for any damage or loss caused through this service.

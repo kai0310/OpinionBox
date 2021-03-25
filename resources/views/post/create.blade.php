@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl text-gray-800 leading-tight">
-            <a href="{{ route('post.index') }}" class="hover:underline">
-                Box
+            <a href="{{ route('post.index') }}" class="hover:underline"
+            >Box
             </a>
             <i class="fas fa-angle-right mx-3"></i>新規作成
         </h2>

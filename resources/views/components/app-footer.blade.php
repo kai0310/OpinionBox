@@ -32,11 +32,18 @@
         <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
           md:flex-row max-w-6xl">
             <div class="mt-2">
-                Licensed under the <a href="{{ config('opinion-box.github.license') }}" target="_blank">Apache License, Version 2.0</a><br />
-                © Copyright 2020 <a href="{{ config('opinion-box.github.author') }}" target="_blank">kai0310</a>. All Rights Reserved.
+                Licensed under the
+                <a href="{{ config('opinion-box.github.license') }}" target="_blank"
+                >Apache License, Version 2.0</a><br/>
+                © Copyright 2020
+                <a href="{{ config('opinion-box.github.author') }}" target="_blank"
+                >kai0310</a>
+                . All Rights Reserved.
             </div>
             <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="{{ config('opinion-box.github.repo') }}" class="w-12 mx-1" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="{{ config('opinion-box.github.repo') }}" class="w-24 mx-1" target="_blank"
+                ><i class="fab fa-github text-lg"></i>
+                </a>
             </div>
         </div>
     </div>

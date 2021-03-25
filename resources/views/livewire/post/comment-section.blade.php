@@ -6,7 +6,8 @@
                     <div class="flex items-end justify-end">
                         <div class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-1 items-end">
                             <div class="max-w-md">
-                                <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white ">
+                                <span
+                                    class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white select-none">
                                     {{ $comment->body }}
                                 </span>
                             </div>
@@ -22,12 +23,13 @@
                             <div class="flex items-end">
                                 <div class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start">
                                     <div class="max-w-xs">
-                                        <p class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+                                        <p class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600 select-none">
                                             {{ $comment->body }}
                                         </p>
                                     </div>
                                 </div>
-                                <a href="{{ route('user.show', [$comment->user->name]) }}" class="block pointer select-none">
+                                <a href="{{ route('user.show', [$comment->user->name]) }}"
+                                   class="block pointer select-none">
                                     <img
                                         src="{{ $comment->user->profile_photo_url }}"
                                         alt="{{ $comment->user->name }}さんのプロフィール画像"
