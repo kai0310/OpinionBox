@@ -47,3 +47,5 @@ Please note that I do not take any responsibility or liability for any damage or
 
 ## LICENSE
 Licensed under the [Apache License, Version 2.0](./LICENSE)
+
+All photos, materials and logos will be kept under license. Please make sure to include the copyright when using them.
