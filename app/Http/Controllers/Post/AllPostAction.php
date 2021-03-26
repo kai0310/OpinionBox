@@ -13,8 +13,7 @@ class AllPostAction extends Controller
     public function __invoke()
     {
         return view('post.all')->with(
-            'posts', Post::latest()
-            ->paginate(Post::TAKE_MAX_COUNT)
+            'posts', Post::latest()->paginate(Post::TAKE_MAX_COUNT)
         );
     }
 }

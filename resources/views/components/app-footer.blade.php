@@ -41,8 +41,8 @@
                 . All Rights Reserved.
             </div>
             <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="{{ config('opinion-box.github.repo') }}" class="w-24 mx-1" target="_blank"
-                ><i class="fab fa-github text-lg"></i>
+                <a href="{{ config('opinion-box.github.repo') }}" class="w-24 mx-1" target="_blank">
+                    <i class="fab fa-github text-lg"></i>
                 </a>
             </div>
         </div>

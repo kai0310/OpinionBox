@@ -7,6 +7,10 @@ use App\Models\User;
 
 class ShowAction extends Controller
 {
+    /**
+     * ユーザページを表示
+     * @param $id
+     */
     public function __invoke($id)
     {
         return view('profile.me')->with(
