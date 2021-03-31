@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire\Post;
 
+use App\Actions\Post\CreateLikePost;
+use App\Actions\Post\DeleteLikePost;
 use Livewire\Component;
 use App\Models\Like;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class LikeButton extends Component
 {
@@ -13,17 +15,14 @@ class LikeButton extends Component
 
     public function like()
     {
-        Like::create([
-            'post_id'  => $this->post->id,
-            'user_id' => Auth::id(),
-        ]);
+        app(CreateLikePost::class)->create($this->post->id);
         $this->counts++;
     }
 
     public function cancel()
     {
-         Like::where('user_id', Auth::id())->delete();
-         $this->counts--;
+        app(DeleteLikePost::class)->delete($this->post->id);
+        $this->counts--;
     }
 
     public function render()
