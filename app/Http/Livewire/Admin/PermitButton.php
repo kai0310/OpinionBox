@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
-use App\Models\Post;
+use App\Actions\Admin\UpdatePostStatus;
 
 class PermitButton extends Component
 {
@@ -15,10 +15,7 @@ class PermitButton extends Component
 
     public function submit()
     {
-        Post::withoutGlobalScope('is_checked')->whereId($this->post->id)
-            ->update([
-                'is_checked' => true,
-            ]);
+        app(UpdatePostStatus::class)->update($this->post->id);
         $this->emit('refresh-permit-button');
     }
 

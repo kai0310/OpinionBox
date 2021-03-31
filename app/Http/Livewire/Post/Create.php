@@ -13,7 +13,7 @@ class Create extends Component
 
     protected $rules = [
         'title'     => 'required|string|min:5|max:30',
-        'content'   => 'required|string|min:20|max:200',
+        'content'   => 'required|string|min:20|max:500',
     ];
 
     public function updated($propertyName)

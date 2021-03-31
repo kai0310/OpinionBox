@@ -16,7 +16,7 @@
             </p>
         </div>
         <section class="max-w-6xl mx-auto px-10 py-6">
-            <div class="flex flex-wrap -m-4">
+            <div class="flex flex-wrap -m-4 items-stretch">
                 <div class="xl:w-1/3 md:w-1/2 p-4">
                     <a href="{{ route('post.create') }}">
                         <div class="border border-gray-300 p-6 rounded-lg bg-white">

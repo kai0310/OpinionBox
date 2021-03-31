@@ -15,4 +15,6 @@ return [
         'issues'        => 'https://github.com/kai0310/OpinionBox/issues',
     ],
 
+    'wiki' => 'https://opinionbox.netlify.app'
+
 ];

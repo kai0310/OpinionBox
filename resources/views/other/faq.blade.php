@@ -24,7 +24,7 @@
                                 投稿内容は他の人に見られますか？
                             </summary>
                             <span>
-                                はい。投稿内容は承認された投稿のみ公開されます。承認は権限を持っている一部のユーザのみが行うことができます。<br />
+                                はい。投稿内容は承認された投稿のみ公開されます。承認は権限を持っている一部のユーザのみが行うことができます。<br/>
                                 詳細は<a href="{{ route('guide') }}" class="text-blue-500">Guide</a>をご参照ください。
                             </span>
                         </details>
@@ -33,7 +33,8 @@
                                 どの様にして投稿することができますか？
                             </summary>
                             <span>
-                                OpinionBoxの利用方法については<a href="route('Guide')">ガイド</a>に記載されていますので、ご活用ください。
+                                OpinionBoxの利用方法については<a href="route('Guide')" class="text-blue-500">ガイド</a> もしくは
+                                <a href="{{ config('opinion-box.wiki') }}" class="text-blue-500">公式マニュアル(wiki)</a>に記載されていますので、ご活用ください。
                             </span>
                         </details>
                         <details class="mb-4">
@@ -42,7 +43,8 @@
                             </summary>
                             <span>
                                 OpinionBoxにおいて修正の必要なバグ等はこのサイトの運営者もしくは
-                                <a href="{{ config('opinion-box.github.issues') }}" target="_blank" class="text-blue-500">
+                                <a href="{{ config('opinion-box.github.issues') }}" target="_blank"
+                                   class="text-blue-500">
                                     GitHubでissues
                                 </a>
                                 を作成し、開発者に知らせてください。

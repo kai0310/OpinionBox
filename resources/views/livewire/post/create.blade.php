@@ -11,21 +11,21 @@
             </div>
             <x-slot name="form">
                 <div class="col-span-6 sm:col-span-4">
-                    <x-jet-label for="title">タイトル</x-jet-label>
+                        <x-jet-label for="title" class="text-lg">タイトル</x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600">
                         それがどの様な提案・意見なのか分かりやすいようにタイトルを入力してください
                     </div>
-                    <x-jet-input wire:model.debounce.500ms="title" input="title" id="title" class="w-96" />
+                    <x-jet-input wire:model.debounce.3s="title" input="title" id="title" class="w-96" />
                     <x-jet-input-error for="title" class="mt-2" />
 
-                    <x-jet-label class="my-2" for="content">内容</x-jet-label>
+                    <x-jet-label class="my-2 text-lg" for="content">内容</x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600">
                         それがどの様な提案・意見なのか分かりやすいように簡潔に内容を入力してください
                     </div>
                     <textarea
-                        wire:model.debounce.500ms="content"
+                        wire:model.debounce.5s="content"
                         id="content"
-                        class="mt-1 block w-full form-input rounded-md shadow-sm h-32"
+                        class="mt-1 block w-full form-input rounded-md shadow-sm h-56"
                     ></textarea>
                     <x-jet-input-error for="content" class="mt-2" />
                 </div>

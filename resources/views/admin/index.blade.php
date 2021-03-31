@@ -22,7 +22,11 @@
                         <a href="{{ route('post.show', [$post->id]) }}" class="text-blue-500 hover:underline">もっと見る</a>
                         <div class="flex justify-end items-center mt-4">
                             <div class="flex items-center">
-                                <img src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->name }}さんのプロフィール画像" class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block ">
+                                <img
+                                    src="{{ $post->user->profile_photo_url }}"
+                                    alt="{{ $post->user->name }}さんのプロフィール画像"
+                                    class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+                                >
                                 <h1 class="text-gray-700 font-bold">{{ $post->user->name }}</h1>
                                 <span class="ml-3 font-light text-gray-600">{{ $post->created_at }}</span>
                             </div>
@@ -33,7 +37,7 @@
         @empty
             <div class="mt-6">
                 <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
-                    <h1 class="text-gray-700 font-bold cursor-pointer">まだ表示できる意見がない様です</h1>
+                    <h1 class="text-gray-700 font-bold">未承認の意見はありません</h1>
                 </div>
             </div>
         @endforelse
