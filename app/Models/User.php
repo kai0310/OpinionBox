@@ -46,7 +46,6 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be cast to native types.
-     *
      * @var array
      */
     protected $casts = [
@@ -57,7 +56,6 @@ class User extends Authenticatable
 
     /**
      * The accessors to append to the model's array form.
-     *
      * @var array
      */
     protected $appends = [
@@ -68,7 +66,6 @@ class User extends Authenticatable
 
     /**
      * 退会済みのユーザの名前を指定
-     *
      * @param $name
      * @return string
      */
@@ -83,7 +80,6 @@ class User extends Authenticatable
 
     /**
      * コメント数と投稿数を返却
-     *
      * @return int
      */
     public function getContributions(): int
@@ -93,7 +89,6 @@ class User extends Authenticatable
 
     /**
      * 意見の貢献数として, コメント数と投稿数を返却
-     *
      * @return int
      */
     public function getContributionsAttribute(): int
@@ -103,7 +98,6 @@ class User extends Authenticatable
 
     /**
      * 投稿
-     *
      * @return HasMany
      */
     public function posts(): hasMany
@@ -113,7 +107,6 @@ class User extends Authenticatable
 
     /**
      * コメント
-     *
      * @return hasMany
      */
     public function comments(): hasMany
@@ -123,7 +116,6 @@ class User extends Authenticatable
 
     /**
      * いいね
-     *
      * @return HasMany
      */
     public function likes()

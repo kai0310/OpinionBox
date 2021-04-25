@@ -41,7 +41,6 @@ class Post extends Model
 
     /**
      * 投稿日時
-     *
      * @return string
      */
     public function getCreatedAttribute(): string
@@ -83,7 +82,6 @@ class Post extends Model
 
     /**
      * 投稿者
-     *
      * @return BelongsTo
      */
     public function user(): BelongsTo
@@ -93,7 +91,6 @@ class Post extends Model
 
     /**
      * コメント
-     *
      * @return hasMany
      */
     public function comments(): hasMany
@@ -103,7 +100,6 @@ class Post extends Model
 
     /**
      * いいね
-     *
      * @return HasMany
      */
     public function likes(): hasMany

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateRejectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('rejects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('latest_history_posts_id');
-            $table->boolean('is_checked')->default(false);
+            $table->unsignedBigInteger('history_posts_id');
+            $table->text('body');
             $table->foreignId('user_id')->nullable()->index();
-            $table->foreign('latest_history_posts_id')
-                ->references('id')
-                ->on('history_posts');
+            $table->foreign('history_posts_id')->references('id')->on('history_posts');
+            $table->dateTime('created_at')->nullable();
+            $table->dateTime('updated_at')->nullable();
         });
     }
 
@@ -31,6 +31,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('rejects');
     }
 }

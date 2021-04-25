@@ -30,7 +30,6 @@ class Comment extends Model
 
     /**
      * ユーザ
-     *
      * @return BelongsTo|void
      */
     public function user()
@@ -40,7 +39,6 @@ class Comment extends Model
 
     /**
      * 投稿
-     *
      * @return BelongsTo
      */
     public function posts(): BelongsTo

@@ -6,33 +6,30 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Like extends Model
+class Reject extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'body',
         'user_id',
-        'post_id',
+        'history_posts_id',
     ];
 
-    public $timestamps = false;
+    /**
+     * ユーザ
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class)->withTrashed();
+    }
 
     /**
      * 投稿
      * @return BelongsTo
      */
-    public function post(): BelongsTo
+    public function history_posts(): BelongsTo
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(HistoryPost::class);
     }
-
-    /**
-     * 投稿者
-     * @return BelongsTo
-     */
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
 }
