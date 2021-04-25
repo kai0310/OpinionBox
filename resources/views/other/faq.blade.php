@@ -33,7 +33,7 @@
                                 どの様にして投稿することができますか？
                             </summary>
                             <span>
-                                OpinionBoxの利用方法については<a href="route('Guide')" class="text-blue-500">ガイド</a> もしくは
+                                OpinionBoxの利用方法については<a href="{{ route('guide') }}" class="text-blue-500">ガイド</a> もしくは
                                 <a href="{{ config('opinion-box.wiki') }}" class="text-blue-500">公式マニュアル(wiki)</a>に記載されていますので、ご活用ください。
                             </span>
                         </details>
@@ -43,8 +43,7 @@
                             </summary>
                             <span>
                                 OpinionBoxにおいて修正の必要なバグ等はこのサイトの運営者もしくは
-                                <a href="{{ config('opinion-box.github.issues') }}" target="_blank"
-                                   class="text-blue-500">
+                                <a href="{{ config('opinion-box.github.issues') }}" target="_blank" class="text-blue-500">
                                     GitHubでissues
                                 </a>
                                 を作成し、開発者に知らせてください。
@@ -76,15 +75,16 @@
                                 退会・アカウント削除したい
                             </summary>
                             <span class="px-4 py-2">
-                                  退会・アカウント削除はご自身のアカウントよりプロフィールページにてアカウント削除の項目がありますので、そちらを削除することにより完全に削除されます。
-                                </span>
+                                退会・アカウント削除はご自身のアカウントよりプロフィールページにてアカウント削除の項目がありますので、そちらを削除することにより完全に削除されます。
+                            </span>
                         </details>
                         <details class="mb-4">
                             <summary class="bg-gray-200 rounded-md py-2 px-4 cursor-pointer select-none">
                                 サポート環境について
                             </summary>
                             <span class="px-4 py-2">
-                                OpinionBoxのサポート環境は以下の通りです。また、当サイトではJavaScriptを使用しております。JavaScriptを無効にして使用された場合、各ページが正常に動作しない、または、表示されない場合がございます。
+                                OpinionBoxのサポート環境は以下の通りです。また、当サイトではJavaScriptを使用しております。
+                                JavaScriptを無効にして使用された場合、各ページが正常に動作しない、または、表示されない場合がございます。
                                 <ul class="list-disc list-inside ml-3">
                                     <li>Google Chrome 最新バージョン</li>
                                     <li>Firefox 最新バージョン</li>

@@ -3,7 +3,6 @@
         <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-center">
             <div class="p-5 w-48 ">
                 <div class="text-xs uppercase text-gray-500 font-medium">Home</div>
-                <a class="my-3 block" href="/">Service</a>
                 <a class="my-3 block" href="{{ route('dashboard') }}">Top</a>
                 <a class="my-3 block" href="{{ route('about') }}">About Us</a>
             </div>
