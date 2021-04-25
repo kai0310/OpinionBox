@@ -23,16 +23,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-
 Route::view('/faq', 'other.faq')->name('faq');
 Route::view('/guide', 'other.guide')->name('guide');
 Route::view('/about', 'other.about')->name('about');
 
 Route::group(['middleware' => 'auth'], function() {
+    Route::view('/', 'dashboard')->name('dashboard');
     Route::get('/post/all', AllPostAction::class)->name('post.all');
     Route::get('/post/me', MyPostAction::class)->name('post.me');
     Route::resource('/post', PostController::class, [

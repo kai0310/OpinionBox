@@ -69,7 +69,7 @@
         <div class="flex flex-col mt-3">
             @forelse($posts as $post)
                 <div class="mt-6">
-                    <x-article-list-item :post="$post"/>
+                    <x-article-list-item :post="$post" />
                 </div>
             @empty
                 <div class="mt-6">
@@ -86,8 +86,7 @@
                         <a
                             href="{{ route('post.all') }}"
                             class="text-gray-700 font-bold hover:underline cursor-pointer"
-                        >
-                            他の意見も見る
+                        >他の意見も見る
                         </a>
                     </div>
                 </div>

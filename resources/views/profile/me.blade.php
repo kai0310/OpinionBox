@@ -9,7 +9,7 @@
         <div class="bg-white my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg shadow-sm mx-auto">
             <div class="block relative h-40 bg-gray-400"></div>
             <div class="relative shadow mx-auto h-24 w-24 -my-12 border-white rounded-full overflow-hidden border-4">
-                <img class="object-cover w-full h-full" src="{{ $user->profile_photo_url }}">
+                <img class="object-cover w-full h-full" src="{{ $user->profile_photo_url }}" />
             </div>
             <div class="mt-16">
                 <h1 class="text-lg text-center font-semibold">

@@ -17,7 +17,6 @@ class Create extends Component
             'content' => $this->content,
         ])->toArray();
         $id = app(CreatePost::class)->create($request);
-
         session()->flash('message', '意見が投稿されました');
         return redirect()->route('post.show', $id);
     }

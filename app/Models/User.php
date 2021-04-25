@@ -76,9 +76,9 @@ class User extends Authenticatable
     {
         if ( isset($this->deleted_at) ){
             return '退会済みユーザ';
-        } else {
-            return $name;
         }
+
+        return $name;
     }
 
     /**
@@ -88,7 +88,7 @@ class User extends Authenticatable
      */
     public function getContributions(): int
     {
-        return count($this->posts) + count($this->comments);
+        return count($this['posts']) + count($this['comments']);
     }
 
     /**

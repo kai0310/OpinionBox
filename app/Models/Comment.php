@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
 /**
  * Class Comment
@@ -30,9 +31,9 @@ class Comment extends Model
     /**
      * ユーザ
      *
-     * @return BelongsTo
+     * @return BelongsTo|void
      */
-    public function user(): BelongsTo
+    public function user()
     {
         return $this->belongsTo(User::class)->withTrashed();
     }
