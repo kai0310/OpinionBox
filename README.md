@@ -34,7 +34,7 @@ It is a web application that aims to gather students' opinions and consultations
 ```bash
 $ git clone https://github.com/kai0310/OpinionBox.git
 $ cd OpinionBox
-$ ./vendor/bin/sail composer install
+$ composer install
 $ cp .env.example .env
 $ ./vendor/bin/sail artisan key:generate
 $ ./vendor/bin/sail artisan migrate
