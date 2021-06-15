@@ -15,7 +15,7 @@
                     <div class="max-w-xl ml-2 text-xs text-gray-600">
                         それがどの様な提案・意見なのか分かりやすいようにタイトルを入力してください
                     </div>
-                    <x-jet-input wire:model.debounce.3s="title" input="title" id="title" class="w-96" />
+                    <x-jet-input wire:model.debounce.3s="title" id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required autofocus />
                     <x-jet-input-error for="title" class="mt-2" />
 
                     <x-jet-label class="my-2 text-lg" for="content">内容</x-jet-label>
