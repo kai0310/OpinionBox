@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use JoelButcher\Socialstream\HasConnectedAccounts;
@@ -51,6 +52,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_admin'          => 'boolean',
+        'is_developer'      => 'boolean',
     ];
 
     /**
@@ -74,5 +77,55 @@ class User extends Authenticatable
         }
 
         return $this->getPhotoUrl();
+    }
+
+    /**
+     * コメント数と投稿数を返却
+     *
+     * @return int
+     */
+    public function getContributions(): int
+    {
+        return count($this->posts) + count($this->comments);
+    }
+
+    /**
+     * 意見の貢献数として, コメント数と投稿数を返却
+     *
+     * @return int
+     */
+    public function getContributionsAttribute(): int
+    {
+        return $this->getContributions();
+    }
+
+    /**
+     * 投稿
+     *
+     * @return HasMany
+     */
+    public function posts(): hasMany
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    /**
+     * コメント
+     *
+     * @return hasMany
+     */
+    public function comments(): hasMany
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    /**
+     * いいね
+     *
+     * @return HasMany
+     */
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }
