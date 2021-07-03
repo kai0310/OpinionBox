@@ -32,8 +32,7 @@
                 <div class="xl:w-1/3 md:w-1/2 p-4">
                     <a href="{{ route('post.all') }}">
                         <div class="border border-gray-300 p-6 rounded-lg bg-white">
-                            <div
-                                class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
+                            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
                                 <i class="fas fa-thumbs-up"></i>
                             </div>
                             <h2 class="text-lg  font-medium title-font mb-2">意見を探してみよう</h2>
@@ -86,8 +85,7 @@
                         <a
                             href="{{ route('post.all') }}"
                             class="text-gray-700 font-bold hover:underline cursor-pointer"
-                        >
-                            他の意見も見る
+                        >他の意見も見る
                         </a>
                     </div>
                 </div>

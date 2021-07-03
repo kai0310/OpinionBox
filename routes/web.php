@@ -19,26 +19,19 @@ use App\Http\Controllers\Admin;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome')->name('welcome');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-
-
-Route::group(['middleware' => 'auth'], function() {
-    Route::view('/faq', 'other.faq')->name('faq');
-    Route::view('/guide', 'other.guide')->name('guide');
-    Route::view('/about', 'other.about')->name('about');
-    Route::get('/post/all', AllPostAction::class)->name('post.all');
-    Route::get('/post/me', MyPostAction::class)->name('post.me');
-    Route::resource('/post', PostController::class, [
+Route::middleware(['auth'])->group(function () {
+    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::view('faq', 'other.faq')->name('faq');
+    Route::view('guide', 'other.guide')->name('guide');
+    Route::view('about', 'other.about')->name('about');
+    Route::get('post/all', AllPostAction::class)->name('post.all');
+    Route::get('post/me', MyPostAction::class)->name('post.me');
+    Route::resource('post', PostController::class, [
         'only' => ['index', 'create', 'show',]
     ]);
-    Route::get('/users/@{user:name}', ShowAction::class)->name('user.show');
+    Route::get('users/@{user:name}', ShowAction::class)->name('user.show');
 });
 
 Route::middleware(['auth', 'can:admin'])

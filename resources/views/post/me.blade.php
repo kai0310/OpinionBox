@@ -24,7 +24,9 @@
         @empty
             <div class="mt-6">
                 <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
-                    <h1 class="text-gray-700 font-bold cursor-pointer">まだ表示できる意見がない様です</h1>
+                    <h1 class="text-gray-700 font-bold cursor-pointer">
+                        まだ表示できる意見がない様です
+                    </h1>
                 </div>
             </div>
         @endforelse
