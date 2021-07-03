@@ -63,6 +63,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "i": "composer install"
+        "i": "composer install",
+        "sail:up": [
+            "@php -r \"file_exists('.env') || copy('.env.dev', '.env');\"",
+            "vendor/bin/sail up -d"
+        ],
+        "sail:down": "vendor/bin/sail down"
     }
 }

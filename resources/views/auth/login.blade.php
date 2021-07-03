@@ -12,6 +12,7 @@
             </div>
         @endif
 
+        @if (\Laravel\Fortify\Features::enabled(\Laravel\Fortify\Features::registration()))
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
@@ -44,5 +45,10 @@
                 </x-jet-button>
             </div>
         </form>
+        @endif
+
+        @if (JoelButcher\Socialstream\Socialstream::show())
+            <x-socialstream-providers />
+        @endif
     </x-jet-authentication-card>
 </x-guest-layout>

@@ -2,24 +2,26 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use JoelButcher\Socialstream\HasConnectedAccounts;
+use JoelButcher\Socialstream\SetsProfilePhotoFromUrl;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
-    use HasProfilePhoto;
+    use HasProfilePhoto {
+        getProfilePhotoUrlAttribute as getPhotoUrl;
+    }
+    use HasConnectedAccounts;
     use Notifiable;
+    use SetsProfilePhotoFromUrl;
     use TwoFactorAuthenticatable;
-    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -27,9 +29,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -51,8 +51,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'is_admin'          => 'boolean',
-        'is_developer'      => 'boolean',
     ];
 
     /**
@@ -64,70 +62,17 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    protected $dates = ['deleted_at'];
-
     /**
-     * 退会済みのユーザの名前を指定
+     * Get the URL to the user's profile photo.
      *
-     * @param $name
      * @return string
      */
-    public function getNameAttribute($name): string
+    public function getProfilePhotoUrlAttribute()
     {
-        if ( isset($this->deleted_at) ){
-            return '退会済みユーザ';
-        } else {
-            return $name;
+        if (filter_var($this->profile_photo_path, FILTER_VALIDATE_URL)) {
+            return $this->profile_photo_path;
         }
-    }
 
-    /**
-     * コメント数と投稿数を返却
-     *
-     * @return int
-     */
-    public function getContributions(): int
-    {
-        return count($this->posts) + count($this->comments);
-    }
-
-    /**
-     * 意見の貢献数として, コメント数と投稿数を返却
-     *
-     * @return int
-     */
-    public function getContributionsAttribute(): int
-    {
-        return $this->getContributions();
-    }
-
-    /**
-     * 投稿
-     *
-     * @return HasMany
-     */
-    public function posts(): hasMany
-    {
-        return $this->hasMany(Post::class);
-    }
-
-    /**
-     * コメント
-     *
-     * @return hasMany
-     */
-    public function comments(): hasMany
-    {
-        return $this->hasMany(Comment::class);
-    }
-
-    /**
-     * いいね
-     *
-     * @return HasMany
-     */
-    public function likes()
-    {
-        return $this->hasMany(Like::class);
+        return $this->getPhotoUrl();
     }
 }
