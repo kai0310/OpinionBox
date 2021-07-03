@@ -1,5 +1,5 @@
 <div class="flex item-center justify-center">
-    <a href="{{ route('user.show', $user->name) }}">
+    <a href="{{ route('user.show', [$user]) }}">
         <img
             src="{{ $user->profile_photo_url }}"
             alt="{{ $user->name }}さんのプロフィール"
@@ -8,7 +8,7 @@
                 "
         />
         <h1 class="text-gray-700 font-bold my-auto">
-            <a href="{{ route('user.show', [$user->name]) }}" class="block hover:underline pointer">
+            <a href="{{ route('user.show', [$user]) }}" class="block hover:underline pointer">
                 {{ $user->name }}
             </a>
         </h1>

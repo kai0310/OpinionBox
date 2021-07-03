@@ -9,12 +9,10 @@ class ShowAction extends Controller
 {
     /**
      * ユーザページを表示
-     * @param $id
+     * @param User $user
      */
-    public function __invoke($id)
+    public function __invoke(User $user)
     {
-        return view('profile.me')->with(
-            'user', User::where('name', $id)->firstOrFail()
-        );
+        return view('profile.me', compact('user'));
     }
 }

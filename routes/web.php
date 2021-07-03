@@ -38,7 +38,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/post', PostController::class, [
         'only' => ['index', 'create', 'show',]
     ]);
-    Route::get('/users/@{id}', ShowAction::class)->name('user.show');
+    Route::get('/users/@{user:name}', ShowAction::class)->name('user.show');
 });
 
 Route::middleware(['auth', 'can:admin'])

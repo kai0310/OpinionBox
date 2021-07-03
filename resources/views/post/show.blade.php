@@ -47,7 +47,7 @@
                             </div>
                         @endif
                         <h1 class="text-xl font-bold text-gray-700 md:text-2xl">
-                            {{ $post->title }}について
+                            {{ $post->title }}
                         </h1>
                         <p class="mt-2 text-gray-600">
                             現在選択中のOpinionBoxに入った意見を表示しています。

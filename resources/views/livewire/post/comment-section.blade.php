@@ -29,7 +29,7 @@
                                 </p>
                             </div>
                         </div>
-                        <a href="{{ route('user.show', [$comment->user->name]) }}"
+                        <a href="{{ route('user.show', [$comment->user]) }}"
                            class="block pointer select-none">
                             <img
                                 src="{{ $comment->user->profile_photo_url }}"
