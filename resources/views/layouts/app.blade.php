@@ -12,12 +12,12 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"/>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ url('css/app.css') }}">
 
         @livewireStyles
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ url('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
