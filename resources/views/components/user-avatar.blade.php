@@ -3,8 +3,9 @@
         <img
             src="{{ $user->profile_photo_url }}"
             alt="{{ $user->name }}さんのプロフィール"
-            class="mx-3 w-10 h-10 object-cover rounded-full hidden sm:block
-        @if ( $user->is_admin ) border border-yellow-400 @endif"
+            class="
+                mx-3 w-10 h-10 object-cover rounded-full hidden sm:block @if ( $user->is_admin ) border border-yellow-400 @endif
+                "
         />
         <h1 class="text-gray-700 font-bold my-auto">
             <a href="{{ route('user.show', [$user->name]) }}" class="block hover:underline pointer">

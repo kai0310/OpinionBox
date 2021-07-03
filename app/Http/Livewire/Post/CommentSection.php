@@ -14,7 +14,7 @@ class CommentSection extends Component
     {
         $request = collect(['body' => $this->body, 'postId' => $this->post->id])->toArray();
         app(CreateComment::class)->create($request);
-        session()->flash('message', '投稿が完了しました');
+        session()->flash('message', 'メッセージを送信中です');
         $this->resetValidation();
         $this->body = '';
     }

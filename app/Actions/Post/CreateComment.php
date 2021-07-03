@@ -17,9 +17,9 @@ class CreateComment implements CreateComments
         ])->validate();
 
         Comment::create([
-            'body' => $request['body'],
-            'user_id' => Auth::id(),
-            'post_id' => $request['postId'],
+            'body'      => $request['body'],
+            'user_id'   => Auth::id(),
+            'post_id'   => $request['postId'],
         ]);
     }
 }

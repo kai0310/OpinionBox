@@ -13,8 +13,8 @@ class CreatePost implements CreatePosts
     public function create(array $request): int
     {
         Validator::make($request, [
-            'title'  => ['required', 'string', 'min:5', 'max:30'],
-            'content' => ['required', 'string', 'min:20', 'max:500'],
+            'title'     => ['required', 'string', 'min:5', 'max:30'],
+            'content'   => ['required', 'string', 'min:20', 'max:500'],
         ])->validate();
 
         return Post::create([
