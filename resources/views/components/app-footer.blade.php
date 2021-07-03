@@ -19,11 +19,12 @@
                 <a class="my-3 block" href="{{ route('guide') }}">Guide</a>
                 <a class="my-3 block" href="{{ route('faq') }}">FAQ</a>
                 <a class="my-3 block" href="{{ config('opinion-box.github.license') }}" target="_blank">LICENSE</a>
+                <a class="my-3 block" href="{{ config('opinion-box.wiki') }}" target="_blank">Wiki</a>
             </div>
             <div class="p-5 w-48 ">
                 <div class="text-xs uppercase text-gray-500 font-medium">Contact us</div>
-                <a class="my-3 block" href="{{ config('opinion-box.github.repo') }}" target="_blank">GitHub-Repo</a>
-                <a href="" target="_blank">Contributor</a>
+                <a href="{{ config('opinion-box.github.repository') }}" target="_blank" class="my-3 block">GitHub-Repo</a>
+                <a href="{{ config('opinion-box.github.contributors') }}" target="_blank">Contributor</a>
             </div>
         </div>
     </div>
@@ -41,7 +42,7 @@
                 . All Rights Reserved.
             </div>
             <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-                <a href="{{ config('opinion-box.github.repo') }}" class="w-24 mx-1" target="_blank">
+                <a href="{{ config('opinion-box.github.repository') }}" class="w-24 mx-1" target="_blank">
                     <i class="fab fa-github text-lg"></i>
                 </a>
             </div>

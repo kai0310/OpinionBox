@@ -11,7 +11,7 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.3.3",
         "@tailwindcss/typography": "^0.4.1",
-        "@tailwindcss/ui": "^0.7.2",
+        "@tailwindcss/ui": "^0.3.1",
         "alpinejs": "^3.2.1",
         "axios": "^0.21",
         "cross-env": "^7.0",
