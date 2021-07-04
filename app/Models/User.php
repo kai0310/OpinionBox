@@ -67,7 +67,6 @@ class User extends Authenticatable
 
     /**
      * Get the URL to the user's profile photo.
-     *
      * @return string
      */
     public function getProfilePhotoUrlAttribute()
@@ -80,7 +79,18 @@ class User extends Authenticatable
     }
 
     /**
-     * コメント数と投稿数を返却
+     * Return the format user name.
+     *
+     * @param $name
+     * @return array|string|string[]|null
+     */
+    public function getNameAttribute($name)
+    {
+        return  preg_replace('/[0-9]/', '', $name);
+    }
+
+    /**
+     * Return the number of the comments and posts.
      *
      * @return int
      */
@@ -90,7 +100,7 @@ class User extends Authenticatable
     }
 
     /**
-     * 意見の貢献数として, コメント数と投稿数を返却
+     * Return the number of comments and posts as the number of opinions contributed.
      *
      * @return int
      */
@@ -100,7 +110,7 @@ class User extends Authenticatable
     }
 
     /**
-     * 投稿
+     * User posts.
      *
      * @return HasMany
      */
@@ -110,7 +120,7 @@ class User extends Authenticatable
     }
 
     /**
-     * コメント
+     * User comments.
      *
      * @return hasMany
      */
@@ -120,7 +130,7 @@ class User extends Authenticatable
     }
 
     /**
-     * いいね
+     * User likes.
      *
      * @return HasMany
      */

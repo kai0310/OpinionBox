@@ -18,7 +18,7 @@ class Like extends Model
     public $timestamps = false;
 
     /**
-     * 投稿
+     * Liked post
      *
      * @return BelongsTo
      */
@@ -28,7 +28,7 @@ class Like extends Model
     }
 
     /**
-     * 投稿者
+     * Posted user
      *
      * @return BelongsTo
      */

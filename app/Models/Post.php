@@ -7,15 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Carbon;
 
 /**
  * Class Post
  * @package App\Models
  *
  * @property int $id ID
- * @property int $user_id ユーザID
- * @property string $title タイトル
- * @property string $content 本文
+ * @property int $user_id User ID
+ * @property string $title Post Title
+ * @property string $content Post Body
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
@@ -35,12 +36,12 @@ class Post extends Model
         'is_checked' => 'boolean',
     ];
 
-    // 最大取得数
+    // Maximum number of acquisitions.
     public const TAKE_MAX_COUNT  = 10;
     public const TAKE_RAND_COUNT = 5;
 
     /**
-     * 投稿日時
+     * Date posted
      *
      * @return string
      */
@@ -71,18 +72,18 @@ class Post extends Model
         return 'たった今';
     }
 
-    /**
-     * 承認済みの投稿のみ
-     */
     protected static function booted()
     {
+        /**
+         * Only approved posts
+         */
         static::addGlobalScope('is_checked', function (Builder $builder) {
             $builder->where('is_checked', true);
         });
     }
 
     /**
-     * 投稿者
+     * Posted user
      *
      * @return BelongsTo
      */
@@ -92,7 +93,7 @@ class Post extends Model
     }
 
     /**
-     * コメント
+     * Comments
      *
      * @return hasMany
      */
@@ -102,7 +103,7 @@ class Post extends Model
     }
 
     /**
-     * いいね
+     * Likes
      *
      * @return HasMany
      */
