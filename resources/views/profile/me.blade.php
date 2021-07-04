@@ -18,6 +18,9 @@
                 <p class="text-sm text-gray-600 text-center">
                     {{ $user->contributions }} contributions
                 </p>
+                <p class="mx-5 text-gray-800">
+                    {{ $user->bio }}
+                </p>
             </div>
             <div class="mt-6 pt-3 flex flex-wrap mx-6 border-t">
                 @if ( $user->is_admin )
