@@ -55,8 +55,8 @@
                     <x-jet-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
                         About
                     </x-jet-nav-link>
-                    @can('admin')
-                        <x-jet-nav-link href="{{ route('admin.index') }}" :active="request()->routeIs('admin.index')">
+                    @can('stuff')
+                        <x-jet-nav-link href="{{ route('stuff.index') }}" :active="request()->routeIs('stuff.index')">
                             未承認の意見
                         </x-jet-nav-link>
                     @endcan
@@ -135,8 +135,8 @@
             <x-jet-responsive-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
                 About
             </x-jet-responsive-nav-link>
-            @can('admin')
-                <x-jet-responsive-nav-link href="{{ route('admin.index') }}" :active="request()->routeIs('about')">
+            @can('stuff')
+                <x-jet-responsive-nav-link href="{{ route('stuff.index') }}" :active="request()->routeIs('about')">
                     未承認の意見
                 </x-jet-responsive-nav-link>
             @endcan

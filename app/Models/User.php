@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection;
 use JoelButcher\Socialstream\HasConnectedAccounts;
 use JoelButcher\Socialstream\SetsProfilePhotoFromUrl;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -110,7 +112,28 @@ class User extends Authenticatable
     }
 
     /**
-     * User posts.
+     * Return ser role list.
+     *
+     * @return array
+     */
+    public function getRoleListAttribute(): array
+    {
+        return $this->roles()->pluck('name')->toArray();
+    }
+
+    /**
+     * Check user has the role.
+     *
+     * @param string $role
+     * @return bool
+     */
+    public function hasRole(string $role): bool
+    {
+        return in_array($role ,$this->role_list, true);
+    }
+
+    /**
+     * User posts
      *
      * @return HasMany
      */
@@ -137,5 +160,15 @@ class User extends Authenticatable
     public function likes()
     {
         return $this->hasMany(Like::class);
+    }
+
+    /**
+     * The roles that belong to the user.
+     *
+     * @return BelongsToMany
+     */
+    public function roles(): BelongsToMany
+    {
+        return $this->belongsToMany(Role::class);
     }
 }

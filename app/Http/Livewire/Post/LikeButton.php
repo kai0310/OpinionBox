@@ -11,7 +11,12 @@ use Illuminate\Support\Facades\Auth;
 class LikeButton extends Component
 {
     public $post;
-    public $counts;
+    public $counts = 0;
+
+    public function mount()
+    {
+        $this->counts = count($this->post->likes);
+    }
 
     public function like()
     {

@@ -2,7 +2,7 @@
     @if ( $post->is_checked )
         <i class="far fa-eye mx-2"></i>公開中
     @else
-        @can('admin')
+        @can('stuff')
             <div class="flex items-center">
                 <x-jet-button wire:click="submit" wire:loading.attr="disabled">
                     公開する

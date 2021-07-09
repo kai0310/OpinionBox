@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
+namespace App\Http\Livewire\Stuff;
 
-use Livewire\Component;
 use App\Actions\Admin\UpdatePostStatus;
+use Livewire\Component;
 
 class PermitButton extends Component
 {
+
     public $post;
 
     protected $listeners = [
@@ -21,6 +22,6 @@ class PermitButton extends Component
 
     public function render()
     {
-        return view('livewire.admin.permit-button');
+        return view('livewire.stuff.permit-button');
     }
 }

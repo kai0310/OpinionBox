@@ -34,9 +34,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('users/@{user}', ShowAction::class)->name('user.show');
 });
 
-Route::middleware(['auth', 'can:admin'])
-    ->prefix('/admin')
-    ->name('admin.')
+Route::middleware(['auth', 'can:stuff'])
+    ->prefix('/stuff')
+    ->name('stuff.')
     ->group(function () {
         Route::get('/', Admin\IndexAction::class)->name('index');
     });
