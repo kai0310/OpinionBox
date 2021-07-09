@@ -10,7 +10,7 @@
                         {{ $post->title }}
                     </p>
                 </div>
-                <livewire:stuff.permit-button :post="$post" />
+                @livewire('stuff.permit-button', ['post' => $post])
             </div>
         </h2>
     </x-slot>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="flex justify-end items-center mt-4">
                                     <div class="flex items-center">
-                                        <livewire:post.like-button :counts="count($post->likes)" :post="$post" />
+                                        @livewire('post.like-button', ['post' => $post])
                                         <x-user-avatar :user="$post->user" />
                                         <span class="ml-3 font-light text-gray-600">
                                             {{ $post->created }}
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <livewire:post.comment-section :post="$post" />
+                    @livewire('post.comment-section', ['post' => $post])
                 </div>
             </div>
         </div>
