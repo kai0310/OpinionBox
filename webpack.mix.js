@@ -12,10 +12,11 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
+    .postCss('resources/css/global.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
     ])
+    .css('resources/css/app.css', 'public/css')
     .webpackConfig(require('./webpack.config'));
 
 if (mix.inProduction()) {

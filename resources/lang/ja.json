@@ -134,5 +134,13 @@
     "results": "結果",
     "to": "to",
     "If necessary, you may logout of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password.": "必要に応じて、すべてのデバイスで他のすべてのブラウザセッションをログアウトすることができます。最近のセッションの一部を以下に示しますが、このリストはすべてを網羅しているわけではありません。アカウントが危険にさらされていると思われる場合は、パスワードも更新してください。",
-    "Your bio": "自己紹介"
+    "Your bio": "自己紹介",
+    "Set Password": "パスワードを設定",
+    "Password is not set.": "パスワードが設定されていません。",
+    "Connected Accounts": "アカウント連携",
+    "Manage and remove your connect accounts.": "連携済みのアカウントを管理する。",
+    "Your connected accounts.": "連携済みのアカウント",
+    "You are free to connect any social accounts to your profile and may remove any connected accounts at any time. If you feel any of your connected accounts have been compromised, you should disconnect them immediately and change your password.": "接続したアカウントはいつでも削除することができます。接続しているアカウントが危険にさらされていると感じた場合は、直ちに接続を解除し、パスワードを変更してください。",
+    "Connected": "連携済み",
+    "The user's password has not been set, so the linkage cannot be canceled.": "パスワードが設定されていないため、連携を開場することができません。"
 }

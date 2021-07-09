@@ -5,6 +5,12 @@
 
     <x-slot name="description">
         {{ __('Ensure your account is using a long, random password to stay secure.') }}
+        @if (is_null($this->user->password))
+            <br />
+            <span class="text-red-500">
+                {{ __('Password is not set.') }}
+            </span>
+        @endif
     </x-slot>
 
     <x-slot name="form">

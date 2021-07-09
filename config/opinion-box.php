@@ -15,6 +15,7 @@ return [
         'issues'        => 'https://github.com/kai0310/OpinionBox/issues',
     ],
 
-    'wiki' => 'https://opinionbox.netlify.app'
+    'wiki' => 'https://opinionbox.netlify.app',
 
+    'chat-bot' => env('CHAT_BOT', false),
 ];

@@ -12,12 +12,19 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"/>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ url('css/app.css') }}">
+        <link rel="stylesheet" href="{{ url('css/global.css') }}">
 
         @livewireStyles
 
         <!-- Scripts -->
         <script src="{{ url('js/app.js') }}" defer></script>
+
+        @if (config('opinion-box.chat-bot'))
+            <script>
+                (function(w, d) { w.CollectId = '{{ config('opinion-box.chat-bot') }}'; const h = d.head || d.getElementsByTagName('head')[0];const s = d.createElement('script'); s.setAttribute('type', 'text/javascript'); s.async=true; s.setAttribute('src', 'https://collectcdn.com/launcher.js');h.appendChild(s); })(window, document);
+            </script>
+        @endif
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

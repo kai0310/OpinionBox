@@ -5,6 +5,12 @@
 
     <x-slot name="description">
         {{ __('Manage and remove your connect accounts.') }}
+        @if (is_null($this->user->password))
+            <br />
+            <span class="text-red-500">
+                {{ __('The user\'s password has not been set, so the linkage cannot be canceled.') }}
+            </span>
+        @endif
     </x-slot>
 
     <x-slot name="content">

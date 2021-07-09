@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ url('css/app.css') }}">
+    <link rel="stylesheet" href="{{ url('css/global.css') }}">
     <style>
         body {font-family: 'Nunito';}@keyframes fadeIn{ 0% {opacity: 0} 100% {opacity: 1} } .fade { animation: fadeIn .5s ease 0s 1 normal; }
 
