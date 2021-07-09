@@ -6,7 +6,8 @@
     </x-slot>
 
     <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-        <div class="bg-white my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg shadow-sm mx-auto">
+        <div
+            class="bg-white my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg shadow-sm mx-auto">
             <div class="block relative h-40 bg-gray-400"></div>
             <div class="relative shadow mx-auto h-24 w-24 -my-12 border-white rounded-full overflow-hidden border-4">
                 <img class="object-cover w-full h-full" src="{{ $user->profile_photo_url }}">
@@ -24,15 +25,16 @@
             </div>
             <div class="mt-6 pt-3 flex flex-wrap mx-6 border-t">
                 @if ( $user->is_admin )
-                    <div class="text-xs mr-2 my-1 uppercase tracking-wider border px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-indigo-100 cursor-default">
+                    <div class="text-indigo-600 text-xs font-semibold border border-indigo-600 rounded-full px-2 py-1">
                         Administrator
                     </div>
                 @endif
-                @if ( $user->is_developer )
-                    <div class="text-xs mr-2 my-1 uppercase tracking-wider border px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-indigo-100 cursor-default">
-                        Developer
+
+                @foreach($user->role_list as $role)
+                    <div class="text-gray-600 text-xs font-semibold border border-gray-700 rounded-full px-2 py-1 mx-1">
+                        {{ $role }}
                     </div>
-                @endif
+                @endforeach
             </div>
         </div>
     </div>

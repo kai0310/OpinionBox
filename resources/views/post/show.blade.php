@@ -6,14 +6,11 @@
                     <a href="{{ route('post.index') }}">
                         Box<i class="fas fa-angle-right mx-3 hidden md:inline-block"></i>
                     </a>
-                    <a href="{{ route('post.all') }}">
-                        全ての投稿<i class="fas fa-angle-right mx-3 hidden md:inline-block"></i>
-                    </a>
                     <p class="hidden md:inline-block max-w-xs truncate align-middle">
                         {{ $post->title }}
                     </p>
                 </div>
-                <livewire:admin.permit-button :post="$post" />
+                <livewire:stuff.permit-button :post="$post" />
             </div>
         </h2>
     </x-slot>

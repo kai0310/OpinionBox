@@ -12,7 +12,7 @@ class IndexAction extends Controller
      */
     public function __invoke()
     {
-        return view('admin.index')->with(
+        return view('stuff.index')->with(
             'posts', Post::withoutGlobalScope('is_checked')
             ->where('is_checked', false)
             ->latest()
