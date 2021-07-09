@@ -41,3 +41,11 @@ Route::middleware(['auth', 'can:stuff'])
     ->group(function () {
         Route::get('/', Stuff\IndexAction::class)->name('index');
     });
+
+Route::middleware(['auth', 'can:admin'])
+    ->prefix('/admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/', Admin\IndexAction::class)->name('index');
+        Route::get('/users', [Admin\ManageUserController::class, 'index'])->name('manage.user');
+    });

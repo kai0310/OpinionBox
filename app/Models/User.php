@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use JoelButcher\Socialstream\HasConnectedAccounts;
 use JoelButcher\Socialstream\SetsProfilePhotoFromUrl;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -89,6 +91,33 @@ class User extends Authenticatable
     public function getNameAttribute($name)
     {
         return  preg_replace('/[0-9]/', '', $name);
+    }
+
+    public function getStudentNumberAttribute()
+    {
+        return preg_replace('/[^0-9]/', '', $this->email);
+    }
+
+    /**
+     * Return user last activity.
+     * @return string
+     */
+    public function getLastAccessedAttribute(): string
+    {
+        if (config('session.driver') !== 'database') {
+            return 'NaN';
+        }
+
+        $sessions = DB::connection(config('session.connection'))
+            ->table(config('session.table', 'sessions'))
+            ->where('user_id', $this->id)
+            ->orderBy('last_activity', 'desc')
+            ->get('last_activity');
+
+        if ($sessions->first() === null) {
+            return 'NaN';
+        }
+        return Carbon::createFromTimestamp($sessions->first()->last_activity)->diffForHumans();
     }
 
     /**

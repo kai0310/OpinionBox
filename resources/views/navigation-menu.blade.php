@@ -89,6 +89,12 @@
                             {{ __('Profile') }}
                         </x-jet-dropdown-link>
 
+                        @can('admin')
+                            <x-jet-dropdown-link href="{{ route('admin.index') }}">
+                                管理者モード
+                            </x-jet-dropdown-link>
+                        @endcan
+
                         <div class="border-t border-gray-100"></div>
 
                     <!-- Authentication -->
