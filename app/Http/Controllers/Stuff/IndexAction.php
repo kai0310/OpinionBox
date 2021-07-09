@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Stuff;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;

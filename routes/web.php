@@ -6,6 +6,7 @@ use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Post\MyPostAction;
 use App\Http\Controllers\Post\AllPostAction;
 use App\Http\Controllers\Profile\ShowAction;
+use App\Http\Controllers\Stuff;
 use App\Http\Controllers\Admin;
 
 /*
@@ -38,5 +39,5 @@ Route::middleware(['auth', 'can:stuff'])
     ->prefix('/stuff')
     ->name('stuff.')
     ->group(function () {
-        Route::get('/', Admin\IndexAction::class)->name('index');
+        Route::get('/', Stuff\IndexAction::class)->name('index');
     });
