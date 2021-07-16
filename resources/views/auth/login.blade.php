@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        @if (\Laravel\Fortify\Features::enabled(\Laravel\Fortify\Features::registration()))
+        @if (\Laravel\Fortify\Features::enabled(\Laravel\Fortify\Features::registration()) || JoelButcher\Socialstream\Socialstream::show())
         <form method="POST" action="{{ route('login') }}">
             @csrf
 

@@ -142,5 +142,8 @@
     "Your connected accounts.": "連携済みのアカウント",
     "You are free to connect any social accounts to your profile and may remove any connected accounts at any time. If you feel any of your connected accounts have been compromised, you should disconnect them immediately and change your password.": "接続したアカウントはいつでも削除することができます。接続しているアカウントが危険にさらされていると感じた場合は、直ちに接続を解除し、パスワードを変更してください。",
     "Connected": "連携済み",
-    "The user's password has not been set, so the linkage cannot be canceled.": "パスワードが設定されていないため、連携を開場することができません。"
+    "The user's password has not been set, so the linkage cannot be canceled.": "パスワードが設定されていないため、連携を解除することができません。",
+    "Role Name": "ロール名",
+    "Detail of Role": "ロールの説明",
+    "Delete Role": "ロールの削除"
 }

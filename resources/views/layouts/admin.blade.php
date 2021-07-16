@@ -27,7 +27,7 @@
 
     <div class="flex flex-col flex-1 w-full">
     <!-- Page Heading -->
-        <header class="bg-white shadow">
+        <header class="bg-white shadow sticky top-0">
             <div class="mx-auto w-full py-6 px-4 sm:px-6 lg:px-8 select-none">
                 {{ $header }}
             </div>
@@ -42,5 +42,7 @@
 
 @stack('modals')
 @livewireScripts
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
+<x-livewire-alert::scripts />
 </body>
 </html>

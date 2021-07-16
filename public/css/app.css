@@ -1,1 +1,8 @@
-.box-shadow-primary{box-shadow:0 2px 14px 0 theme("colors.blue.500")}
+.box-shadow-primary {
+    box-shadow: 0 2px 14px 0 theme('colors.blue.500');
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
