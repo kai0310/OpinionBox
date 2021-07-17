@@ -10,15 +10,14 @@ class UpdateRole implements UpdateRoles
 {
     public function update(Role $role, array $input)
     {
-        Validator::make($input, [
-            'name'      => ['required', 'string', 'max:10'],
-            'detail'    => ['max:30'],
-        ])->validate();
+//        Validator::make($input, [
+//            'name'      => ['required', 'string', 'max:10'],
+//        ])->validate();
 
 
         return $role->update([
-            'name'      => $input['name'],
-            'detail'    => $input['detail']
+            'name'   => $input['name'],
+            'detail' => $input['detail'],
         ]);
     }
 }

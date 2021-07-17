@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Actions\Admin\UpdateRole;
 use App\Models\Role;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class EditRoleForm extends Component
@@ -27,13 +28,14 @@ class EditRoleForm extends Component
      */
     public function mount()
     {
-        $this->state = $this->role;
+        $this->state = $this->role->toArray();
     }
 
     public function update()
     {
-        $input = collect(['name' => $this->name, 'detail' => $this->detail])->toArray();
-        app(UpdateRole::class)->update($this->role, $input);
+        app(UpdateRole::class)->update($this->role, $this->state);
+        $this->formModal = false;
+        $this->emit('refresh-admin-all-user-table');
     }
 
     public function render()

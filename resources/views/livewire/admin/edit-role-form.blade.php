@@ -9,25 +9,23 @@
                 ロール編集
             </x-slot>
             <x-slot name="content">
+                <!-- Role Name -->
                 <div class="col-span-6 sm:col-span-4">
                     <x-jet-label for="roleName" value="{{ __('Role Name') }}"/>
-                    <x-jet-input id="roleName" type="text" class="mt-1 block w-full" wire:model.defer="state.name" />
-                    <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" />
+                    <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name"/>
                     <x-jet-input-error for="roleName" class="mt-2"/>
                 </div>
-                {{ $state['name'] }}
-
+                <!-- Detail of role -->
                 <div class="col-span-6 sm:col-span-4 mt-3">
                     <x-jet-label for="roleDetail" value="{{ __('Detail of Role') }}"/>
                     <textarea
                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                         rows="3"
-                        wire:model="detail"
+                        wire:model="state.detail"
                         id="roleDetail"
                     >{{ $role->detail }}</textarea>
                     <x-jet-input-error for="roleDetail" class="mt-2"/>
                 </div>
-
             </x-slot>
 
             <x-slot name="footer">
