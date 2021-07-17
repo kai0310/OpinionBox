@@ -41,9 +41,11 @@
                                         {{ $role->detail ?? 'No detail' }}
                                     </div>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium flex">
                                     @livewire('admin.edit-role-form', ['role' => $role ], key($role->id))
-                                    @livewire('admin.delete-role-button', ['role' => $role ], key($role->id))
+                                    <span class="mx-2">
+                                        @livewire('admin.delete-role-button', ['role' => $role ], key($role->id))
+                                    </span>
                                 </td>
                             </tr>
                         @endforeach

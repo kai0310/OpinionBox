@@ -23,15 +23,22 @@
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-gray-100 flex">
 
-        <x-admin.side-navigation />
+    <!-- Side Navigation -->
+    <x-admin.side-navigation/>
 
     <div class="flex flex-col flex-1 w-full">
-    <!-- Page Heading -->
+        <!-- Page Heading -->
         <header class="bg-white shadow sticky top-0">
-            <div class="mx-auto w-full py-6 px-4 sm:px-6 lg:px-8 select-none">
-                {{ $header }}
+            <div class="flex justify-between h-16">
+                <div class="mx-auto w-full py-6 px-4 sm:px-6 lg:px-8 select-none">
+                    {{ $header }}
+                </div>
+
+                <!-- Hamburger -->
+                <x-admin.hamburger-menu />
             </div>
         </header>
+
         <!-- Page Content -->
         <main class="m-5">
             {{ $slot }}
@@ -43,6 +50,6 @@
 @stack('modals')
 @livewireScripts
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
-<x-livewire-alert::scripts />
+<x-livewire-alert::scripts/>
 </body>
 </html>
