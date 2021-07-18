@@ -19,6 +19,7 @@
         "laravel/jetstream": "^2.1",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "league/commonmark": "^1.6",
         "livewire/livewire": "^2.5"
     },
     "require-dev": {

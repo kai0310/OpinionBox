@@ -89,6 +89,10 @@
                             {{ __('Profile') }}
                         </x-jet-dropdown-link>
 
+                        <x-jet-dropdown-link href="{{ route('announcements.index') }}">
+                            お知らせ
+                        </x-jet-dropdown-link>
+
                         @can('admin')
                             <x-jet-dropdown-link href="{{ route('admin.index') }}">
                                 管理者モード
