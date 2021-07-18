@@ -61,11 +61,13 @@
                                         {!! nl2br($post->content) !!}
                                     </p>
                                 </div>
-                                <div class="flex justify-end items-center mt-4">
+                                <div class="flex justify-end items-center mt-4 text-sm">
                                     <div class="flex items-center">
-                                        @livewire('post.like-button', ['post' => $post])
+                                        <span class="mx-2 md:mx-0">
+                                            @livewire('post.like-button', ['post' => $post])
+                                        </span>
                                         <x-user-avatar :user="$post->user" />
-                                        <span class="ml-3 font-light text-gray-600">
+                                        <span class=" font-light text-gray-600">
                                             {{ $post->created }}
                                         </span>
                                     </div>
