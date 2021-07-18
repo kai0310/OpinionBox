@@ -6,7 +6,7 @@ use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Post\MyPostAction;
 use App\Http\Controllers\Post\AllPostAction;
 use App\Http\Controllers\Profile\ShowAction;
-use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\ShowAnnouncementListAction;
 use App\Http\Controllers\Stuff;
 use App\Http\Controllers\Admin;
 
@@ -28,7 +28,7 @@ Route::middleware(['auth'])->group(function () {
     Route::view('faq', 'other.faq')->name('faq');
     Route::view('guide', 'other.guide')->name('guide');
     Route::view('about', 'other.about')->name('about');
-    Route::resource('announcements', AnnouncementController::class);
+    Route::get('/announcements', ShowAnnouncementListAction::class)->name('announcements.index');
     Route::get('post/all', AllPostAction::class)->name('post.all');
     Route::get('post/me', MyPostAction::class)->name('post.me');
     Route::resource('post', PostController::class, [
