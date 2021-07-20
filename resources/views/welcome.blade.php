@@ -3,6 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ config('app.description') }}" />
+    <meta property="og:url" content="{{ route('welcome') }}" />
+    <meta property="og:title" content="{{ config('app.name') }}" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ url('/ogp.png') }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:locale" content="ja_JP" />
 
     <title>OpinionBox</title>
 
@@ -13,7 +20,6 @@
     <link rel="stylesheet" href="{{ url('css/global.css') }}">
     <style>
         body {font-family: 'Nunito';}@keyframes fadeIn{ 0% {opacity: 0} 100% {opacity: 1} } .fade { animation: fadeIn .5s ease 0s 1 normal; }
-
     </style>
 </head>
 <body>
