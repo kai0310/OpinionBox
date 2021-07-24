@@ -15,6 +15,7 @@ use JoelButcher\Socialstream\SetsProfilePhotoFromUrl;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use phpDocumentor\Reflection\Types\Null_;
 
 class User extends Authenticatable
 {
@@ -93,16 +94,19 @@ class User extends Authenticatable
         return  preg_replace('/[0-9]/', '', $name);
     }
 
-    public function getStudentNumberAttribute()
+    /**
+     * Return student number.
+     * @return false|string|null
+     */
+    public function getStudentNumberAttribute(): false|string|null
     {
-        return preg_replace('/[^0-9]/', '', $this->email);
+        if (config('services.google.custom_domain')) {
+            return mb_strstr($this->email, '@'.config('services.google.custom_domain'), true);
+        }
+        return Null;
     }
 
-    /**
-     * Return user last activity.
-     * @return string
-     */
-    public function getLastAccessedAttribute(): string
+    public function getLastAccessed()
     {
         if (config('session.driver') !== 'database') {
             return 'NaN';
@@ -117,7 +121,23 @@ class User extends Authenticatable
         if ($sessions->first() === null) {
             return 'NaN';
         }
-        return Carbon::createFromTimestamp($sessions->first()->last_activity)->diffForHumans();
+
+        return Carbon::createFromTimestamp($this->getLastAccessed()->first()->last_activity);
+    }
+
+    public function getLastAccessedAttribute()
+    {
+        if ( $this->getLastAccessed() !== 'NaN' ) {
+            return $this->getLastAccessed()->first()->diffForHumans();
+        }
+    }
+
+    public function getIsOnlineAttribute()
+    {
+//        if ($this->getLastAccessed()->m > 5) {
+//            return true;
+//        }
+        return false;
     }
 
     /**

@@ -62,9 +62,15 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900">
-                                        {{ $user->student_number }}
-                                    </div>
+                                    @if ($user->student_number)
+                                        <span class="text-sm text-gray-900">
+                                            {{ $user->student_number  }}
+                                        </span>
+                                    @else
+                                        <span class="text-sm text-gray-600">
+                                            NaN
+                                        </span>
+                                    @endif
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
 
@@ -82,6 +88,7 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{ $user->last_accessed }}
+                                    {{ $user->is_online }}
                                 </td>
 
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
