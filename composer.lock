@@ -1664,16 +1664,16 @@
         },
         {
             "name": "joelbutcher/socialstream",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelbutcher/socialstream.git",
-                "reference": "3afef5e0373c026644ace54fa7207e8027217625"
+                "reference": "767c9c94a149627544d8df5cde33799252f3bffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelbutcher/socialstream/zipball/3afef5e0373c026644ace54fa7207e8027217625",
-                "reference": "3afef5e0373c026644ace54fa7207e8027217625",
+                "url": "https://api.github.com/repos/joelbutcher/socialstream/zipball/767c9c94a149627544d8df5cde33799252f3bffe",
+                "reference": "767c9c94a149627544d8df5cde33799252f3bffe",
                 "shasum": ""
             },
             "require": {
@@ -1736,7 +1736,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-05T01:33:38+00:00"
+            "time": "2021-09-01T14:56:06+00:00"
         },
         {
             "name": "laravel/fortify",
