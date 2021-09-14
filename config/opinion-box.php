@@ -7,7 +7,7 @@ return [
      */
     'github' => [
         'author'        => 'https://github.com/kai0310',
-        'author_icon'   => 'https://avatars0.githubusercontent.com/u/52205108?s=460&amp;u=0667510c252aaa7352707d952480fe7baeafb9b6&amp;v=4',
+        'author_icon'   => 'https://unavatar.io/kai0310',
         'repository'    => 'https://github.com/kai0310/OpinionBox',
         'license'       => 'https://github.com/kai0310/OpinionBox/blob/2.x/LICENSE',
         'discussions'   => 'https://github.com/kai0310/OpinionBox/discussions',
@@ -18,4 +18,13 @@ return [
     'wiki' => 'https://opinionbox.netlify.app',
 
     'chat-bot' => env('CHAT_BOT', false),
+
+    'initial' => [
+        'user' => [
+            'do_create' => env('OPINIONBOX_INITIAL_USER_DO_CREATE', true),
+            'name'      => env('OPINIONBOX_INITIAL_USER_NAME', 'OpinionBox Official'),
+            'email'     => env('OPINIONBOX_INITIAL_USER_EMAIL', 'opinionbox@example.com'),
+            'password'  => env('OPINIONBOX_INITIAL_USER_PW', 'password')
+        ]
+    ]
 ];

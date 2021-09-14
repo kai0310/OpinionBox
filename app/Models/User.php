@@ -57,8 +57,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'is_admin'          => 'boolean',
-        'is_developer'      => 'boolean',
+        'is_admin' => 'boolean',
+        'is_developer' => 'boolean',
     ];
 
     /**
@@ -91,7 +91,7 @@ class User extends Authenticatable
      */
     public function getNameAttribute($name)
     {
-        return  preg_replace('/[0-9]/', '', $name);
+        return preg_replace('/[0-9]/', '', $name);
     }
 
     /**
@@ -101,7 +101,7 @@ class User extends Authenticatable
     public function getStudentNumberAttribute(): false|string|null
     {
         if (config('services.google.custom_domain')) {
-            return mb_strstr($this->email, '@'.config('services.google.custom_domain'), true);
+            return mb_strstr($this->email, '@' . config('services.google.custom_domain'), true);
         }
         return Null;
     }
@@ -127,17 +127,14 @@ class User extends Authenticatable
 
     public function getLastAccessedAttribute()
     {
-        if ( $this->getLastAccessed() !== 'NaN' ) {
+        if ($this->getLastAccessed() !== 'NaN') {
             return $this->getLastAccessed()->first()->diffForHumans();
         }
     }
 
     public function getIsOnlineAttribute()
     {
-//        if ($this->getLastAccessed()->m > 5) {
-//            return true;
-//        }
-        return false;
+        return $this->getLastAccessed()->m > 5;
     }
 
     /**
@@ -178,7 +175,7 @@ class User extends Authenticatable
      */
     public function hasRole(string $role): bool
     {
-        return in_array($role ,$this->role_list, true);
+        return in_array($role, $this->role_list, true);
     }
 
     /**

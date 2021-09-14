@@ -19,5 +19,11 @@ class Announcement extends Model
         return $this->created_at->format('M	d, Y');
     }
 
+    public function getShortBodyAttribute(): string
+    {
+        return str_limit_ja($this->body, 30);
+    }
+
+
 
 }

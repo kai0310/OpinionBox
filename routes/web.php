@@ -51,5 +51,6 @@ Route::middleware(['auth', 'can:admin'])
         Route::get('/', Admin\IndexAction::class)->name('index');
         Route::get('/users', Admin\ManageUsersController::class)->name('manage.users');
         Route::get('/roles', Admin\ManageRolesAction::class)->name('manage.roles');
-        Route::view('/application-config', 'admin/application-config')->name('application-config');
+        Route::view('/application-config', 'admin.application-config')->name('application-config');
+        Route::view('/announcements', 'admin.manage.announcement')->name('announcements');
     });

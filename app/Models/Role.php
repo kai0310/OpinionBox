@@ -15,7 +15,7 @@ class Role extends Model
         'detail',
     ];
 
-    /**
+  /**
      * The users that belong to the role.
      *
      * @return BelongsToMany
