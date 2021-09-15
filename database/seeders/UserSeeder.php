@@ -16,14 +16,17 @@ class UserSeeder extends Seeder
     public function run()
     {
         if (config('opinion-box.initial.user.do_create')) {
-            User::factory()->create([
-                'name' => config('opinion-box.initial.user.name'),
-                'email' => config('opinion-box.initial.user.email'),
-                'password' => bcrypt(config('opinion-box.initial.user.password')),
-                'is_admin' => true,
-                'bio' => 'Hey! I\'m OpinionBox official account',
-                'profile_photo_path' => 'https://unavatar.io/kai0310'
-            ]);
+            $user = User::factory()
+                ->create([
+                    'name' => config('opinion-box.initial.user.name'),
+                    'email' => config('opinion-box.initial.user.email'),
+                    'password' => bcrypt(config('opinion-box.initial.user.password')),
+                    'is_admin' => true,
+                    'bio' => 'Hey! I\'m OpinionBox official account',
+                    'profile_photo_path' => 'https://unavatar.io/kai0310'
+                ]);
+
+            $user->roles()->attach([1, 2,]);
         }
 
         if (!App::environment('production')) {
