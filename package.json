@@ -9,7 +9,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/forms": "^0.3.4",
         "@tailwindcss/typography": "^0.4.1",
         "@tailwindcss/ui": "^0.7.2",
         "alpinejs": "^3.4.1",
