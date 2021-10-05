@@ -146,5 +146,7 @@
     "Role Name": "ロール名",
     "Detail of Role": "ロールの説明",
     "Delete Role": "ロールの削除",
-    "Just now": "たった今"
+    "Just now": "たった今",
+    "This post is not visible": "この投稿を表示することができません",
+    "You can\\'t approve own posts": "自分の投稿を承認することはできません"
 }
