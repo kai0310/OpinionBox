@@ -8,14 +8,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use JetBrains\PhpStorm\Pure;
 use JoelButcher\Socialstream\HasConnectedAccounts;
 use JoelButcher\Socialstream\SetsProfilePhotoFromUrl;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-use phpDocumentor\Reflection\Types\Null_;
 
 class User extends Authenticatable
 {
@@ -70,11 +69,31 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    protected $with = [
+        'roles',
+    ];
+
+    public const STUFF = 'stuff';
+    public const DEVELOPER = 'developer';
+
+    /**
+     * Return the user is stuff.
+     * @return bool
+     */
+    public function isStuff(): bool
+    {
+        if (config('opinion-box.settings.admin_is_stuff') && $this->is_admin) {
+            return true;
+        }
+
+        return $this->hasRole(self::STUFF);
+    }
+
     /**
      * Get the URL to the user's profile photo.
      * @return string
      */
-    public function getProfilePhotoUrlAttribute()
+    public function getProfilePhotoUrlAttribute(): string
     {
         if (filter_var($this->profile_photo_path, FILTER_VALIDATE_URL)) {
             return $this->profile_photo_path;
@@ -89,7 +108,7 @@ class User extends Authenticatable
      * @param $name
      * @return array|string|string[]|null
      */
-    public function getNameAttribute($name)
+    public function getNameAttribute($name): array|string|null
     {
         return preg_replace('/[0-9]/', '', $name);
     }
@@ -106,7 +125,7 @@ class User extends Authenticatable
         return Null;
     }
 
-    public function getLastAccessed()
+    public function getLastAccessed(): Carbon|string
     {
         if (config('session.driver') !== 'database') {
             return 'NaN';
@@ -132,7 +151,7 @@ class User extends Authenticatable
         }
     }
 
-    public function getIsOnlineAttribute()
+    public function getIsOnlineAttribute(): bool
     {
         return $this->getLastAccessed()->m > 5;
     }
@@ -152,7 +171,7 @@ class User extends Authenticatable
      *
      * @return int
      */
-    public function getContributionsAttribute(): int
+    #[Pure] public function getContributionsAttribute(): int
     {
         return $this->getContributions();
     }

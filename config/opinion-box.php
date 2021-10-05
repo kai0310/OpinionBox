@@ -26,5 +26,10 @@ return [
             'email'     => env('OPINIONBOX_INITIAL_USER_EMAIL', 'opinionbox@example.com'),
             'password'  => env('OPINIONBOX_INITIAL_USER_PW', 'password')
         ]
-    ]
+    ],
+
+    'settings' => [
+        'admin_is_stuff' => env('OPINIONBOX_SETTINGS_ADMIN_IS_STUFF', true),
+
+    ],
 ];

@@ -27,15 +27,17 @@ class PostPolicy
      *
      * @param User $user
      * @param Post $post
-     * @return bool
+     * @return bool|Response
      */
-    public function view(User $user, Post $post): bool
+    public function view(User $user, Post $post): bool|Response
     {
-        if ($user->is_admin) {
+        if ($user->isStuff()) {
             return true;
         }
 
-        return $user->id === $post->user_id;
+        return $user->id === $post->user_id
+            ? Response::allow()
+            : Response::deny(__('This post is not visible'));
     }
 
     /**
@@ -56,9 +58,21 @@ class PostPolicy
      * @param Post $post
      * @return Response|bool
      */
-    public function update(User $user, Post $post)
+    public function update(User $user, Post $post): bool
     {
-        //
+        return $user->id === $post->id;
+    }
+
+    public function approve(User $user, Post $post)
+    {
+        if (!$user->isStuff()) {
+            return false;
+        }
+
+        return $user->id === $post->id
+            ? Response::deny(__('You can\'t approve own posts'))
+            : Response::allow();
+
     }
 
     /**
