@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ShowAnnouncementListAction extends Controller
 {
-    public function __invoke()
+    /**
+     * Show announcements list.
+     * @return View
+     */
+    public function __invoke(): View
     {
         return view('announcement.index')
             ->with('announcements', Announcement::paginate(30));

@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="min-h-screen min-w-full bg-gray-100 flex flex-col justify-center p-4 sm:p-10">
-    <div class="relative w-full max-w-full lg:max-w-6xl xl:max-w-screen-2xl mx-auto fade">
+    <div class="relative w-full max-w-full lg:max-w-6xl xl:max-w-screen-xl mx-auto fade">
         <div class="absolute inset-0 -mr-3.5 bg-gradient-to-r from-red-100 to-purple-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-3 sm:rounded-3xl"></div>
         <div class="relative bg-white shadow-lg sm:rounded-3xl">
             <div class="flex items-center justify-start pt-6 pl-6">

@@ -4,16 +4,18 @@ namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use Illuminate\View\View;
 
 class AllPostAction extends Controller
 {
     /**
-     * 承認済みの全投稿を表示
+     * Show all approved posts.
+     * @return View
      */
-    public function __invoke()
+    public function __invoke(): View
     {
         return view('post.all')->with(
-            'posts', Post::latest()->paginate(Post::TAKE_MAX_COUNT)
+            'posts', Post::approved()->latest()->paginate(Post::TAKE_MAX_COUNT)
         );
     }
 }

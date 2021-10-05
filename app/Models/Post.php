@@ -33,12 +33,29 @@ class Post extends Model
     ];
 
     protected $casts = [
+        'user_id' => 'integer',
         'is_checked' => 'boolean',
     ];
 
     // Maximum number of acquisitions.
     public const TAKE_MAX_COUNT  = 10;
     public const TAKE_RAND_COUNT = 5;
+
+    /**
+     * @param $query
+     */
+    public function scopeApproved($query): void
+    {
+        $query->where('is_checked', true);
+    }
+
+    /**
+     * @param $query
+     */
+    public function scopeNotApproved($query): void
+    {
+        $query->where('is_checked', false);
+    }
 
     /**
      * Date posted
@@ -69,17 +86,7 @@ class Post extends Model
             return sprintf('%d 秒前', $diff->s);
         }
 
-        return 'たった今';
-    }
-
-    protected static function booted()
-    {
-        /**
-         * Only approved posts
-         */
-        static::addGlobalScope('is_checked', function (Builder $builder) {
-            $builder->where('is_checked', true);
-        });
+        return __('Just now');
     }
 
     /**

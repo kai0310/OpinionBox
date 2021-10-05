@@ -145,5 +145,6 @@
     "The user's password has not been set, so the linkage cannot be canceled.": "パスワードが設定されていないため、連携を解除することができません。",
     "Role Name": "ロール名",
     "Detail of Role": "ロールの説明",
-    "Delete Role": "ロールの削除"
+    "Delete Role": "ロールの削除",
+    "Just now": "たった今"
 }

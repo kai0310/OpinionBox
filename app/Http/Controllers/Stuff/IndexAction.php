@@ -13,10 +13,7 @@ class IndexAction extends Controller
     public function __invoke()
     {
         return view('stuff.index')->with(
-            'posts', Post::withoutGlobalScope('is_checked')
-            ->where('is_checked', false)
-            ->latest()
-            ->paginate(Post::TAKE_MAX_COUNT)
+            'posts', Post::notApproved()->latest()->paginate(Post::TAKE_MAX_COUNT)
         );
     }
 }
