@@ -60,7 +60,7 @@ class PostPolicy
      */
     public function update(User $user, Post $post): bool
     {
-        return $user->id === $post->id;
+        return $user->id === $post->user_id;
     }
 
     public function approve(User $user, Post $post)
@@ -69,7 +69,7 @@ class PostPolicy
             return false;
         }
 
-        return $user->id === $post->id
+        return $user->id === $post->user_id
             ? Response::deny(__('You can\'t approve own posts'))
             : Response::allow();
 
