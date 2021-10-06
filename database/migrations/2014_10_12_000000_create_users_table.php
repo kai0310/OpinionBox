@@ -25,6 +25,7 @@ class   CreateUsersTable extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->foreignId('current_connected_account_id')->nullable();
             $table->text('profile_photo_path')->nullable();
+            $table->dateTime('banned_at')->nullable();
             $table->timestamps();
         });
     }

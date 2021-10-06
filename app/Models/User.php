@@ -90,6 +90,15 @@ class User extends Authenticatable
     }
 
     /**
+     * Return the user is ban.
+     * @return bool
+     */
+    public function isBanned(): bool
+    {
+        return ! is_null($this->banned_at);
+    }
+
+    /**
      * Get the URL to the user's profile photo.
      * @return string
      */
@@ -106,7 +115,7 @@ class User extends Authenticatable
      * Return the format user name.
      *
      * @param $name
-     * @return array|string|string[]|null
+     * @return array|string|null
      */
     public function getNameAttribute($name): array|string|null
     {
