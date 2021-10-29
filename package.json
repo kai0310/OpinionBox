@@ -15,7 +15,7 @@
         "alpinejs": "^3.4.2",
         "axios": "^0.24",
         "cross-env": "^7.0",
-        "laravel-mix": "^6.0.34",
+        "laravel-mix": "^6.0.37",
         "lodash": "^4.17.21",
         "postcss": "^8.3.11",
         "postcss-import": "^14.0.2",
