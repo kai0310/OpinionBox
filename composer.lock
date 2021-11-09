@@ -1621,22 +1621,26 @@
         },
         {
             "name": "jantinnerezo/livewire-alert",
-            "version": "2.1.8",
+            "version": "2.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jantinnerezo/livewire-alert.git",
-                "reference": "245c495c3a89e6a16096eb67bba7cac31bd94e6d"
+                "reference": "4f2cc36cacd02ec835ca593a2ad03799380a15e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jantinnerezo/livewire-alert/zipball/245c495c3a89e6a16096eb67bba7cac31bd94e6d",
-                "reference": "245c495c3a89e6a16096eb67bba7cac31bd94e6d",
+                "url": "https://api.github.com/repos/jantinnerezo/livewire-alert/zipball/4f2cc36cacd02ec835ca593a2ad03799380a15e2",
+                "reference": "4f2cc36cacd02ec835ca593a2ad03799380a15e2",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
                 "livewire/livewire": "^2.0",
-                "php": "^7.1|^7.2|^7.3|^7.4|^8.0"
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.15",
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "extra": {
@@ -1673,7 +1677,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jantinnerezo/livewire-alert/issues",
-                "source": "https://github.com/jantinnerezo/livewire-alert/tree/2.1.8"
+                "source": "https://github.com/jantinnerezo/livewire-alert/tree/2.1.9"
             },
             "funding": [
                 {
@@ -1681,7 +1685,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-10-27T18:00:13+00:00"
+            "time": "2021-11-08T18:11:44+00:00"
         },
         {
             "name": "jaybizzle/crawler-detect",
