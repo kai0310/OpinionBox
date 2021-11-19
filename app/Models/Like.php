@@ -17,7 +17,7 @@ class Like extends Model
 
     public $timestamps = false;
 
-    /**
+  /**
      * Liked post
      *
      * @return BelongsTo

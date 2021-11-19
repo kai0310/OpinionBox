@@ -2,7 +2,9 @@
 
 namespace App\Contracts\Actions\Post;
 
+use App\Models\Post;
+
 interface DeleteLikePosts
 {
-    public function delete(int $id);
+    public function delete(Post $post);
 }

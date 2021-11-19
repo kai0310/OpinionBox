@@ -22,8 +22,7 @@ class CommentSection extends Component
     public function render()
     {
         return view('livewire.post.comment-section')->with(
-            'comments', $this->post->comments()
-            ->latest()->get()
+            'comments', $this->post->comments()->latest()->get()
         );
     }
 }

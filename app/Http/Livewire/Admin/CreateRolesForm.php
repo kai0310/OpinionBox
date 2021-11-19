@@ -15,6 +15,7 @@ class CreateRolesForm extends Component
     public function create(): void
     {
         $input = collect(['name' => $this->name, 'detail' => $this->detail])->toArray();
+
         app(CreateRole::class)->create($input);
         $this->emit('refresh-admin-all-user-table');
         $this->refresh();

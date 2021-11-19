@@ -5,13 +5,13 @@ namespace App\Actions\Post;
 
 
 use App\Contracts\Actions\Post\DeleteLikePosts;
-use App\Models\Like;
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 
 class DeleteLikePost implements DeleteLikePosts
 {
-    public function delete(int $id)
+    public function delete(Post $post)
     {
-        Like::where('user_id', Auth::id())->delete();
+        return $post->likes()->whereBelongsTo(Auth::user())->delete();
     }
 }

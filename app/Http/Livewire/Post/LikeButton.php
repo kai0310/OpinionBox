@@ -13,20 +13,20 @@ class LikeButton extends Component
     public $post;
     public $counts = 0;
 
-    public function mount()
+    public function mount(): void
     {
         $this->counts = count($this->post->likes);
     }
 
-    public function like()
+    public function like(): void
     {
-        app(CreateLikePost::class)->create($this->post->id);
+        app(CreateLikePost::class)->create($this->post);
         $this->counts++;
     }
 
     public function cancel()
     {
-        app(DeleteLikePost::class)->delete($this->post->id);
+        app(DeleteLikePost::class)->delete($this->post);
         $this->counts--;
     }
 

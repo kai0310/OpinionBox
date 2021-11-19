@@ -2,19 +2,16 @@
 
 namespace App\Actions\Post;
 
+use App\Models\Post;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use App\Contracts\Actions\Post\CreateLikePosts;
-use App\Models\Like;
-
 
 class CreateLikePost implements CreateLikePosts
 {
-    public function create(int $id)
+    public function create(Post $post): Model
     {
-        Like::create([
-            'post_id' => $id,
-            'user_id' => Auth::id(),
-        ]);
+        return $post->likes()->create(['user_id' => Auth::id()]);
     }
 
 }
