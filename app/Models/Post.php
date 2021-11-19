@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
+use JetBrains\PhpStorm\Pure;
 
 /**
  * Class Post
@@ -25,37 +27,78 @@ use Illuminate\Support\Carbon;
 class Post extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
     protected $fillable = [
         'title',
         'content',
         'user_id',
+        'approved_at',
+        'published_at',
+        'hide_at',
     ];
 
     protected $casts = [
-        'user_id' => 'integer',
-        'is_checked' => 'boolean',
+        'user_id'       => 'integer',
+        'approved_at'   => 'datetime',
+        'published_at'  => 'datetime',
+        'hide_at'       => 'datetime',
     ];
 
     // Maximum number of acquisitions.
     public const TAKE_MAX_COUNT  = 10;
     public const TAKE_RAND_COUNT = 5;
 
-    /**
-     * @param $query
-     */
     public function scopeApproved($query): void
     {
-        $query->where('is_checked', true);
+        $query->whereNotNull('approved_at');
     }
 
-    /**
-     * @param $query
-     */
     public function scopeNotApproved($query): void
     {
-        $query->where('is_checked', false);
+        $query->where('approved_at');
     }
+
+    public function scopePublished($query): void
+    {
+        $query->whereNotNull('published_at');
+    }
+
+    public function scopeNotPublished($query): void
+    {
+        $query->whereNull('published_at');
+    }
+
+    public function scopeHide($query): void
+    {
+        $query->whereNotNull('hide_at');
+    }
+
+    public function scopeNotHide($query): void
+    {
+        $query->whereNull('hide_at');
+    }
+
+    public function isPublished(): bool
+    {
+        return is_null($this->published_at);
+    }
+
+    public function isNotPublished(): bool
+    {
+        return ! $this->isPublished();
+    }
+
+    public function isApproved(): bool
+    {
+        return is_null($this->approved_at);
+    }
+
+    public function isNotApproved(): bool
+    {
+        return ! $this->isApproved();
+    }
+
 
     /**
      * Date posted

@@ -15,10 +15,20 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->boolean('is_checked')->default(false);
+
             $table->string('title');
             $table->text('content');
-            $table->foreignId('user_id')->nullable()->index();
+
+            $table->foreignId('user_id')
+                ->nullable()
+                ->index()
+                ->constrained();
+
+            $table->dateTime('approved_at')->nullable();
+
+            $table->dateTime('hide_at')->nullable();
+
+            $table->dateTime('deleted_at')->nullable();
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
         });

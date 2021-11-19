@@ -12,17 +12,6 @@ class PostPolicy
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can view any models.
-     *
-     * @param User $user
-     * @return Response|bool
-     */
-    public function viewAny(User $user)
-    {
-        //
-    }
-
-    /**
      * Determine whether the user can view the model.
      *
      * @param User $user
@@ -35,20 +24,9 @@ class PostPolicy
             return true;
         }
 
-        return $user->id === $post->user_id
+        return $user->is($post->user)
             ? Response::allow()
             : Response::deny(__('This post is not visible'));
-    }
-
-    /**
-     * Determine whether the user can create models.
-     *
-     * @param User $user
-     * @return Response|bool
-     */
-    public function create(User $user)
-    {
-        //
     }
 
     /**
@@ -56,23 +34,22 @@ class PostPolicy
      *
      * @param User $user
      * @param Post $post
-     * @return Response|bool
+     * @return bool
      */
     public function update(User $user, Post $post): bool
     {
-        return $user->id === $post->user_id;
+        return $user->is($post->user);
     }
 
-    public function approve(User $user, Post $post)
+    public function approve(User $user, Post $post): Response|bool
     {
         if (!$user->isStuff()) {
             return false;
         }
 
-        return $user->id === $post->user_id
+        return $user->is($post->user)
             ? Response::deny(__('You can\'t approve own posts'))
             : Response::allow();
-
     }
 
     /**
@@ -80,10 +57,11 @@ class PostPolicy
      *
      * @param User $user
      * @param Post $post
-     * @return Response|bool
+     * @return bool
      */
-    public function delete(User $user, Post $post)
+    public function delete(User $user, Post $post): bool
     {
+        return $user->is($post->user);
     }
 
     /**
@@ -91,22 +69,21 @@ class PostPolicy
      *
      * @param User $user
      * @param Post $post
-     * @return Response|bool
+     * @return bool
      */
-    public function restore(User $user, Post $post)
+    public function restore(User $user, Post $post): bool
     {
-        //
+        return $user->is($post->user);
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      *
      * @param User $user
-     * @param Post $post
-     * @return Response|bool
+     * @return bool
      */
-    public function forceDelete(User $user, Post $post)
+    public function forceDelete(User $user): bool
     {
-        //
+        return $user->isStuff();
     }
 }

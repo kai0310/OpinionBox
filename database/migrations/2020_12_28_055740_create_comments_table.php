@@ -18,6 +18,10 @@ class CreateCommentsTable extends Migration
             $table->text('body');
             $table->foreignId('user_id')->nullable()->index();
             $table->foreignId('post_id')->nullable()->index();
+
+            $table->dateTime('hide_at')->nullable();
+
+            $table->dateTime('deleted_at')->nullable();
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
         });
