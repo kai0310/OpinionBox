@@ -1,18 +1,20 @@
 <?php
 
+const GITHUB_DOMAIN = 'https://github.com/';
+
 return [
 
     /*
      * GitHub内のURL
      */
     'github' => [
-        'author'        => 'https://github.com/kai0310',
-        'author_icon'   => 'https://unavatar.io/kai0310',
-        'repository'    => 'https://github.com/kai0310/OpinionBox',
-        'license'       => 'https://github.com/kai0310/OpinionBox/blob/2.x/LICENSE',
-        'discussions'   => 'https://github.com/kai0310/OpinionBox/discussions',
-        'contributors'  => 'https://github.com/kai0310/OpinionBox/graphs/contributors',
-        'issues'        => 'https://github.com/kai0310/OpinionBox/issues',
+        'author'        => GITHUB_DOMAIN.'kai0310',
+        'author_icon'   => 'https://unavatar.io/github/kai0310',
+        'repository'    => GITHUB_DOMAIN.'kai0310/OpinionBox',
+        'license'       => GITHUB_DOMAIN.'blob/2.x/LICENSE',
+        'discussions'   => GITHUB_DOMAIN.'kai0310/OpinionBox/discussions',
+        'contributors'  => GITHUB_DOMAIN.'kai0310/OpinionBox/graphs/contributors',
+        'issues'        => GITHUB_DOMAIN.'kai0310/OpinionBox/issues',
     ],
 
     'wiki' => 'https://opinionbox.netlify.app',

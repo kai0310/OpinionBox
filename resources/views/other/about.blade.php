@@ -20,12 +20,16 @@
         </section>
         <div class="flex items-center justify-center mt-16">
             <div class="px-5 py-4 bg-white dark:bg-gray-800 shadow rounded-lg max-w-lg">
-                <div class="flex mb-4">
-                    <img
-                        class="w-12 h-12 rounded-full"
-                        src="{{ config('opinion-box.github.author_icon') }}"
-                        rel="author icon"
-                    />
+                <div class="flex mb-4 items-center">
+                    <div class="p-1 border-2 border-blue-400 rounded-full">
+                        <img
+                            class="w-12 h-12 rounded-full"
+                            src="{{ config('opinion-box.github.author_icon') }}"
+                            rel="author icon"
+                            loading="lazy"
+                            onmousedown="return false;"
+                        />
+                    </div>
                     <div class="ml-2 mt-0.5">
                         <span class="block font-medium text-base leading-snug text-black dark:text-gray-100">
                           <a href="https://github.com/kai0310" target="_blank">

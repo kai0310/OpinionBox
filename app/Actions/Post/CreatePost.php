@@ -10,7 +10,7 @@ use App\Models\Post;
 
 class CreatePost implements CreatePosts
 {
-    public function create(array $request): int
+    public function create(array $request): Post
     {
         Validator::make($request, [
             'title'     => ['required', 'string', 'min:5', 'max:30'],
@@ -18,9 +18,8 @@ class CreatePost implements CreatePosts
         ])->validate();
 
         return Auth::user()->posts()->create([
-            'user_id'   => Auth::id(),
             'title'     => $request['title'],
             'content'   => $request['content'],
-        ])->id;
+        ]);
     }
 }

@@ -42,7 +42,7 @@
             </main>
 
             <!-- Page Footer -->
-            <x-app-footer />
+            @include('layouts._footer')
 
         </div>
 

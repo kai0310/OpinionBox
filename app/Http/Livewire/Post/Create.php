@@ -16,10 +16,11 @@ class Create extends Component
             'title' => $this->title,
             'content' => $this->content,
         ])->toArray();
-        $id = app(CreatePost::class)->create($request);
 
-        session()->flash('message', '意見が投稿されました');
-        return redirect()->route('post.show', $id);
+        $post = app(CreatePost::class)->create($request);
+
+        session()->flash('message', __('posts.created'));
+        return redirect()->route('post.show', $post);
     }
 
     public function render()
