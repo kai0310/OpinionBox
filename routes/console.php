@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Artisan;
 //Artisan::command('inspire', function () {
 //    $this->comment(Inspiring::quote());
 //})->purpose('Display an inspiring quote');
+
+Artisan::command('ensure-database-state-is-loaded', function () {
+
+    collect([
+
+        new Database\State\EnsureRolesArePresent,
+
+    ])->each->__invoke();
+
+});
