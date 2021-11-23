@@ -208,12 +208,12 @@ class User extends Authenticatable
 
     public function grade()
     {
-        return substr($this->name, 0, 1);
+        return (int) mb_substr($this->name, 0, 1);
     }
 
     public function class()
     {
-        return substr($this->name, 1, 2);
+        return (int) mb_substr($this->name, 1, 2);
     }
 
     public function tester()
