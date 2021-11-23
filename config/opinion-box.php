@@ -33,5 +33,13 @@ return [
     'settings' => [
         'admin_is_stuff' => env('OPINIONBOX_SETTINGS_ADMIN_IS_STUFF', true),
 
+        'selected_tester' => [
+            // 'grade' => [
+            //     5,
+            // ],
+            // 'class' => [
+            //     1, 2,
+            // ],
+        ],
     ],
 ];

@@ -206,6 +206,31 @@ class User extends Authenticatable
         return in_array($role, $this->role_list, true);
     }
 
+    public function grade()
+    {
+        return substr($this->name, 0, 1);
+    }
+
+    public function class()
+    {
+        return substr($this->name, 1, 2);
+    }
+
+    public function tester()
+    {
+        $tester =  config('opinion-box.settings.selected_tester');
+
+        if ($this->user?->isStuff()) {
+            return true;
+        }
+
+        if (count($tester)) {
+            return $this->grade() === $tester['grade'] && $this->class() === $tester['class'];
+        }
+
+        return true;
+    }
+
     /**
      * User posts
      *
