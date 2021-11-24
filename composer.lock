@@ -1901,16 +1901,16 @@
         },
         {
             "name": "laravel/fortify",
-            "version": "v1.8.3",
+            "version": "v1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/fortify.git",
-                "reference": "19f71710cb4c6a2e774aece8a8c920165a95a059"
+                "reference": "a6c29b72e623a5cd7e68b24bac8e0f3986e0029e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/fortify/zipball/19f71710cb4c6a2e774aece8a8c920165a95a059",
-                "reference": "19f71710cb4c6a2e774aece8a8c920165a95a059",
+                "url": "https://api.github.com/repos/laravel/fortify/zipball/a6c29b72e623a5cd7e68b24bac8e0f3986e0029e",
+                "reference": "a6c29b72e623a5cd7e68b24bac8e0f3986e0029e",
                 "shasum": ""
             },
             "require": {
@@ -1960,7 +1960,7 @@
                 "issues": "https://github.com/laravel/fortify/issues",
                 "source": "https://github.com/laravel/fortify"
             },
-            "time": "2021-11-02T16:23:43+00:00"
+            "time": "2021-11-23T17:16:33+00:00"
         },
         {
             "name": "laravel/framework",
@@ -4089,16 +4089,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.9",
+            "version": "v0.10.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "01281336c4ae557fe4a994544f30d3a1bc204375"
+                "reference": "38017532bba35d15d28dcc001b4274df0251c4a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/01281336c4ae557fe4a994544f30d3a1bc204375",
-                "reference": "01281336c4ae557fe4a994544f30d3a1bc204375",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/38017532bba35d15d28dcc001b4274df0251c4a1",
+                "reference": "38017532bba35d15d28dcc001b4274df0251c4a1",
                 "shasum": ""
             },
             "require": {
@@ -4158,9 +4158,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.10.9"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.10.11"
             },
-            "time": "2021-10-10T13:37:39+00:00"
+            "time": "2021-11-23T15:02:17+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7503,16 +7503,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.12.5",
+            "version": "v1.12.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "d1c31b2c3d226e70e0071e074da69e4801f0f47b"
+                "reference": "31edbfef5c232157244564db4869fd93bc53b8ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/d1c31b2c3d226e70e0071e074da69e4801f0f47b",
-                "reference": "d1c31b2c3d226e70e0071e074da69e4801f0f47b",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/31edbfef5c232157244564db4869fd93bc53b8ce",
+                "reference": "31edbfef5c232157244564db4869fd93bc53b8ce",
                 "shasum": ""
             },
             "require": {
@@ -7559,7 +7559,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-11-16T16:55:18+00:00"
+            "time": "2021-11-23T17:35:39+00:00"
         },
         {
             "name": "mockery/mockery",
