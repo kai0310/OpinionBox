@@ -17,9 +17,10 @@ class CreatePost implements CreatePosts
             'content'   => ['required', 'string', 'min:20', 'max:500'],
         ])->validate();
 
-        return Auth::user()->posts()->create([
-            'title'     => $request['title'],
-            'content'   => $request['content'],
+        return Auth::user()?->posts()->create([
+            'title'         => $request['title'],
+            'content'       => $request['content'],
+            'published_at'  => now(),
         ]);
     }
 }

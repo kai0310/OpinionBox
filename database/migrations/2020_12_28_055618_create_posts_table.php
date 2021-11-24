@@ -24,6 +24,8 @@ class CreatePostsTable extends Migration
                 ->index()
                 ->constrained();
 
+            $table->dateTime('published_at')->nullable();
+
             $table->dateTime('approved_at')->nullable();
 
             $table->dateTime('hide_at')->nullable();
