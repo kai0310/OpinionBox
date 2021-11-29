@@ -3,10 +3,14 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Actions\Admin\DeleteRole;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
+use Livewire\Exceptions\BypassViewHandler;
 
 class DeleteRoleButton extends Component
 {
+    use LivewireAlert;
+
     public $role;
 
     /**

@@ -4,10 +4,13 @@ namespace App\Http\Livewire\Admin;
 
 use App\Actions\Admin\CreateRole;
 use App\Models\Role;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
 class CreateRolesForm extends Component
 {
+    use LivewireAlert;
+
     public $formModal = false;
     public $name;
     public $detail;
