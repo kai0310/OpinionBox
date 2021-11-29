@@ -7,11 +7,14 @@ use App\Models\Post;
 
 class UpdatePostStatus implements UpdatePostStatuses
 {
-    public function update(int $id)
+    public function approve(Post $post): bool
     {
-        return Post::withoutGlobalScope('is_checked')->whereId($id)
-            ->update([
-                'is_checked' => true,
-            ]);
+        return $post->update(['approved_at' => now()]);
     }
+
+    public function undoApprove(Post $post): bool
+    {
+        return $post->update(['approved_at' => null]);
+    }
+
 }

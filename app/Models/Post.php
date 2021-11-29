@@ -15,15 +15,13 @@ use JetBrains\PhpStorm\Pure;
  * Class Post
  * @package App\Models
  *
- * @property int $id ID
- * @property int $user_id User ID
- * @property string $title Post Title
+ * @property int $id         ID
+ * @property int $user_id    User ID
+ * @property string $title   Post Title
  * @property string $content Post Body
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
-
-
 class Post extends Model
 {
     use HasFactory;
@@ -39,14 +37,14 @@ class Post extends Model
     ];
 
     protected $casts = [
-        'user_id'       => 'integer',
-        'approved_at'   => 'datetime',
-        'published_at'  => 'datetime',
-        'hide_at'       => 'datetime',
+        'user_id' => 'integer',
+        'approved_at' => 'datetime',
+        'published_at' => 'datetime',
+        'hide_at' => 'datetime',
     ];
 
     // Maximum number of acquisitions.
-    public const TAKE_MAX_COUNT  = 10;
+    public const TAKE_MAX_COUNT = 10;
     public const TAKE_RAND_COUNT = 5;
 
     public function scopeApproved($query): void
@@ -81,7 +79,7 @@ class Post extends Model
 
     public function isPublished(): bool
     {
-        return is_null($this->published_at);
+        return (bool) $this->approved_at;
     }
 
     public function isNotPublished(): bool

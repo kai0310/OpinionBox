@@ -2,7 +2,11 @@
 
 namespace App\Contracts\Actions\Admin;
 
+use App\Models\Post;
+
 interface UpdatePostStatuses
 {
-    public function update(int $id);
+    public function approve(Post $post);
+
+    public function undoApprove(Post $post);
 }

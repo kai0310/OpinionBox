@@ -7,18 +7,20 @@ use Livewire\Component;
 
 class PermitButton extends Component
 {
-
     public $post;
 
-    protected $listeners = [
-        'refresh-permit-button' => '$refresh',
-    ];
-
-    public function submit()
+    public function approve(): void
     {
-        app(UpdatePostStatus::class)->update($this->post->id);
-        $this->emit('refresh-permit-button');
+        app(UpdatePostStatus::class)->approve($this->post);
+        session()->flash('message', 'Post successfully updated.');
+
     }
+
+    public function undoApprove(): void
+    {
+        app(UpdatePostStatus::class)->undoApprove($this->post);
+    }
+
 
     public function render()
     {
