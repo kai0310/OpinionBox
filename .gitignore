@@ -1,14 +1,22 @@
 /node_modules
-/public/hot
+/public/css
+/public/js
 /public/storage
+/public/mix-manifest.json
+/public/hot
 /storage/*.key
 /vendor
 .env
 .env.backup
 .phpunit.result.cache
+docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.idea
+
+# Editor directories and files
+/.idea
+.vscode
 .DS_Store
+public/css/app.css
