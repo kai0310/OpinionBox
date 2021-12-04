@@ -20,6 +20,11 @@ class PostPolicy
      */
     public function view(User $user, Post $post): bool|Response
     {
+
+        if ($post->isApproved()) {
+            return true;
+        }
+
         if ($user->isStuff()) {
             return true;
         }

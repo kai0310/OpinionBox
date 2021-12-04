@@ -2,27 +2,36 @@
 
 namespace App\Http\Livewire\Post;
 
+use App\Models\Post;
+use Illuminate\View\View;
 use Livewire\Component;
 use App\Actions\Post\CreateComment;
 
 class CommentSection extends Component
 {
+    /** @var Post */
     public $post;
+
+    /** @var string */
     public $body;
 
-    public function submit()
+    public function mount(Post $post)
     {
-        $request = collect(['body' => $this->body, 'postId' => $this->post->id])->toArray();
-        app(CreateComment::class)->create($request);
-        session()->flash('message', 'メッセージを送信中です');
-        $this->resetValidation();
-        $this->body = '';
+        $this->post = $post;
+        $this->post->comments = $this->post->comments()->latest()->get();
     }
 
-    public function render()
+    public function submit(): void
     {
-        return view('livewire.post.comment-section')->with(
-            'comments', $this->post->comments()->latest()->get()
-        );
+        $request = collect(['body' => $this->body, 'postId' => $this->post->id])->toArray();
+        $comment = app(CreateComment::class)->create($request);
+        $this->resetValidation();
+        $this->reset('body');
+        $this->post->comments->push($comment);
+    }
+
+    public function render(): View
+    {
+        return view('livewire.post.comment-section');
     }
 }

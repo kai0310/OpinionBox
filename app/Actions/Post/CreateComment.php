@@ -15,7 +15,7 @@ class CreateComment implements CreateComments
             'body' => ['required', 'string', 'max:30'],
         ])->validate();
 
-        Auth::user()->comments()->create([
+        return Auth::user()?->comments()->create([
             'body'      => $request['body'],
             'post_id'   => $request['postId'],
         ]);

@@ -79,7 +79,7 @@ class Post extends Model
 
     public function isPublished(): bool
     {
-        return (bool) $this->approved_at;
+        return (bool) $this->published_at;
     }
 
     public function isNotPublished(): bool

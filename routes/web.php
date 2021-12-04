@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin;
 
 Route::view('/', 'welcome')->name('welcome');
 
+// User
 Route::middleware(['auth'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
     Route::view('faq', 'other.faq')->name('faq');
@@ -37,6 +38,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('users/@{user}', ShowAction::class)->name('user.show');
 });
 
+// Stuff
 Route::middleware(['auth', 'can:stuff'])
     ->prefix('/stuff')
     ->name('stuff.')
@@ -44,6 +46,7 @@ Route::middleware(['auth', 'can:stuff'])
         Route::get('/', Stuff\IndexAction::class)->name('index');
     });
 
+// Admin
 Route::middleware(['auth', 'can:admin'])
     ->prefix('/admin')
     ->name('admin.')
