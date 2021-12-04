@@ -47,7 +47,7 @@
         ></textarea>
 
         <div class="flex justify-end gap-x-2 mt-5">
-            <x-jet-button class="bg-green-450 hover:bg-green-600 border-green-600 focus:border-green-450 font-normal">
+            <x-jet-button>
                 {{ __('投稿') }}
             </x-jet-button>
         </div>
