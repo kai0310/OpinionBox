@@ -77,26 +77,25 @@ class Post extends Model
         $query->whereNull('hide_at');
     }
 
-    public function isPublished(): bool
-    {
-        return (bool) $this->published_at;
-    }
-
     public function isNotPublished(): bool
     {
-        return ! $this->isPublished();
+        return is_null($this->isPublished());
     }
 
-    public function isApproved(): bool
+    public function isPublished(): bool
     {
-        return is_null($this->approved_at);
+        return ! $this->isNotPublished();
     }
 
     public function isNotApproved(): bool
     {
-        return ! $this->isApproved();
+        return is_null($this->approved_at);
     }
 
+    public function isApproved(): bool
+    {
+        return ! $this->isNotApproved();
+    }
 
     /**
      * Date posted

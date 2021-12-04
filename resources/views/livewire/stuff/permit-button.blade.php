@@ -1,5 +1,5 @@
 <div class="ml-auto text-sm flex items-center gap-x-6">
-    @if ($post->isPublished())
+    @if ($post->isApproved())
         <div>
             <i class="far fa-eye mx-2"></i>
             {{ __('公開中') }}
