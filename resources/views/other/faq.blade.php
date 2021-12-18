@@ -25,7 +25,7 @@
                             </summary>
                             <span>
                                 はい。投稿内容は承認された投稿のみ公開されます。承認は権限を持っている一部のユーザのみが行うことができます。<br/>
-                                詳細は<a href="{{ route('guide') }}" class="text-blue-500">Guide</a>をご参照ください。
+                                詳細は<a href="{{ route('guide') }}" class="link">Guide</a>をご参照ください。
                             </span>
                         </details>
                         <details class="mb-4">
@@ -33,8 +33,8 @@
                                 どの様にして投稿することができますか？
                             </summary>
                             <span>
-                                OpinionBoxの利用方法については<a href="route('Guide')" class="text-blue-500">ガイド</a> もしくは
-                                <a href="{{ config('opinion-box.wiki') }}" class="text-blue-500">公式マニュアル(wiki)</a>に記載されていますので、ご活用ください。
+                                OpinionBoxの利用方法については<a href="route('Guide')" class="link">ガイド</a> もしくは
+                                <a href="{{ config('opinion-box.wiki') }}" class="link">公式マニュアル(wiki)</a>に記載されていますので、ご活用ください。
                             </span>
                         </details>
                         <details class="mb-4">
@@ -44,7 +44,7 @@
                             <span>
                                 OpinionBoxにおいて修正の必要なバグ等はこのサイトの運営者もしくは
                                 <a href="{{ config('opinion-box.github.issues') }}" target="_blank"
-                                   class="text-blue-500">
+                                   class="link">
                                     GitHubでissues
                                 </a>
                                 を作成し、開発者に知らせてください。

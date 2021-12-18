@@ -47,6 +47,10 @@ class Post extends Model
     public const TAKE_MAX_COUNT = 10;
     public const TAKE_RAND_COUNT = 5;
 
+    protected $withCount = [
+      'comments'
+    ];
+
     public function scopeApproved($query): void
     {
         $query->whereNotNull('approved_at');

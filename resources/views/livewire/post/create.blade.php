@@ -5,12 +5,12 @@
             早速あなたもあなたの意見をBoxに入れてみましょう。<br/>
             Boxに入れるには次の項目にそれぞれ意見のタイトルと内容を入力し、送信するだけです。
         </x-slot>
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 lg:col-span-4">
             <div class="max-w-xl ml-2 text-xs text-gray-600">
                 どのような相談内容なのか分かりやすい様にタイトルをつけてください。
             </div>
             <x-slot name="form">
-                <div class="col-span-6 sm:col-span-4">
+                <div class="col-span-6 lg:col-span-4">
                     <x-jet-label for="title" class="text-lg">タイトル</x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600 my-1">
                         それがどの様な提案・意見なのか分かりやすいようにタイトルを入力してください
@@ -44,7 +44,7 @@
                 <x-jet-button submit type="submit">送信</x-jet-button>
             </x-slot>
         </div>
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 lg:col-span-4">
             <div class="max-w-xl ml-2 text-xs text-gray-600">
                 相談したい内容を分かりやすく文章で入力してください。
             </div>

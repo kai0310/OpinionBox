@@ -5,3 +5,23 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+.text-main {
+    @apply text-blue-400;
+}
+
+.text-sub {
+    @apply text-gray-600;
+}
+
+.text-disable {
+    @apply text-gray-500;
+}
+
+.text-active {
+    @apply text-blue-700;
+}
+
+.link {
+    @apply text-blue-500;
+}

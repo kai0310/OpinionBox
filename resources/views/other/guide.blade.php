@@ -56,7 +56,7 @@
                         <div class="px-3 pb-6">
                             アカウント登録をすると、すぐに意見を投稿することができます。
                             より良い学校生活のために「もっとこうしたらいい！」や「こんなことをして欲しい」などの意見を
-                            <a href="{{ route('post.create') }}" class="text-blue-500">こちら</a>のページより投稿することができます。
+                            <a href="{{ route('post.create') }}" class="link">こちら</a>のページより投稿することができます。
                         </div>
                     </div>
                 </div>
