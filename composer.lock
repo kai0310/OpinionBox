@@ -1827,16 +1827,16 @@
         },
         {
             "name": "joelbutcher/socialstream",
-            "version": "3.2.2",
+            "version": "v3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelbutcher/socialstream.git",
-                "reference": "e35b8f8faf3f4380ee4f26012443ca3019a256aa"
+                "reference": "9b114fd7e36595c01fe9311e552b40fffd523f00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelbutcher/socialstream/zipball/e35b8f8faf3f4380ee4f26012443ca3019a256aa",
-                "reference": "e35b8f8faf3f4380ee4f26012443ca3019a256aa",
+                "url": "https://api.github.com/repos/joelbutcher/socialstream/zipball/9b114fd7e36595c01fe9311e552b40fffd523f00",
+                "reference": "9b114fd7e36595c01fe9311e552b40fffd523f00",
                 "shasum": ""
             },
             "require": {
@@ -1881,9 +1881,19 @@
             ],
             "description": "A simple Socialite implementation for Laravel Jetstream.",
             "keywords": [
-                "auth",
+                "SocialStream",
+                "inertia",
+                "jetstream",
+                "jetstream socialite",
                 "laravel",
-                "tailwind"
+                "laravel jetstream",
+                "laravel livewire",
+                "laravel oauth",
+                "laravel socialite",
+                "oauth",
+                "socialite",
+                "tailwind",
+                "vue"
             ],
             "support": {
                 "issues": "https://github.com/joelbutcher/socialstream/issues",
@@ -1899,7 +1909,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-30T20:13:51+00:00"
+            "time": "2021-12-20T16:00:39+00:00"
         },
         {
             "name": "laravel/fortify",
