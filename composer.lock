@@ -971,16 +971,16 @@
         },
         {
             "name": "dragonmantank/cron-expression",
-            "version": "v3.2.3",
+            "version": "v3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dragonmantank/cron-expression.git",
-                "reference": "47c53bbb260d3c398fba9bfa9683dcf67add2579"
+                "reference": "9545dea2a1d92b60c8b3d06f02025c83e999bde0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/47c53bbb260d3c398fba9bfa9683dcf67add2579",
-                "reference": "47c53bbb260d3c398fba9bfa9683dcf67add2579",
+                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/9545dea2a1d92b60c8b3d06f02025c83e999bde0",
+                "reference": "9545dea2a1d92b60c8b3d06f02025c83e999bde0",
                 "shasum": ""
             },
             "require": {
@@ -1020,7 +1020,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dragonmantank/cron-expression/issues",
-                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.2.3"
+                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.2.4"
             },
             "funding": [
                 {
@@ -1028,7 +1028,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-06T05:35:07+00:00"
+            "time": "2022-01-13T04:09:37+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2149,16 +2149,16 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.6.0",
+            "version": "v2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "45a50f408691f45731f9a0ec2516ca812a9d7e71"
+                "reference": "7ba4cbe98ee06da2ccb9e46752697200670892fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/45a50f408691f45731f9a0ec2516ca812a9d7e71",
-                "reference": "45a50f408691f45731f9a0ec2516ca812a9d7e71",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/7ba4cbe98ee06da2ccb9e46752697200670892fc",
+                "reference": "7ba4cbe98ee06da2ccb9e46752697200670892fc",
                 "shasum": ""
             },
             "require": {
@@ -2211,7 +2211,7 @@
                 "issues": "https://github.com/laravel/jetstream/issues",
                 "source": "https://github.com/laravel/jetstream"
             },
-            "time": "2022-01-12T17:42:00+00:00"
+            "time": "2022-01-13T16:09:33+00:00"
         },
         {
             "name": "laravel/sanctum",
