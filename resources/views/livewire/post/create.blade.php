@@ -1,6 +1,8 @@
 <div>
     <x-jet-form-section submit="submit">
-        <x-slot name="title">意見をBoxに入れてみる</x-slot>
+        <x-slot name="title">
+            意見をBoxに入れてみる
+        </x-slot>
         <x-slot name="description">
             早速あなたもあなたの意見をBoxに入れてみましょう。<br/>
             Boxに入れるには次の項目にそれぞれ意見のタイトルと内容を入力し、送信するだけです。
@@ -11,7 +13,9 @@
             </div>
             <x-slot name="form">
                 <div class="col-span-6 lg:col-span-4">
-                    <x-jet-label for="title" class="text-lg">タイトル</x-jet-label>
+                    <x-jet-label for="title" class="text-lg">
+                        タイトル
+                    </x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600 my-1">
                         それがどの様な提案・意見なのか分かりやすいようにタイトルを入力してください
                     </div>
@@ -26,7 +30,9 @@
                     />
                     <x-jet-input-error for="title" class="mt-2"/>
 
-                    <x-jet-label class="text-lg mt-3" for="content">内容</x-jet-label>
+                    <x-jet-label class="text-lg mt-3" for="content">
+                        内容
+                    </x-jet-label>
                     <div class="max-w-xl ml-2 text-xs text-gray-600 my-1">
                         それがどの様な提案・意見なのか分かりやすいように簡潔に内容を入力してください
                     </div>
@@ -41,7 +47,9 @@
                 </div>
             </x-slot>
             <x-slot name="actions">
-                <x-jet-button submit type="submit">送信</x-jet-button>
+                <x-jet-button submit type="submit">
+                    送信
+                </x-jet-button>
             </x-slot>
         </div>
         <div class="col-span-6 lg:col-span-4">

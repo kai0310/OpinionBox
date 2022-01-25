@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl text-gray-800 leading-tight">
-            お知らせ
+            {{ __('お知らせ') }}
         </h2>
     </x-slot>
     <section class="text-gray-600 body-font">
@@ -13,7 +13,7 @@
                         :isLast="$loop->last"
                     />
                 @empty
-                    お知らせはありません
+                    {{ __('お知らせはありません') }}
                 @endforelse
             </div>
         </div>

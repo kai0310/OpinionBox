@@ -4,17 +4,18 @@
             <a href="{{ route('post.index') }}" class="hover:underline">
                 Box
             </a>
-            <i class="fas fa-angle-right mx-3"></i>自分の投稿
+            <i class="fas fa-angle-right mx-3"></i>
+            {{ __('自分の投稿') }}
         </h2>
     </x-slot>
 
     <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
         <div class="px-4 sm:px-0">
             <h1 class="text-xl font-bold text-gray-700 md:text-2xl">
-                自分の投稿
+                {{ __('自分の投稿') }}
             </h1>
             <p class="mt-2 text-gray-600">
-                自分の投稿した意見のみを表示しています。
+                {{ __('自分の投稿した意見のみを表示しています。') }}
             </p>
         </div>
         @forelse($posts as $post)
@@ -25,7 +26,7 @@
             <div class="mt-6">
                 <div class="mx-auto max-w-4xl px-10 py-6 text-center bg-white rounded-lg shadow-md">
                     <h1 class="text-gray-700 font-bold cursor-pointer">
-                        まだ表示できる意見がない様です
+                        {{ __('まだ表示できる意見がない様です') }}
                     </h1>
                 </div>
             </div>
