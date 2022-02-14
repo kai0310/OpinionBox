@@ -14,7 +14,7 @@
         "@tailwindcss/ui": "^0.7.2",
         "alpinejs": "^3.9.0",
         "autoprefixer": "^10.4.2",
-        "axios": "^0.25",
+        "axios": "^0.26",
         "cross-env": "^7.0",
         "laravel-mix": "^6.0.41",
         "lodash": "^4.17.21",
