@@ -19,7 +19,10 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "league/commonmark": "^2.0",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^2.5",
+        "symfony/http-client": "^6.0",
+        "symfony/mailgun-mailer": "^6.0",
+        "symfony/postmark-mailer": "^6.0"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",
