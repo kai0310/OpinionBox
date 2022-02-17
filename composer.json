@@ -10,12 +10,11 @@
     "require": {
         "php": "^8.0",
         "barryvdh/laravel-debugbar": "^3.5",
-        "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jantinnerezo/livewire-alert": "^2.2",
         "joelbutcher/socialstream": "^3.1",
-        "laravel/framework": "^8.40",
+        "laravel/framework": "^9.0",
         "laravel/jetstream": "^2.1",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
@@ -23,11 +22,11 @@
         "livewire/livewire": "^2.5"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
+        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.8",
         "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
+        "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.3.3"
     },
     "config": {
@@ -71,6 +70,10 @@
             "@php -r \"file_exists('.env') || copy('.env.dev', '.env');\"",
             "vendor/bin/sail up -d"
         ],
-        "sail:down": "vendor/bin/sail down"
+        "sail:down": "vendor/bin/sail down",
+        "pkg:refresh": [
+            "rm -rf vendor && composer install",
+            "rm -rf node_modules && npm i"
+        ]
     }
 }
