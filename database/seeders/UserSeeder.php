@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
+use Database\Factories\PostFactory;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\App;
@@ -26,11 +28,13 @@ class UserSeeder extends Seeder
                     'profile_photo_path' => 'https://unavatar.io/kai0310'
                 ]);
 
-            $user->roles()->attach([1, 2,]);
+            $user->roles()->attach([1, 2]);
         }
 
-        if (!App::environment('production')) {
-            User::factory(1000)->create();
+        if (! App::environment('production')) {
+            User::factory(100)->has(
+                Post::factory()->count(2)
+            )->create();
         }
     }
 }
