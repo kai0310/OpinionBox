@@ -6,11 +6,11 @@
         </div>
 
         <div class="flex items-center">
-            @can('stuff')
+            @if(auth()->user()->isStuff())
                 <x-jet-button wire:click="undoApprove" wire:loading.attr="disabled">
                     {{ __('非公開にする') }}
                 </x-jet-button>
-            @endcan
+            @endif
             <div wire:loading.delay>
                 <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -20,7 +20,7 @@
             </div>
         </div>
     @else
-        @can('stuff')
+        @if(auth()->user()->isStuff())
             <div class="flex items-center">
                 <x-jet-button wire:click="approve" wire:loading.attr="disabled">
                     {{ __('公開する') }}
@@ -36,6 +36,6 @@
         @else
             <i class="far fa-eye-slash mx-2"></i>
             {{ __('非公開中') }}
-        @endcan
+        @endif
     @endif
 </div>

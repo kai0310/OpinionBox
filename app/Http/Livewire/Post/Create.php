@@ -7,8 +7,8 @@ use App\Actions\Post\CreatePost;
 
 class Create extends Component
 {
-    public $title;
-    public $content;
+    public ?string $title = null;
+    public ?string $content = null;
 
     public function submit()
     {

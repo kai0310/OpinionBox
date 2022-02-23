@@ -1,20 +1,18 @@
 <?php
 
-const GITHUB_DOMAIN = 'https://github.com/';
-
 return [
 
     /*
      * GitHub内のURL
      */
     'github' => [
-        'author'        => GITHUB_DOMAIN.'kai0310',
+        'author'        => 'https://github.com/kai0310',
         'author_icon'   => 'https://unavatar.io/github/kai0310',
-        'repository'    => GITHUB_DOMAIN.'kai0310/OpinionBox',
-        'license'       => GITHUB_DOMAIN.'blob/2.x/LICENSE',
-        'discussions'   => GITHUB_DOMAIN.'kai0310/OpinionBox/discussions',
-        'contributors'  => GITHUB_DOMAIN.'kai0310/OpinionBox/graphs/contributors',
-        'issues'        => GITHUB_DOMAIN.'kai0310/OpinionBox/issues',
+        'repository'    => 'https://github.com/ai0310/OpinionBox',
+        'license'       => 'https://github.com/blob/2.x/LICENSE',
+        'discussions'   => 'https://github.com/kai0310/OpinionBox/discussions',
+        'contributors'  => 'https://github.com/kai0310/OpinionBox/graphs/contributors',
+        'issues'        => 'https://github.com/kai0310/OpinionBox/issues',
     ],
 
     'wiki' => 'https://opinionbox.netlify.app',
@@ -31,15 +29,8 @@ return [
     ],
 
     'settings' => [
-        'admin_is_stuff' => env('OPINIONBOX_SETTINGS_ADMIN_IS_STUFF', true),
+        'admin_is_stuff'    => env('OPINIONBOX_SETTINGS_ADMIN_IS_STUFF', true),
 
-        'selected_tester' => [
-            // 'grade' => [
-            //     5,
-            // ],
-            // 'class' => [
-            //     01, 02,
-            // ],
-        ],
+        'selected_tester'   => [],
     ],
 ];
