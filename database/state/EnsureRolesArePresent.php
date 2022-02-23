@@ -3,6 +3,7 @@
 namespace Database\State;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 
 class EnsureRolesArePresent
@@ -10,7 +11,7 @@ class EnsureRolesArePresent
 
     public function __invoke()
     {
-        if ($this->present()) {
+        if ($this->present() || Schema::hasTable('roles')) {
             return;
         }
 
