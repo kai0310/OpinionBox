@@ -11,7 +11,7 @@ class EnsureRolesArePresent
 
     public function __invoke()
     {
-        if ($this->present() || Schema::hasTable('roles')) {
+        if ($this->present() && Schema::hasTable('roles')) {
             return;
         }
 
