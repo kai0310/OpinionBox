@@ -16,9 +16,15 @@ class BrowserKitTestCase extends BaseTestCase
 
     public string $baseUrl = 'http://localhost';
 
-    protected function setUpTraits(): array
+    protected function setUpTraits()
     {
-        return parent::setUpTraits();
+        $uses = parent::setUpTraits();
+
+        if (isset($uses[WithFaker::class])) {
+            $this->setUpFaker();
+        }
+
+        return $uses;
     }
 
     protected function dispatch($job)
