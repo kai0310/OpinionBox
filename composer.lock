@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9aef9cfa4d15d6dfd05d596fe60faff",
+    "content-hash": "ea6b71c6de31a564a25459df7673ffaa",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -7974,7 +7974,7 @@
         },
         {
             "name": "pestphp/pest-plugin-parallel",
-            "version": "v0.3.1",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-parallel.git",
@@ -8041,7 +8041,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-parallel/tree/v0.3.1"
+                "source": "https://github.com/pestphp/pest-plugin-parallel/tree/v1.0.0"
             },
             "funding": [
                 {
