@@ -1507,16 +1507,16 @@
         },
         {
             "name": "jantinnerezo/livewire-alert",
-            "version": "2.2.4",
+            "version": "2.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jantinnerezo/livewire-alert.git",
-                "reference": "8c133deaab8b0b6d157a082f246057426b8d83d4"
+                "reference": "352d13719741fce537893bd9372504385bc99d5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jantinnerezo/livewire-alert/zipball/8c133deaab8b0b6d157a082f246057426b8d83d4",
-                "reference": "8c133deaab8b0b6d157a082f246057426b8d83d4",
+                "url": "https://api.github.com/repos/jantinnerezo/livewire-alert/zipball/352d13719741fce537893bd9372504385bc99d5c",
+                "reference": "352d13719741fce537893bd9372504385bc99d5c",
                 "shasum": ""
             },
             "require": {
@@ -1563,7 +1563,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jantinnerezo/livewire-alert/issues",
-                "source": "https://github.com/jantinnerezo/livewire-alert/tree/2.2.4"
+                "source": "https://github.com/jantinnerezo/livewire-alert/tree/2.2.6"
             },
             "funding": [
                 {
@@ -1571,7 +1571,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-02-02T07:17:53+00:00"
+            "time": "2022-03-15T17:39:01+00:00"
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -1859,16 +1859,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.4.1",
+            "version": "v9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "29f0aaade82eadd20ef881b4efb88b0dad4e9a5b"
+                "reference": "35be2599c9ac3d58bf1578895c2e85ea4848a0d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/29f0aaade82eadd20ef881b4efb88b0dad4e9a5b",
-                "reference": "29f0aaade82eadd20ef881b4efb88b0dad4e9a5b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/35be2599c9ac3d58bf1578895c2e85ea4848a0d7",
+                "reference": "35be2599c9ac3d58bf1578895c2e85ea4848a0d7",
                 "shasum": ""
             },
             "require": {
@@ -2034,7 +2034,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-03-08T16:17:00+00:00"
+            "time": "2022-03-15T14:41:19+00:00"
         },
         {
             "name": "laravel/jetstream",
