@@ -1859,16 +1859,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.4.1",
+            "version": "v9.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "29f0aaade82eadd20ef881b4efb88b0dad4e9a5b"
+                "reference": "35be2599c9ac3d58bf1578895c2e85ea4848a0d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/29f0aaade82eadd20ef881b4efb88b0dad4e9a5b",
-                "reference": "29f0aaade82eadd20ef881b4efb88b0dad4e9a5b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/35be2599c9ac3d58bf1578895c2e85ea4848a0d7",
+                "reference": "35be2599c9ac3d58bf1578895c2e85ea4848a0d7",
                 "shasum": ""
             },
             "require": {
@@ -2034,7 +2034,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-03-08T16:17:00+00:00"
+            "time": "2022-03-15T14:41:19+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -7449,16 +7449,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.13.6",
+            "version": "v1.13.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "6205041336b09b965af1d6af29261584e787bf52"
+                "reference": "2092e1ce6e4ba534bff443de8c3a7bb280aba121"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/6205041336b09b965af1d6af29261584e787bf52",
-                "reference": "6205041336b09b965af1d6af29261584e787bf52",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/2092e1ce6e4ba534bff443de8c3a7bb280aba121",
+                "reference": "2092e1ce6e4ba534bff443de8c3a7bb280aba121",
                 "shasum": ""
             },
             "require": {
@@ -7505,7 +7505,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-03-07T15:35:47+00:00"
+            "time": "2022-03-11T14:11:15+00:00"
         },
         {
             "name": "mockery/mockery",
