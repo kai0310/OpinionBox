@@ -13,7 +13,7 @@
         "@tailwindcss/typography": "^0.5.2",
         "@tailwindcss/ui": "^0.7.2",
         "alpinejs": "^3.9.1",
-        "autoprefixer": "^10.4.2",
+        "autoprefixer": "^10.4.4",
         "axios": "^0.26",
         "cross-env": "^7.0",
         "laravel-mix": "^6.0.43",
