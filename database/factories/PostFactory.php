@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,4 +22,35 @@ class PostFactory extends Factory
             'content' => $this->faker->paragraph
         ];
     }
+
+    public function published(): self
+    {
+        return $this->state(function (): array {
+            return [
+                'published' => now()
+            ];
+        });
+    }
+
+    public function hide(): self
+    {
+        return $this->state(function (): array {
+            return [
+                'hide_at' => now()
+            ];
+        });
+    }
+
+    public function markAsResolved(): self
+    {
+        return $this->state(function (): array {
+            return [
+                'resolved_user_id' => User::factory()->create()->id,
+                'resolved_at' => now()
+            ];
+        });
+    }
+
+
+
 }
