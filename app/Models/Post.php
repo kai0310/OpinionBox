@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
-use JetBrains\PhpStorm\Pure;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Post
@@ -99,6 +98,11 @@ class Post extends Model
     public function isApproved(): bool
     {
         return ! $this->isNotApproved();
+    }
+
+    public function authorIs(User $user): bool
+    {
+        return $this->user()->is($user);
     }
 
     /**
