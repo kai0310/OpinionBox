@@ -59,3 +59,33 @@ test('stuff users can see the allow button', function () {
 
     $this->visit('post/1')->see(__('非公開にする'));
 });
+
+test('author can delete my post', function () {
+    $user = $this->login();
+    \App\Models\Post::factory()->create(['user_id' => $user->id]);
+
+    $post = \App\Models\Post::get()->first();
+
+    $this->get('post/1')->see(__('削除する'));
+
+    Livewire\Livewire::test(\App\Http\Livewire\Post\DeletePostButton::class, ['post' => $post])
+        ->call('deletePost');
+
+    $this->assertEquals(0, \App\Models\Post::all()->count());
+
+});
+
+test('no one except the author can delete a post', function () {
+    \App\Models\User::factory()->has(
+        \App\Models\Post::factory()->approved()
+    )->create();
+
+    $this->login();
+    $this->get('post/1')->dontSee(__('削除する'));
+
+    Livewire\Livewire::test(\App\Http\Livewire\Post\DeletePostButton::class, [
+        'post' => \App\Models\Post::query()->first()
+    ])->call('deletePost');
+
+    $this->assertEquals(1, \App\Models\Post::all()->count());
+});
