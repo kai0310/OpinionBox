@@ -19,14 +19,25 @@
         <!-- Scripts -->
         <script src="{{ url('js/app.js') }}" defer></script>
 
+        @wireUiScripts
+        <script src="//unpkg.com/alpinejs" defer></script>
+
         @if (config('opinion-box.chat-bot'))
             <script>
-                (function(w, d) { w.CollectId = '{{ config('opinion-box.chat-bot') }}'; const h = d.head || d.getElementsByTagName('head')[0];const s = d.createElement('script'); s.setAttribute('type', 'text/javascript'); s.async=true; s.setAttribute('src', 'https://collectcdn.com/launcher.js');h.appendChild(s); })(window, document);
+                (function(w, d) {
+                    w.CollectId = '{{ config('opinion-box.chat-bot') }}';
+                    const h = d.head || d.getElementsByTagName('head')[0];const s = d.createElement('script');
+                    s.setAttribute('type', 'text/javascript');
+                    s.async=true;
+                    s.setAttribute('src', 'https://collectcdn.com/launcher.js');h.appendChild(s);
+                })(window, document);
             </script>
         @endif
 
     </head>
     <body class="font-sans antialiased">
+        <x-dialog z-index="z-50" blur="md" align="center" />
+
         <div class="min-h-screen bg-gray-100">
             <x-jet-banner/>
             @livewire('navigation-menu')
