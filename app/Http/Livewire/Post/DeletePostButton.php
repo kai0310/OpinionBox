@@ -9,17 +9,32 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Livewire\Component;
+use WireUi\Traits\Actions;
 
 class DeletePostButton extends Component
 {
+    use Actions;
+
     public Post $post;
 
-    protected DeletePost $deletePost;
+    public bool $confirmingApiTokenDeletion = false;
 
-    public function mount(Post $post, DeletePost $deletePost): void
+    public function mount(Post $post): void
     {
         $this->post = $post;
-        $this->deletePost = $deletePost;
+    }
+
+    public function confirmation(): void
+    {
+        $this->dialog()->confirm([
+            'icon'       => 'error',
+            'title'       => '意見を本当に削除しますか？',
+            'description' => '一度消してしまうと、この操作は取り消せません。',
+            'acceptLabel' => '削除する',
+            'method'      => 'deletePost',
+            'params'      => 'Saved',
+            'rejectLabel' => '削除しない',
+        ]);
     }
 
     /**
