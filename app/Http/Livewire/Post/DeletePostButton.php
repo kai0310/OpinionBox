@@ -28,12 +28,12 @@ class DeletePostButton extends Component
     {
         $this->dialog()->confirm([
             'icon'       => 'error',
-            'title'       => '意見を本当に削除しますか？',
-            'description' => '一度消してしまうと、この操作は取り消せません。',
-            'acceptLabel' => '削除する',
             'method'      => 'deletePost',
             'params'      => 'Saved',
-            'rejectLabel' => '削除しない',
+            'title'       => __('意見を本当に削除しますか？'),
+            'description' => __('一度削除してしまうと、この操作は取り消せません。'),
+            'acceptLabel' => __('削除する'),
+            'rejectLabel' => __('削除しない'),
         ]);
     }
 
