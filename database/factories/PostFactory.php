@@ -23,6 +23,15 @@ class PostFactory extends Factory
         ];
     }
 
+    public function approved(): self
+    {
+        return $this->state(function (): array {
+            return [
+                'approved_at' => now()
+            ];
+        });
+    }
+
     public function published(): self
     {
         return $this->state(function (): array {
