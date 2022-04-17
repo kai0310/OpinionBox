@@ -28,6 +28,25 @@ trait UserAccessors
     }
 
     /**
+     * Return the user is admin.
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return (bool) $this->is_admin;
+    }
+
+    /**
+     * Return the user isn't admin.
+     * @return bool
+     */
+    public function isNotAdmin(): bool
+    {
+        return ! (bool) $this->is_admin;
+    }
+
+
+    /**
      * Return the user is ban.
      * @return bool
      */
@@ -156,7 +175,7 @@ trait UserAccessors
 
     public function tester()
     {
-        $tester =  config('opinion-box.settings.selected_tester');
+        $tester = config('opinion-box.settings.selected_tester');
 
         if ($this->user?->isStuff()) {
             return true;

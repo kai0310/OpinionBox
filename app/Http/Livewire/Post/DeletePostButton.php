@@ -39,7 +39,7 @@ class DeletePostButton extends Component
      * @param DeletePost $deletePost
      * @return RedirectResponse
      */
-    public function deletePost(DeletePost $deletePost)
+    public function deletePost(DeletePost $deletePost): RedirectResponse
     {
         try {
             $deletePost->handle($this->post, Auth::user());

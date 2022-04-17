@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Actions\Admin\DeleteRole;
+use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\Exceptions\BypassViewHandler;
@@ -18,7 +19,7 @@ class DeleteRoleButton extends Component
      *
      * @var bool
      */
-    public $confirmingRoleDeletion = false;
+    public bool $confirmingRoleDeletion = false;
 
     public function confirmingRoleDeletion(): void
     {
@@ -31,7 +32,7 @@ class DeleteRoleButton extends Component
      */
     public function deleteRole(): void
     {
-        app(DeleteRole::class)->delete($this->role);
+        app(DeleteRole::class)->delete($this->role, Auth::user());
         $this->emit('refresh-admin-all-user-table');
         $this->confirmingRoleDeletion = false;
         $this->alert('success', 'ロールが削除されました', [

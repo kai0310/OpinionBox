@@ -19,13 +19,8 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens;
-    use HasFactory;
-    use HasConnectedAccounts;
-    use Notifiable;
-    use SetsProfilePhotoFromUrl;
-    use TwoFactorAuthenticatable;
-    use UserAccessors;
+    use HasApiTokens, HasFactory, HasConnectedAccounts, Notifiable,
+        SetsProfilePhotoFromUrl, TwoFactorAuthenticatable, UserAccessors;
 
     /**
      * The attributes that are mass assignable.
