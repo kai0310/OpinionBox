@@ -12,7 +12,7 @@ class CreateComment implements CreateComments
     public function create(array $request)
     {
         Validator::make($request, [
-            'body' => ['required', 'string', 'max:30'],
+            'body' => ['required', 'string', 'max:200'],
         ])->validate();
 
         return Auth::user()?->comments()->create([

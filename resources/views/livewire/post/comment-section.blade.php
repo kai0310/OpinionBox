@@ -21,13 +21,25 @@
                             </div>
 
                             <div class="flex items-center gap-x-2">
-                                {{ $comment->created_at->diffForHumans() }}
+                                <span class="mr-2">
+                                    {{ $comment->created_at->diffForHumans() }}
+                                </span>
+                                <x-dropdown>
+                                    @if ($comment->user->is(auth()->user()))
+                                        <x-dropdown.item
+                                            wire:click="confirmingCommentDeletion({{ $comment->id }})"
+                                            class="text-red-500 hover:text-red-600 non-selective"
+                                            :label="__('削除する')"
+                                        />
+                                    @endif
+                                    <x-dropdown.item class="non-selective" :label="__('通報する')" />
+                                </x-dropdown>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="prose max-w-none p-6 break-words">
-                    {!! $comment->body !!}
+                <div class="prose prose-indigo max-w-none p-6 break-words">
+                    {!! nl2br(replace_links(e($comment->body))) !!}
                 </div>
             </div>
         @empty
@@ -52,5 +64,4 @@
             </x-jet-button>
         </div>
     </form>
-
 </div>

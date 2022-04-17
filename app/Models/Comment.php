@@ -16,6 +16,7 @@ use Illuminate\Support\Carbon;
  * @property string $body Comment Body
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @method static find(int|null $deleteTargetCommentId)
  */
 
 class Comment extends Model

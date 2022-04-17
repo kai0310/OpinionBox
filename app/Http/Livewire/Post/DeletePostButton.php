@@ -16,7 +16,7 @@ class DeletePostButton extends Component
     use Actions;
 
     public Post $post;
-    
+
     public function mount(Post $post): void
     {
         $this->post = $post;
