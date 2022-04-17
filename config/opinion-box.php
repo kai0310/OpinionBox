@@ -8,7 +8,7 @@ return [
     'github' => [
         'author'        => 'https://github.com/kai0310',
         'author_icon'   => 'https://unavatar.io/github/kai0310',
-        'repository'    => 'https://github.com/ai0310/OpinionBox',
+        'repository'    => 'https://github.com/kai0310/OpinionBox',
         'license'       => 'https://github.com/blob/2.x/LICENSE',
         'discussions'   => 'https://github.com/kai0310/OpinionBox/discussions',
         'contributors'  => 'https://github.com/kai0310/OpinionBox/graphs/contributors',

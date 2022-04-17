@@ -32,7 +32,12 @@
                                             :label="__('削除する')"
                                         />
                                     @endif
-                                    <x-dropdown.item class="non-selective" :label="__('通報する')" />
+                                    {{--
+                                        <x-dropdown.item class="non-selective" :label="__('編集する')" />
+                                    --}}
+                                    {{--
+                                        <x-dropdown.item class="non-selective" :label="__('通報する')" />
+                                    --}}
                                 </x-dropdown>
                             </div>
                         </div>
