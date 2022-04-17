@@ -5,7 +5,6 @@ namespace App\Actions\Post;
 use App\Exceptions\CannotDeletePostException;
 use App\Models\Post;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class DeletePost
 {
