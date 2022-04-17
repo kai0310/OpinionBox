@@ -48,7 +48,7 @@
             </x-slot>
             <x-slot name="actions">
                 <x-jet-button submit type="submit">
-                    送信
+                    {{ __('意見を投稿する') }}
                 </x-jet-button>
             </x-slot>
         </div>

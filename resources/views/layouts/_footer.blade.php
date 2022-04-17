@@ -58,7 +58,7 @@
                     Contact us
                 </div>
                 <a href="{{ config('opinion-box.github.repository') }}" target="_blank" class="my-3 block">
-                    GitHub-Repo
+                    GitHub
                 </a>
                 <a href="{{ config('opinion-box.github.contributors') }}" target="_blank">
                     Contributor

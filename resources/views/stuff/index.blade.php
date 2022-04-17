@@ -31,7 +31,7 @@
                 </div>
             </div>
         @endforelse
-        <div class="mx-auto max-w-4xl">
+        <div class="mx-auto mt-5 max-w-4xl">
             {{ $posts->links() }}
         </div>
     </div>
