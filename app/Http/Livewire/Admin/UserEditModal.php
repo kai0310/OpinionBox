@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use App\Actions\Admin\ForceResetPassword;
 use App\Exceptions\LackOfPermissionException;
 use App\Models\User;
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Livewire\Component;
@@ -30,17 +31,24 @@ class UserEditModal extends Component
     /**
      * @param ForceResetPassword $forceResetPassword
      * @return void
-     * @throws LackOfPermissionException
      */
     public function resetPassword(ForceResetPassword $forceResetPassword): void
     {
-        $new_password = $forceResetPassword->handle(Auth::user(), $this->targetUser)['new_password'];
-
-        $this->userEditModal = false;
+        try {
+            $reset_password = $forceResetPassword->handle(Auth::user(), $this->targetUser);
+        } catch (Exception $e) {
+            $this->dialog()->error(
+                __('パスワードを初期化できませんでした'),
+                $e->getMessage()
+            );
+            return;
+        } finally {
+            $this->userEditModal = false;
+        }
 
         $this->dialog()->success(
             __('パスワードを初期化しました'),
-            __('新しいパスワードは :0 です', [$new_password])
+            __('新しいパスワードは :0 です', [$reset_password['new_password']])
         );
     }
 
