@@ -5,6 +5,7 @@ namespace App\Actions\Admin;
 use App\Exceptions\LackOfPermissionException;
 use App\Models\User;
 use App\Traits\OnlyAdminCan;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use JetBrains\PhpStorm\ArrayShape;
 
@@ -29,7 +30,7 @@ class ForceResetPassword
         $reset_password = Str::random(20);
 
         $status = $target_user->update([
-            'password' => $reset_password,
+            'password' => Hash::make($reset_password),
             'email_verified_at' => null
         ]);
 
