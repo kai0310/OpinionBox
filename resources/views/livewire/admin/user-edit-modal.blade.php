@@ -1,9 +1,9 @@
 <div>
-    <span wire:click="$set('cardModal', true)" class="text-indigo-600 hover:text-indigo-900 select-none cursor-pointer">
+    <span wire:click="$set('userEditModal', true)" class="text-indigo-600 hover:text-indigo-900 select-none cursor-pointer">
         {{ __('編集する') }}
     </span>
 
-    <x-modal.card title="Edit Customer" blur wire:model.defer="cardModal">
+    <x-modal.card title="Edit Customer" blur wire:model.defer="userEditModal">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <x-input label="Name" placeholder="Your full name" :value="$targetUser->name" />
 
