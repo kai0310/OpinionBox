@@ -22,6 +22,10 @@ class ForceResetPassword
     {
         $this->adminCan($user);
 
+        if ($user->is($target_user)) {
+            throw LackOfPermissionException::cannotMyself();
+        }
+
         $reset_password = Str::random(20);
 
         $status = $target_user->update([

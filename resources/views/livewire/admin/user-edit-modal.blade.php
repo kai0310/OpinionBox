@@ -16,18 +16,20 @@
             </div>
 
             <div class="flex gap-x-2">
-                <x-button
-                    wire:click="resetPassword"
-                    class="py-2"
-                    outline negative
-                    :label="__('パスワードを初期化する')"
-                />
+                @unless (auth()->user()->is($targetUser))
+                    <x-button
+                        wire:click="resetPassword"
+                        class="py-2"
+                        outline negative
+                        :label="__('パスワードを初期化する')"
+                    />
 
-                <x-jet-danger-button
-                    wire:click="banUser"
-                    flat negative
-                    label="Banする"
-                />
+                    <x-jet-danger-button
+                        wire:click="banUser"
+                        flat negative
+                        label="Banする"
+                    />
+                @endunless
             </div>
         </div>
 
