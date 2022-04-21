@@ -3,5 +3,7 @@
         {{ __ ('お知らせ管理') }}
     </x-slot>
 
-    @livewire('admin.announcements-table')
+    {{--
+        @livewire('admin.announcements-table')
+    --}}
 </x-admin-layout>

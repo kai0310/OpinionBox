@@ -11,7 +11,7 @@
               border-transparent
               rounded-md
               font-semibold
-              text-xs
+              text-sm
               text-white
               uppercase
               tracking-widest
