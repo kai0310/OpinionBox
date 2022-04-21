@@ -19,8 +19,11 @@
     <!-- Scripts -->
     <script src="{{ url('js/app.js') }}" defer></script>
 
+    @wireUiScripts
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body class="font-sans antialiased">
+<x-dialog z-index="z-50" blur="md" align="center" />
 <div class="min-h-screen bg-gray-100 flex">
 
     <!-- Side Navigation -->
