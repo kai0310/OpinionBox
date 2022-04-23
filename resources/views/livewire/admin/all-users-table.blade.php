@@ -50,6 +50,11 @@
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
                                                 {{ $user->name }}
+                                                @if ($user->isBanned())
+                                                    <span class="text-red-500">
+                                                        {{ __('banned') }}
+                                                    </span>
+                                                @endif
                                             </div>
                                             <div class="text-sm text-gray-500">
                                                 {{ $user->email }}
@@ -83,7 +88,7 @@
                                     {{ $user->is_admin ? 'はい' : 'いいえ' }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    @livewire('admin.user-edit-modal', ['targetUser' => $user])
+                                    @livewire('admin.user-edit-modal', ['targetUser' => $user], key($user->id))
                                 </td>
                             </tr>
                         @endforeach

@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Actions\Admin\BanUser;
 use App\Actions\Admin\ForceResetPassword;
-use App\Exceptions\LackOfPermissionException;
 use App\Models\User;
 use Exception;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +26,29 @@ class UserEditModal extends Component
 
     public function editUser(): void
     {
+    }
+
+    public function banUser(BanUser $banUser): void
+    {
+        try {
+            $banUser->handle(Auth::user(), $this->targetUser);
+        } catch (Exception $e) {
+            $this->dialog()->error(
+                __('操作が正常に実行されませんでした'),
+                $e->getMessage()
+            );
+        } finally {
+            $this->userEditModal = false;
+        }
+
+        $this->emit('refresh-admin-all-users-table');
+
+        $this->dialog()->success(
+            __(
+                $this->targetUser->isBanned() ?
+                ':0 さんのBanしました' : ':0 さんのBanを解除しました', [$this->targetUser->name]
+            ),
+        );
     }
 
     /**

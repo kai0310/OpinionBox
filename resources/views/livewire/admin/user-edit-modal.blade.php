@@ -3,16 +3,16 @@
         {{ __('編集する') }}
     </span>
 
-    <x-modal.card title="Edit Customer" blur wire:model.defer="userEditModal">
+    <x-modal.card :title="__(':0 さんの情報', [$targetUser->name])" blur wire:model.defer="userEditModal">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <x-input label="Name" placeholder="Your full name" :value="$targetUser->name" />
+            <x-input :label="__('Name')" :placeholder="__('フルネーム')" :value="$targetUser->name" />
 
             @if ($targetUser->student_number)
-                <x-input label="Phone" :value="$targetUser->student_number" />
+                <x-input :label="__('学籍番号')" :value="$targetUser->student_number" />
             @endif
 
             <div class="col-span-1 sm:col-span-2">
-                <x-input label="Email" :value="$targetUser->email" />
+                <x-input :label="__('Name')" :value="$targetUser->email" />
             </div>
 
             <div class="flex gap-x-2">
@@ -24,10 +24,10 @@
                         :label="__('パスワードを初期化する')"
                     />
 
-                    <x-jet-danger-button
+                    <x-button
                         wire:click="banUser"
-                        flat negative
-                        label="Banする"
+                        negative
+                        label="{{ $targetUser->isBanned() ? 'Banを解除する' : 'Banする' }}"
                     />
                 @endunless
             </div>
