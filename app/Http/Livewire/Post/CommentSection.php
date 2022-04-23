@@ -67,8 +67,13 @@ class CommentSection extends Component
             return;
         }
 
-        unset($this->post->comments[$comment->id]);
         Comment::find($this->deleteTargetCommentId)->delete();
+
+        $this->notification()->success(
+            __('コメントを削除しました'),
+        );
+
+        $this->emitSelf('commentDeleted');
     }
 
     public function render(): View
