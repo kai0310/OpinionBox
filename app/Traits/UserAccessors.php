@@ -149,7 +149,7 @@ trait UserAccessors
      */
     public function getRoleListAttribute(): array
     {
-        return $this->roles()->pluck('name')->toArray();
+        return $this?->roles->pluck('name')->toArray();
     }
 
     /**

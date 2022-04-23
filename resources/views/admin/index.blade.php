@@ -6,7 +6,7 @@
     <div>
         <div class="mt-6 bg-white dark:bg-secondary-800 rounded-lg shadow-lg p-4 sm:p-5">
             <div class="z-20 relative grid gap-4 sm:gap-x-6 sm:gap-y-4 sm:grid-cols-3">
-                <a href="http://127.0.0.1:8000/shopper/setting/general" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
+                <a href="{{ route('admin.announcements') }}" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
                     <div class="shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12 ">
                         <x-heroicon-o-speakerphone class="h-6 w-6" />
 
@@ -20,7 +20,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="http://127.0.0.1:8000/shopper/setting/management" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
+                <a href="{{ route('admin.manage.users') }}" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
                     <div class="shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12 ">
                         <x-heroicon-o-user-group class="w-6 h-6" />
                     </div>
@@ -33,7 +33,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="http://127.0.0.1:8000/shopper/setting/email-setting" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
+                <a href="#" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
                     <div class="shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12 ">
                         <x-heroicon-o-key class="w-6 h-6" />
                     </div>
@@ -46,7 +46,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="http://127.0.0.1:8000/shopper/setting/email-setting" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
+                <a href="{{ route('admin.manage.roles') }}" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
                     <div class="shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12 ">
                         <x-heroicon-o-shield-check class="w-6 h-6" />
                     </div>
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="http://127.0.0.1:8000/shopper/setting/email-setting" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
+                <a href="#" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
                     <div class="shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12 ">
                         <x-heroicon-o-pencil-alt class="w-6 h-6" />
                     </div>
@@ -72,7 +72,7 @@
                         </p>
                     </div>
                 </a>
-                <a href="http://127.0.0.1:8000/shopper/setting/email-setting" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
+                <a href="{{ route('admin.application-config') }}" class="p-3 flex items-start space-x-4 rounded-lg hover:bg-secondary-50 dark:hover:bg-secondary-700 transition ease-in-out duration-200">
                     <div class="shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12 ">
                         <x-heroicon-o-puzzle class="w-6 h-6" />
                     </div>
