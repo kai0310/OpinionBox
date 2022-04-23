@@ -19,7 +19,7 @@ class AllUsersTable extends Component
 
     public function getUsers(): LengthAwarePaginator
     {
-        return User::query()->where('name', 'like', '%'.$this->search.'%')
+        return User::with('roles')->where('name', 'like', '%'.$this->search.'%')
             ->orwhere('email', 'like', '%'.$this->search.'%')
             ->paginate(30);
     }
