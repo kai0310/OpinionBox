@@ -8255,20 +8255,20 @@
         },
         {
             "name": "pestphp/pest-plugin-parallel",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-parallel.git",
-                "reference": "67c0a49754e26cbe5ecd6965631351c0ede956fa"
+                "reference": "e9ef3fff75d5bbf4e3cb6278985e1494ee9c503e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-parallel/zipball/67c0a49754e26cbe5ecd6965631351c0ede956fa",
-                "reference": "67c0a49754e26cbe5ecd6965631351c0ede956fa",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-parallel/zipball/e9ef3fff75d5bbf4e3cb6278985e1494ee9c503e",
+                "reference": "e9ef3fff75d5bbf4e3cb6278985e1494ee9c503e",
                 "shasum": ""
             },
             "require": {
-                "brianium/paratest": "^6.3",
+                "brianium/paratest": "^6.4.2",
                 "pestphp/pest-plugin": "^1.0",
                 "php": "^7.3 || ^8.0"
             },
@@ -8278,7 +8278,7 @@
                 "pestphp/pest": "<1.16"
             },
             "require-dev": {
-                "pestphp/pest": "dev-master",
+                "pestphp/pest": "1.x-dev",
                 "pestphp/pest-dev-tools": "dev-master"
             },
             "type": "library",
@@ -8322,7 +8322,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-parallel/tree/v1.0.0"
+                "source": "https://github.com/pestphp/pest-plugin-parallel/tree/v1.1.0"
             },
             "funding": [
                 {
@@ -8354,7 +8354,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-09-06T20:21:59+00:00"
+            "time": "2022-05-06T13:19:11+00:00"
         },
         {
             "name": "phar-io/manifest",
