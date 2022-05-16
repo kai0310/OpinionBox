@@ -2515,16 +2515,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "32a49eb2b38fe5e5c417ab748a45d0beaab97955"
+                "reference": "cb36fee279f7fca01d5d9399ddd1b37e48e2eca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/32a49eb2b38fe5e5c417ab748a45d0beaab97955",
-                "reference": "32a49eb2b38fe5e5c417ab748a45d0beaab97955",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/cb36fee279f7fca01d5d9399ddd1b37e48e2eca1",
+                "reference": "cb36fee279f7fca01d5d9399ddd1b37e48e2eca1",
                 "shasum": ""
             },
             "require": {
@@ -2617,7 +2617,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-07T22:37:05+00:00"
+            "time": "2022-05-14T15:37:39+00:00"
         },
         {
             "name": "league/config",
@@ -7136,16 +7136,16 @@
         },
         {
             "name": "wireui/wireui",
-            "version": "v1.1.2",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wireui/wireui.git",
-                "reference": "61b07383b4cf0e76508fe2b6bd9aa103c275b474"
+                "reference": "25bb02c0bff490bf81d751087da94cb4c8dd8095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wireui/wireui/zipball/61b07383b4cf0e76508fe2b6bd9aa103c275b474",
-                "reference": "61b07383b4cf0e76508fe2b6bd9aa103c275b474",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/25bb02c0bff490bf81d751087da94cb4c8dd8095",
+                "reference": "25bb02c0bff490bf81d751087da94cb4c8dd8095",
                 "shasum": ""
             },
             "require": {
@@ -7195,9 +7195,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wireui/wireui/issues",
-                "source": "https://github.com/wireui/wireui/tree/v1.1.2"
+                "source": "https://github.com/wireui/wireui/tree/v1.2.2"
             },
-            "time": "2022-05-10T05:08:35+00:00"
+            "time": "2022-05-16T11:56:19+00:00"
         },
         {
             "name": "yarri/link-finder",
