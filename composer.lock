@@ -7130,16 +7130,16 @@
         },
         {
             "name": "wireui/wireui",
-            "version": "v1.3.2",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wireui/wireui.git",
-                "reference": "6bec0f5636a73cd2a77e0b80ea45f0188b0312dc"
+                "reference": "2469a922db5d2e21d6c84d3c04a70162df20a6c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wireui/wireui/zipball/6bec0f5636a73cd2a77e0b80ea45f0188b0312dc",
-                "reference": "6bec0f5636a73cd2a77e0b80ea45f0188b0312dc",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/2469a922db5d2e21d6c84d3c04a70162df20a6c8",
+                "reference": "2469a922db5d2e21d6c84d3c04a70162df20a6c8",
                 "shasum": ""
             },
             "require": {
@@ -7192,9 +7192,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wireui/wireui/issues",
-                "source": "https://github.com/wireui/wireui/tree/v1.3.2"
+                "source": "https://github.com/wireui/wireui/tree/v1.5.0"
             },
-            "time": "2022-05-19T07:24:00+00:00"
+            "time": "2022-05-31T05:10:14+00:00"
         },
         {
             "name": "yarri/link-finder",
