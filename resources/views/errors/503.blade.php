@@ -6,7 +6,7 @@
 
 @section('image')
     <div
-        style="background-image: url({{ asset('/icons/sleeping.png') }});"
+        style="background-image: url({{ asset('/images/sleeping.png') }});"
         class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center"
     ></div>
 @endsection

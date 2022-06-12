@@ -6,7 +6,7 @@
 
 @section('image')
     <div
-        style="background-image: url({{ asset('/icons/not_found.png') }});"
+        style="background-image: url({{ asset('/images/not_found.png') }});"
         class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center"
     ></div>
 @endsection

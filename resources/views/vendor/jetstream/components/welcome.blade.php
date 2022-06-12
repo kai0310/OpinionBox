@@ -9,7 +9,7 @@
             </h3>
         </div>
         <img
-            src="{{ asset('/icons/share.svg') }}"
+            src="{{ asset('/images/share.svg') }}"
             class="mx-auto md:m-0" width="256"
             height="256"
             onmousedown="return false;"
