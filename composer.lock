@@ -7131,20 +7131,20 @@
         },
         {
             "name": "wireui/wireui",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wireui/wireui.git",
-                "reference": "2469a922db5d2e21d6c84d3c04a70162df20a6c8"
+                "reference": "e59d4bd6aae7372ab5c499ab8a4e292525f2d933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wireui/wireui/zipball/2469a922db5d2e21d6c84d3c04a70162df20a6c8",
-                "reference": "2469a922db5d2e21d6c84d3c04a70162df20a6c8",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/e59d4bd6aae7372ab5c499ab8a4e292525f2d933",
+                "reference": "e59d4bd6aae7372ab5c499ab8a4e292525f2d933",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^8.80|^9.0",
+                "laravel/framework": "^8.83|^9.16",
                 "livewire/livewire": "^2.10",
                 "php": "^8.0|8.1"
             },
@@ -7193,9 +7193,15 @@
             ],
             "support": {
                 "issues": "https://github.com/wireui/wireui/issues",
-                "source": "https://github.com/wireui/wireui/tree/v1.5.0"
+                "source": "https://github.com/wireui/wireui/tree/v1.6.0"
             },
-            "time": "2022-05-31T05:10:14+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/PH7-Jack",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-15T22:47:48+00:00"
         },
         {
             "name": "yarri/link-finder",
