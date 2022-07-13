@@ -2003,16 +2003,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.19.0",
+            "version": "v9.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bbce25bd823133f6a5a724f2d62680b711f1d0df"
+                "reference": "c99868f1c9bf2f5d250993121838db905591864f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bbce25bd823133f6a5a724f2d62680b711f1d0df",
-                "reference": "bbce25bd823133f6a5a724f2d62680b711f1d0df",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c99868f1c9bf2f5d250993121838db905591864f",
+                "reference": "c99868f1c9bf2f5d250993121838db905591864f",
                 "shasum": ""
             },
             "require": {
@@ -2178,7 +2178,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-06-28T14:33:19+00:00"
+            "time": "2022-07-13T13:26:22+00:00"
         },
         {
             "name": "laravel/jetstream",
@@ -7136,16 +7136,16 @@
         },
         {
             "name": "wireui/wireui",
-            "version": "v1.11.1",
+            "version": "v1.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wireui/wireui.git",
-                "reference": "059d69f194b4fb22fa111fbe23922b48382816ad"
+                "reference": "e0f6bbdc4334dc8ee66baf530abaff5d543af122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wireui/wireui/zipball/059d69f194b4fb22fa111fbe23922b48382816ad",
-                "reference": "059d69f194b4fb22fa111fbe23922b48382816ad",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/e0f6bbdc4334dc8ee66baf530abaff5d543af122",
+                "reference": "e0f6bbdc4334dc8ee66baf530abaff5d543af122",
                 "shasum": ""
             },
             "require": {
@@ -7198,7 +7198,7 @@
             ],
             "support": {
                 "issues": "https://github.com/wireui/wireui/issues",
-                "source": "https://github.com/wireui/wireui/tree/v1.11.1"
+                "source": "https://github.com/wireui/wireui/tree/v1.12.3"
             },
             "funding": [
                 {
@@ -7206,7 +7206,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-07-05T02:44:17+00:00"
+            "time": "2022-07-13T16:31:09+00:00"
         },
         {
             "name": "yarri/link-finder",
