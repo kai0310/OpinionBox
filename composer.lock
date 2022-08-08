@@ -8265,16 +8265,16 @@
         },
         {
             "name": "pestphp/pest-plugin-parallel",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-parallel.git",
-                "reference": "e9ef3fff75d5bbf4e3cb6278985e1494ee9c503e"
+                "reference": "7ae93d4052d2f45c0a37ca34f5dea940fb28cf31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-parallel/zipball/e9ef3fff75d5bbf4e3cb6278985e1494ee9c503e",
-                "reference": "e9ef3fff75d5bbf4e3cb6278985e1494ee9c503e",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-parallel/zipball/7ae93d4052d2f45c0a37ca34f5dea940fb28cf31",
+                "reference": "7ae93d4052d2f45c0a37ca34f5dea940fb28cf31",
                 "shasum": ""
             },
             "require": {
@@ -8288,8 +8288,12 @@
                 "pestphp/pest": "<1.16"
             },
             "require-dev": {
+                "ergebnis/phpstan-rules": "^1.0.0",
                 "pestphp/pest": "1.x-dev",
-                "pestphp/pest-dev-tools": "dev-master"
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-strict-rules": "^1.3",
+                "symfony/var-dumper": "^5.0 || ^6.0",
+                "thecodingmachine/phpstan-strict-rules": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -8332,7 +8336,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-parallel/tree/v1.1.0"
+                "source": "https://github.com/pestphp/pest-plugin-parallel/tree/v1.2.0"
             },
             "funding": [
                 {
@@ -8364,7 +8368,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-05-06T13:19:11+00:00"
+            "time": "2022-07-06T08:38:19+00:00"
         },
         {
             "name": "phar-io/manifest",
