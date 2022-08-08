@@ -17,7 +17,7 @@
         "joelbutcher/socialstream": "^3.1",
         "laravel/framework": "^9.0",
         "laravel/jetstream": "^2.1",
-        "laravel/sanctum": "^2.6",
+        "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.5",
         "league/commonmark": "^2.0",
         "livewire/livewire": "^2.5",
