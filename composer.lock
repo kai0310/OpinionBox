@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4db39b54aa8c42fb891472d2006e4a4f",
+    "content-hash": "2c33a2ba911b572d750a07dff28a280d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -146,25 +146,25 @@
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
-            "version": "1.3.1",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blade-ui-kit/blade-heroicons.git",
-                "reference": "a2749abc7b8eb6149ff643ffa99a3d33a2de7961"
+                "reference": "36bbf7386d600706f96e83ec4ca75d3817c46f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/a2749abc7b8eb6149ff643ffa99a3d33a2de7961",
-                "reference": "a2749abc7b8eb6149ff643ffa99a3d33a2de7961",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/36bbf7386d600706f96e83ec4ca75d3817c46f3d",
+                "reference": "36bbf7386d600706f96e83ec4ca75d3817c46f3d",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-icons": "^1.1",
-                "illuminate/support": "^8.0|^9.0",
-                "php": "^7.4|^8.0"
+                "illuminate/support": "^9.0",
+                "php": "^8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^6.0|^7.0",
+                "orchestra/testbench": "^7.0",
                 "phpunit/phpunit": "^9.0"
             },
             "type": "library",
@@ -199,7 +199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/blade-ui-kit/blade-heroicons/issues",
-                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/1.3.1"
+                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/2.0.5"
             },
             "funding": [
                 {
@@ -211,7 +211,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-02T11:50:13+00:00"
+            "time": "2022-11-02T12:52:36+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
@@ -2256,66 +2256,6 @@
                 "source": "https://github.com/laravel/jetstream"
             },
             "time": "2022-12-15T14:58:38+00:00"
-        },
-        {
-            "name": "laravel/sail",
-            "version": "v1.16.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/sail.git",
-                "reference": "9ec5338d13bdc941a23347cb36385988c525fe02"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/9ec5338d13bdc941a23347cb36385988c525fe02",
-                "reference": "9ec5338d13bdc941a23347cb36385988c525fe02",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^8.0|^9.0",
-                "illuminate/contracts": "^8.0|^9.0",
-                "illuminate/support": "^8.0|^9.0",
-                "php": "^7.3|^8.0"
-            },
-            "bin": [
-                "bin/sail"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Sail\\SailServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Sail\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Docker files for running a basic Laravel application.",
-            "keywords": [
-                "docker",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/sail/issues",
-                "source": "https://github.com/laravel/sail"
-            },
-            "time": "2022-12-14T14:54:21+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -8083,6 +8023,66 @@
             "time": "2022-04-13T17:44:04+00:00"
         },
         {
+            "name": "laravel/sail",
+            "version": "v1.16.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "9ec5338d13bdc941a23347cb36385988c525fe02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/9ec5338d13bdc941a23347cb36385988c525fe02",
+                "reference": "9ec5338d13bdc941a23347cb36385988c525fe02",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.0|^9.0",
+                "illuminate/contracts": "^8.0|^9.0",
+                "illuminate/support": "^8.0|^9.0",
+                "php": "^7.3|^8.0"
+            },
+            "bin": [
+                "bin/sail"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Sail\\SailServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Sail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Docker files for running a basic Laravel application.",
+            "keywords": [
+                "docker",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/sail/issues",
+                "source": "https://github.com/laravel/sail"
+            },
+            "time": "2022-12-14T14:54:21+00:00"
+        },
+        {
             "name": "masterminds/html5",
             "version": "2.7.6",
             "source": {
@@ -10649,5 +10649,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
