@@ -31,6 +31,18 @@ It is a web application that aims to gather students' opinions and consultations
 - Node.js
 
 ## Install
+
+```bash
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/opt \
+    -w /opt \
+    laravelsail/php80-composer:latest \
+    composer install --ignore-platform-reqs
+```
+
+
+
 ```bash
 $ git clone https://github.com/kai0310/OpinionBox.git
 $ cd OpinionBox
