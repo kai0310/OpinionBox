@@ -16,5 +16,4 @@ class UpdatePostStatus implements UpdatePostStatuses
     {
         return $post->update(['approved_at' => null]);
     }
-
 }

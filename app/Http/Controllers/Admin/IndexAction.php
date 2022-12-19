@@ -9,6 +9,7 @@ class IndexAction extends Controller
 {
     /**
      * Handle the incoming request.
+     *
      * @return View
      */
     public function __invoke(): View

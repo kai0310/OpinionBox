@@ -2,7 +2,8 @@
 
 namespace App\Traits;
 
-use WireUi\Actions\{Dialog, Notification};
+use WireUi\Actions\Dialog;
+use WireUi\Actions\Notification;
 
 trait WireUiActions
 {

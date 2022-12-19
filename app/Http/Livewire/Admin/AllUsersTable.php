@@ -14,7 +14,7 @@ class AllUsersTable extends Component
     public string $search = '';
 
     protected $listeners = [
-        'refresh-admin-all-users-table' => '$refresh'
+        'refresh-admin-all-users-table' => '$refresh',
     ];
 
     public function getUsers(): LengthAwarePaginator

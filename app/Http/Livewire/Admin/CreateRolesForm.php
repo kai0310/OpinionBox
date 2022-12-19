@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Actions\Admin\CreateRole;
-use App\Models\Role;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -12,7 +11,9 @@ class CreateRolesForm extends Component
     use LivewireAlert;
 
     public $formModal = false;
+
     public $name;
+
     public $detail;
 
     public function create(): void
@@ -23,7 +24,7 @@ class CreateRolesForm extends Component
         $this->emit('refresh-admin-all-user-table');
         $this->refresh();
         $this->alert('success', 'ロールが追加されました', [
-            'position' =>  'top-end',
+            'position' => 'top-end',
         ]);
     }
 

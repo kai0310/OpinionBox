@@ -5,13 +5,13 @@ namespace App\Http\Livewire\Post;
 use App\Actions\Post\CreateLikePost;
 use App\Actions\Post\DeleteLikePost;
 use App\Models\Post;
-use Livewire\Component;
-use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
 
 class LikeButton extends Component
 {
     public Post $post;
+
     public int $counts = 0;
 
     public function mount(): void

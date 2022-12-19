@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class MyPostAction extends Controller
 {
     /**
      * Show own post.
+     *
      * @return View
      */
     public function __invoke(): View

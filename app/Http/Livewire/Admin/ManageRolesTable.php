@@ -18,8 +18,8 @@ class ManageRolesTable extends Component
 
     public function render()
     {
-        return view('livewire.admin.manage-roles-table',[
-            'roles' => Role::paginate(15)
+        return view('livewire.admin.manage-roles-table', [
+            'roles' => Role::paginate(15),
         ]);
     }
 }

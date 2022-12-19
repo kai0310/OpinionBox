@@ -10,16 +10,15 @@ use Illuminate\Support\Carbon;
 
 /**
  * Class Comment
- * @package App\Models
  *
  * @property int $id ID
  * @property int $user_id User ID
  * @property string $body Comment Body
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ *
  * @method static find(int|null $deleteTargetCommentId)
  */
-
 class Comment extends Model
 {
     use HasFactory, SoftDeletes;

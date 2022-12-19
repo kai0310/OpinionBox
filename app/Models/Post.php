@@ -8,11 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Post
- * @package App\Models
  *
  * @property int $id         ID
  * @property int $user_id    User ID
@@ -43,10 +41,11 @@ class Post extends Model
 
     // Maximum number of acquisitions.
     public const TAKE_MAX_COUNT = 10;
+
     public const TAKE_RAND_COUNT = 5;
 
     protected $withCount = [
-      'comments'
+        'comments',
     ];
 
     public function scopeApproved($query): void

@@ -25,10 +25,10 @@ class DeletePostButton extends Component
     public function confirmation(): void
     {
         $this->dialog()->confirm([
-            'icon'       => 'error',
-            'method'      => 'deletePost',
-            'params'      => 'Saved',
-            'title'       => __('意見を本当に削除しますか？'),
+            'icon' => 'error',
+            'method' => 'deletePost',
+            'params' => 'Saved',
+            'title' => __('意見を本当に削除しますか？'),
             'description' => __('一度削除してしまうと、この操作は取り消せません。'),
             'acceptLabel' => __('削除する'),
             'rejectLabel' => __('削除しない'),
@@ -36,7 +36,7 @@ class DeletePostButton extends Component
     }
 
     /**
-     * @param DeletePost $deletePost
+     * @param  DeletePost  $deletePost
      * @return RedirectResponse
      */
     public function deletePost(DeletePost $deletePost)

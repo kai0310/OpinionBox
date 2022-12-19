@@ -2,13 +2,13 @@
 
 namespace App\Http\Livewire\Post;
 
+use App\Actions\Post\CreateComment;
 use App\Models\Comment;
 use App\Models\Post;
 use App\Traits\WireUiActions;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Livewire\Component;
-use App\Actions\Post\CreateComment;
 
 class CommentSection extends Component
 {
@@ -31,7 +31,7 @@ class CommentSection extends Component
     public function submit(): void
     {
         $request = collect([
-            'body' => $this->body, 'postId' => $this->post->id
+            'body' => $this->body, 'postId' => $this->post->id,
         ])->toArray();
 
         $comment = app(CreateComment::class)->create($request);
@@ -47,11 +47,11 @@ class CommentSection extends Component
         $this->deleteTargetCommentId = $comment;
 
         $this->dialog()->confirm([
-            'icon'        => 'error',
-            'title'       => __('コメントを本当に削除しますか？'),
+            'icon' => 'error',
+            'title' => __('コメントを本当に削除しますか？'),
             'description' => __('投稿されたコメントは議論に必要なかもしれません'),
             'acceptLabel' => '削除する',
-            'method'      => 'deleteComment',
+            'method' => 'deleteComment',
             'rejectLabel' => '削除しない',
         ]);
     }

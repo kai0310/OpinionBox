@@ -52,7 +52,7 @@ class UserEditModal extends Component
     }
 
     /**
-     * @param ForceResetPassword $forceResetPassword
+     * @param  ForceResetPassword  $forceResetPassword
      * @return void
      */
     public function resetPassword(ForceResetPassword $forceResetPassword): void
@@ -64,6 +64,7 @@ class UserEditModal extends Component
                 __('パスワードを初期化できませんでした'),
                 $e->getMessage()
             );
+
             return;
         } finally {
             $this->userEditModal = false;
@@ -74,7 +75,6 @@ class UserEditModal extends Component
             __('新しいパスワードは :0 です', [$reset_password['new_password']])
         );
     }
-
 
     public function render(): View
     {

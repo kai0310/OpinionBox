@@ -5,10 +5,8 @@ namespace Database\State;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-
 class EnsureRolesArePresent
 {
-
     public function __invoke()
     {
         if ($this->present() && Schema::hasTable('roles')) {
@@ -22,9 +20,6 @@ class EnsureRolesArePresent
 
     public function present()
     {
-
         return DB::table('roles')->count() > 0;
-
     }
-
 }

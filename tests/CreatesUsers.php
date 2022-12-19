@@ -18,14 +18,14 @@ trait CreatesUsers
     protected function loginAsAdmin(): User
     {
         return $this->login([
-            'is_admin' => true
+            'is_admin' => true,
         ]);
     }
 
-
     /**
      * Create a user account
-     * @param array $attributes
+     *
+     * @param  array  $attributes
      * @return User
      */
     protected function createUser(array $attributes = []): User

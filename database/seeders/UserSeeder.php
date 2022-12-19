@@ -3,9 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Post;
-use Database\Factories\PostFactory;
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\App;
 
 class UserSeeder extends Seeder
@@ -25,7 +24,7 @@ class UserSeeder extends Seeder
                     'password' => bcrypt(config('opinion-box.initial.user.password')),
                     'is_admin' => true,
                     'bio' => 'Hey! I\'m OpinionBox official account',
-                    'profile_photo_path' => 'https://unavatar.io/kai0310'
+                    'profile_photo_path' => 'https://unavatar.io/kai0310',
                 ]);
 
             $user->roles()->attach([1, 2]);

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Actions\Post;
-
 
 use App\Contracts\Actions\Post\DeleteLikePosts;
 use App\Models\Post;

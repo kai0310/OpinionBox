@@ -14,9 +14,8 @@ class UpdateRole implements UpdateRoles
 //            'name'      => ['required', 'string', 'max:10'],
 //        ])->validate();
 
-
         return $role->update([
-            'name'   => $input['name'],
+            'name' => $input['name'],
             'detail' => $input['detail'],
         ]);
     }

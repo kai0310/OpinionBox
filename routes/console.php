@@ -19,11 +19,9 @@ use Illuminate\Support\Facades\Artisan;
 //})->purpose('Display an inspiring quote');
 
 Artisan::command('ensure-database-state-is-loaded', function () {
-
     collect([
 
         new Database\State\EnsureRolesArePresent,
 
     ])->each->__invoke();
-
 });

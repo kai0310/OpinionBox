@@ -11,14 +11,13 @@ class CreateRole implements CreateRoles
     public function create(array $input)
     {
         Validator::make($input, [
-            'name'      => ['required', 'string', 'max:10'],
-            'detail'    => ['max:30'],
+            'name' => ['required', 'string', 'max:10'],
+            'detail' => ['max:30'],
         ])->validate();
 
-
         return Role::create([
-            'name'      => $input['name'],
-            'detail'    => $input['detail']
+            'name' => $input['name'],
+            'detail' => $input['detail'],
         ]);
     }
 }

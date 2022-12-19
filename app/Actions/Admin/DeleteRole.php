@@ -2,16 +2,18 @@
 
 namespace App\Actions\Admin;
 
-use App\Exceptions\CannotDeleteRoleException;
-use App\Models\{Role, User};
 use App\Contracts\Actions\Admin\DeleteRoles;
+use App\Exceptions\CannotDeleteRoleException;
+use App\Models\Role;
+use App\Models\User;
 
 class DeleteRole implements DeleteRoles
 {
     /**
-     * @param Role $role
-     * @param User $user
+     * @param  Role  $role
+     * @param  User  $user
      * @return bool|null
+     *
      * @throws CannotDeleteRoleException
      */
     public function delete(Role $role, User $user): ?bool

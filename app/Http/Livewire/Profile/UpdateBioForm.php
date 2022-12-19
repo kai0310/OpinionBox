@@ -9,6 +9,7 @@ use Livewire\Component;
 class UpdateBioForm extends Component
 {
     public $bio = '';
+
     public $state = [];
 
     public function mount()

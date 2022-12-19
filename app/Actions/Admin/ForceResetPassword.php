@@ -14,12 +14,14 @@ class ForceResetPassword
     use OnlyAdminCan;
 
     /**
-     * @param User $user
-     * @param User $target_user
+     * @param  User  $user
+     * @param  User  $target_user
      * @return array
+     *
      * @throws LackOfPermissionException
      */
-    #[ArrayShape(['status' => "bool", 'new_password' => "string"])] public function handle(User $user, User $target_user): array
+    #[ArrayShape(['status' => 'bool', 'new_password' => 'string'])]
+    public function handle(User $user, User $target_user): array
     {
         $this->adminCan($user);
 
@@ -31,7 +33,7 @@ class ForceResetPassword
 
         $status = $target_user->update([
             'password' => Hash::make($reset_password),
-            'email_verified_at' => null
+            'email_verified_at' => null,
         ]);
 
         return ['status' => $status, 'new_password' => $reset_password];

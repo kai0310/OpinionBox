@@ -13,14 +13,12 @@ class PermitButton extends Component
     {
         app(UpdatePostStatus::class)->approve($this->post);
         session()->flash('message', 'Post successfully updated.');
-
     }
 
     public function undoApprove(): void
     {
         app(UpdatePostStatus::class)->undoApprove($this->post);
     }
-
 
     public function render()
     {

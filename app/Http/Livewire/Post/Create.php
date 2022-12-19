@@ -2,12 +2,13 @@
 
 namespace App\Http\Livewire\Post;
 
-use Livewire\Component;
 use App\Actions\Post\CreatePost;
+use Livewire\Component;
 
 class Create extends Component
 {
     public ?string $title = null;
+
     public ?string $content = null;
 
     public function submit()
@@ -20,6 +21,7 @@ class Create extends Component
         $post = app(CreatePost::class)->create($request);
 
         session()->flash('message', __('posts.created'));
+
         return redirect()->route('post.show', $post);
     }
 

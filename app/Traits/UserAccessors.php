@@ -9,13 +9,13 @@ use Laravel\Jetstream\HasProfilePhoto;
 
 trait UserAccessors
 {
-
     use HasProfilePhoto {
         getProfilePhotoUrlAttribute as getPhotoUrl;
     }
 
     /**
      * Return the user is stuff.
+     *
      * @return bool
      */
     public function isStuff(): bool
@@ -29,6 +29,7 @@ trait UserAccessors
 
     /**
      * Return the user is admin.
+     *
      * @return bool
      */
     public function isAdmin(): bool
@@ -38,6 +39,7 @@ trait UserAccessors
 
     /**
      * Return the user isn't admin.
+     *
      * @return bool
      */
     public function isNotAdmin(): bool
@@ -45,9 +47,9 @@ trait UserAccessors
         return ! (bool) $this->is_admin;
     }
 
-
     /**
      * Return the user is ban.
+     *
      * @return bool
      */
     public function isBanned(): bool
@@ -57,6 +59,7 @@ trait UserAccessors
 
     /**
      * Get the URL to the user's profile photo.
+     *
      * @return string
      */
     public function getProfilePhotoUrlAttribute(): string
@@ -81,14 +84,16 @@ trait UserAccessors
 
     /**
      * Return student number.
+     *
      * @return false|string|null
      */
     public function getStudentNumberAttribute(): false|string|null
     {
         if (config('services.google.custom_domain')) {
-            return mb_strstr($this->email, '@' . config('services.google.custom_domain'), true);
+            return mb_strstr($this->email, '@'.config('services.google.custom_domain'), true);
         }
-        return Null;
+
+        return null;
     }
 
     public function getLastAccessed(): Carbon|string
@@ -137,10 +142,11 @@ trait UserAccessors
      *
      * @return int
      */
-    #[Pure] public function getContributionsAttribute(): int
-    {
-        return $this->getContributions();
-    }
+    #[Pure]
+ public function getContributionsAttribute(): int
+ {
+     return $this->getContributions();
+ }
 
     /**
      * Return ser role list.
@@ -155,7 +161,7 @@ trait UserAccessors
     /**
      * Check user has the role.
      *
-     * @param string $role
+     * @param  string  $role
      * @return bool
      */
     public function hasRole(string $role): bool
@@ -187,5 +193,4 @@ trait UserAccessors
 
         return true;
     }
-
 }

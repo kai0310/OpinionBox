@@ -14,13 +14,12 @@ class PostPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param User $user
-     * @param Post $post
+     * @param  User  $user
+     * @param  Post  $post
      * @return bool|Response
      */
     public function view(User $user, Post $post): bool|Response
     {
-
         if ($post->isApproved()) {
             return true;
         }
@@ -37,8 +36,8 @@ class PostPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param User $user
-     * @param Post $post
+     * @param  User  $user
+     * @param  Post  $post
      * @return bool
      */
     public function update(User $user, Post $post): bool
@@ -48,7 +47,7 @@ class PostPolicy
 
     public function approve(User $user, Post $post): Response|bool
     {
-        if (!$user->isStuff()) {
+        if (! $user->isStuff()) {
             return false;
         }
 
@@ -60,8 +59,8 @@ class PostPolicy
     /**
      * Determine whether the user can delete the model.
      *
-     * @param User $user
-     * @param Post $post
+     * @param  User  $user
+     * @param  Post  $post
      * @return bool
      */
     public function delete(User $user, Post $post): bool
@@ -72,8 +71,8 @@ class PostPolicy
     /**
      * Determine whether the user can restore the model.
      *
-     * @param User $user
-     * @param Post $post
+     * @param  User  $user
+     * @param  Post  $post
      * @return bool
      */
     public function restore(User $user, Post $post): bool
@@ -84,7 +83,7 @@ class PostPolicy
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param User $user
+     * @param  User  $user
      * @return bool
      */
     public function forceDelete(User $user): bool

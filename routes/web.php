@@ -1,14 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\Post\PostController;
-use App\Http\Controllers\Post\MyPostAction;
+use App\Http\Controllers\Admin;
 use App\Http\Controllers\Post\AllPostAction;
+use App\Http\Controllers\Post\MyPostAction;
+use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Profile\ShowAction;
 use App\Http\Controllers\ShowAnnouncementListAction;
 use App\Http\Controllers\Stuff;
-use App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('post/all', AllPostAction::class)->name('post.all');
     Route::get('post/me', MyPostAction::class)->name('post.me');
     Route::resource('post', PostController::class, [
-        'only' => ['index', 'create', 'show',]
+        'only' => ['index', 'create', 'show'],
     ]);
     Route::get('users/@{user}', ShowAction::class)->name('user.show');
 });

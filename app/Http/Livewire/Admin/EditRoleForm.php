@@ -3,15 +3,16 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Actions\Admin\UpdateRole;
-use App\Models\Role;
-use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class EditRoleForm extends Component
 {
     public $formModal;
+
     public $role;
+
     public $name;
+
     public $detail;
 
     /**

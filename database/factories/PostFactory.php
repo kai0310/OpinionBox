@@ -19,7 +19,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
-            'content' => $this->faker->paragraph
+            'content' => $this->faker->paragraph,
         ];
     }
 
@@ -27,7 +27,7 @@ class PostFactory extends Factory
     {
         return $this->state(function (): array {
             return [
-                'approved_at' => now()
+                'approved_at' => now(),
             ];
         });
     }
@@ -36,7 +36,7 @@ class PostFactory extends Factory
     {
         return $this->state(function (): array {
             return [
-                'published' => now()
+                'published' => now(),
             ];
         });
     }
@@ -45,7 +45,7 @@ class PostFactory extends Factory
     {
         return $this->state(function (): array {
             return [
-                'hide_at' => now()
+                'hide_at' => now(),
             ];
         });
     }
@@ -55,11 +55,8 @@ class PostFactory extends Factory
         return $this->state(function (): array {
             return [
                 'resolved_user_id' => User::factory()->create()->id,
-                'resolved_at' => now()
+                'resolved_at' => now(),
             ];
         });
     }
-
-
-
 }

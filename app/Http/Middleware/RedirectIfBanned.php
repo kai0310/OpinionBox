@@ -11,8 +11,8 @@ class RedirectIfBanned
     /**
      * Handle an incoming request.
      *
-     * @param Request $request
-     * @param Closure $next
+     * @param  Request  $request
+     * @param  Closure  $next
      * @return mixed
      */
     public function handle(Request $request, Closure $next): mixed
@@ -21,7 +21,7 @@ class RedirectIfBanned
             return $next($request);
         }
 
-        if (Auth::check() && !Auth::user()?->tester()) {
+        if (Auth::check() && ! Auth::user()?->tester()) {
             abort(403, 'Sorry you can\'t use this app now');
         }
 

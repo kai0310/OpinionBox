@@ -11,9 +11,10 @@ class BanUser
     use OnlyAdminCan;
 
     /**
-     * @param User $user
-     * @param User $target_user
+     * @param  User  $user
+     * @param  User  $target_user
      * @return void
+     *
      * @throws LackOfPermissionException
      */
     public function handle(User $user, User $target_user): void
@@ -28,5 +29,4 @@ class BanUser
             'banned_at' => $target_user->isBanned() ? null : now(),
         ]);
     }
-
 }

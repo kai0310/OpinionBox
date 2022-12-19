@@ -2,10 +2,9 @@
 
 namespace App\Actions\Post;
 
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Auth;
 use App\Contracts\Actions\Post\CreateComments;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class CreateComment implements CreateComments
 {
@@ -16,8 +15,8 @@ class CreateComment implements CreateComments
         ])->validate();
 
         return Auth::user()?->comments()->create([
-            'body'      => $request['body'],
-            'post_id'   => $request['postId'],
+            'body' => $request['body'],
+            'post_id' => $request['postId'],
         ]);
     }
 }

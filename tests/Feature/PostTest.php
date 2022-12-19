@@ -72,7 +72,6 @@ test('author can delete my post', function () {
         ->call('deletePost');
 
     $this->assertEquals(0, \App\Models\Post::all()->count());
-
 });
 
 test('no one except the author can delete a post', function () {
@@ -84,7 +83,7 @@ test('no one except the author can delete a post', function () {
     $this->get('post/1')->dontSee(__('削除する'));
 
     Livewire\Livewire::test(\App\Http\Livewire\Post\DeletePostButton::class, [
-        'post' => \App\Models\Post::query()->first()
+        'post' => \App\Models\Post::query()->first(),
     ])->call('deletePost');
 
     $this->assertEquals(1, \App\Models\Post::all()->count());

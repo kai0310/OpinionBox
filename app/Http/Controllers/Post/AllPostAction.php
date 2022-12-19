@@ -10,6 +10,7 @@ class AllPostAction extends Controller
 {
     /**
      * Show all approved posts.
+     *
      * @return View
      */
     public function __invoke(): View

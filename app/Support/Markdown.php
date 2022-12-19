@@ -15,24 +15,22 @@ class Markdown
      *
      * @param  string  $text
      * @param  array  $options
-     *
      * @return HtmlString
      */
     public static function parse(string $text, $options = []): HtmlString
     {
-
         $config = array_merge([
-            'html_input'         => 'escape',
+            'html_input' => 'escape',
             'allow_unsafe_links' => false,
-            'max_nesting_level'  => 30,
+            'max_nesting_level' => 30,
             'open_in_new_window' => true,
             'external_link' => [
-                'internal_hosts'     => config('app.url'),
+                'internal_hosts' => config('app.url'),
                 'open_in_new_window' => true,
-                'html_class'         => '',
-                'nofollow'           => '',
-                'noopener'           => 'external',
-                'noreferrer'         => 'external',
+                'html_class' => '',
+                'nofollow' => '',
+                'noopener' => 'external',
+                'noreferrer' => 'external',
             ],
         ], $options);
 

@@ -10,7 +10,8 @@ class ShowAction extends Controller
 {
     /**
      * Show user profile page.
-     * @param User $user
+     *
+     * @param  User  $user
      * @return View
      */
     public function __invoke(User $user): View

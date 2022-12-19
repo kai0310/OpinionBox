@@ -9,9 +9,10 @@ use App\Models\User;
 class DeletePost
 {
     /**
-     * @param Post $post
-     * @param User $user
+     * @param  Post  $post
+     * @param  User  $user
      * @return bool|null
+     *
      * @throws CannotDeletePostException
      */
     public function handle(Post $post, User $user): ?bool

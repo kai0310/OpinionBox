@@ -14,6 +14,14 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ url('css/global.css') }}">
 
+        <style>
+            @font-face {
+                font-family: 'LINESeed';
+                url({{ asset('WOFF/LINESeedJP_OTF_Rg.woff') }}  format('woff'),
+            }
+
+        </style>
+
         @livewireStyles
 
         <!-- Scripts -->
@@ -35,7 +43,7 @@
         @endif
 
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased LINESeed">
         @include('components.wireui-components')
 
         <div class="min-h-screen bg-gray-100">

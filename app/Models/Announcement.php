@@ -23,7 +23,4 @@ class Announcement extends Model
     {
         return str_limit_ja($this->body, 30);
     }
-
-
-
 }

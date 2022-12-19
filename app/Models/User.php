@@ -8,13 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\DB;
-use JetBrains\PhpStorm\Pure;
 use JoelButcher\Socialstream\HasConnectedAccounts;
 use JoelButcher\Socialstream\SetsProfilePhotoFromUrl;
 use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -68,6 +64,7 @@ class User extends Authenticatable
     ];
 
     public const STUFF = 'stuff';
+
     public const DEVELOPER = 'developer';
 
     /**

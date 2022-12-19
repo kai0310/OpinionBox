@@ -17,7 +17,7 @@ class Like extends Model
 
     public $timestamps = false;
 
-  /**
+    /**
      * Liked post
      *
      * @return BelongsTo
@@ -36,5 +36,4 @@ class Like extends Model
     {
         return $this->belongsTo(User::class);
     }
-
 }

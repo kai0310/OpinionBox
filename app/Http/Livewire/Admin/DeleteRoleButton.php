@@ -6,7 +6,6 @@ use App\Actions\Admin\DeleteRole;
 use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
-use Livewire\Exceptions\BypassViewHandler;
 
 class DeleteRoleButton extends Component
 {
@@ -36,7 +35,7 @@ class DeleteRoleButton extends Component
         $this->emit('refresh-admin-all-user-table');
         $this->confirmingRoleDeletion = false;
         $this->alert('success', 'ロールが削除されました', [
-            'position' =>  'top-end',
+            'position' => 'top-end',
         ]);
     }
 

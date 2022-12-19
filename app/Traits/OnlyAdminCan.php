@@ -2,7 +2,6 @@
 
 namespace App\Traits;
 
-use App\Exceptions\CannotDeleteRoleException;
 use App\Exceptions\LackOfPermissionException;
 use App\Models\User;
 
