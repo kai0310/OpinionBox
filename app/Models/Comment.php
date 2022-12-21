@@ -2,50 +2,26 @@
 
 namespace App\Models;
 
+use App\Traits\BelongsToUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Carbon;
 
-/**
- * Class Comment
- *
- * @property int $id ID
- * @property int $user_id User ID
- * @property string $body Comment Body
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- *
- * @method static find(int|null $deleteTargetCommentId)
- */
 class Comment extends Model
 {
-    use HasFactory, SoftDeletes;
+    use BelongsToUser, HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'user_id',
-        'post_id',
-        'body',
+        'body', 'user_id', 'commentable_id', 'commentable_type',
     ];
 
-    /**
-     * Commented user
-     *
-     * @return BelongsTo
-     */
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $with = [
+        'user',
+    ];
 
-    /**
-     * Commented post
-     *
-     * @return BelongsTo
-     */
-    public function posts(): BelongsTo
+    public function commentable(): MorphTo
     {
-        return $this->belongsTo(Post::class);
+        return $this->morphTo();
     }
 }

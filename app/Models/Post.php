@@ -2,26 +2,16 @@
 
 namespace App\Models;
 
+use App\Traits\HasComments;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Carbon;
 
-/**
- * Class Post
- *
- * @property int $id         ID
- * @property int $user_id    User ID
- * @property string $title   Post Title
- * @property string $content Post Body
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- */
 class Post extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, HasComments;
 
     protected $fillable = [
         'title',
@@ -143,16 +133,6 @@ class Post extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
-    }
-
-    /**
-     * Comments
-     *
-     * @return hasMany
-     */
-    public function comments(): hasMany
-    {
-        return $this->hasMany(Comment::class);
     }
 
     /**

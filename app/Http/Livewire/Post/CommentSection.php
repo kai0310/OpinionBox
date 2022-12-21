@@ -34,7 +34,7 @@ class CommentSection extends Component
             'body' => $this->body, 'postId' => $this->post->id,
         ])->toArray();
 
-        $comment = app(CreateComment::class)->create($request);
+        $comment = app(CreateComment::class)->create($this->post, $request);
 
         $this->resetValidation();
         $this->reset('body');
